@@ -14,7 +14,7 @@ const NavBar = () => {
     setOpen((pre) => !pre);
   };
   return (
-    <div className="fixed top-0 left-0 right-0 bg-neutral-50 dark:bg-neutral-900 z-40 bg-opacity-85  mx-auto">
+    <div className="fixed top-0 left-0 right-0 bg-white shadow-md dark:bg-neutral-900 z-40   mx-auto">
       <nav className="max-w-7xl mx-auto z-40 flex justify-between items-center px-4 md:px-6  py-3 backdrop-blur-sm">
         <div
           className="block md:hidden rounded-full text-cyan-400 border border-cyan-400 p-2 shadow-md cursor-pointer relative z-50"
