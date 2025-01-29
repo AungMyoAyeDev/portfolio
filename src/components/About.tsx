@@ -34,31 +34,21 @@ const About = () => {
     <section className="min-h-screen py-20 px-4 md:px-12 " id="about">
       <h1 className="heading">About Me</h1>
       <div className="flex flex-col md:flex-row justify-between  gap-8 py-8 ">
-        <motion.div
-          variants={imageVarient}
-          initial="initial"
-          whileInView="inView"
-          animate="animate"
-          className=" relative w-[90%] md:w-[40%] h-[40vh] md:h-[65vh] border-2   mx-auto  bg-transparent   border-transparent bg-clip-border rounded-md bg-gradient-to-tr from-rose-500 via-amber-500 to-blue-600 "
-          style={{
-            backgroundImage: "linear-gradient(to right,red,orange ,violet)",
-            backgroundSize: "200% 200%",
-          }}
-        >
-          <div className="abouslute  w-full h-full m-4 rounded-md z-40 border-2 border-cyan-300"></div>
+        <div className=" relative w-[90%] md:w-[40%] h-[40vh] md:h-[65vh] border-2   mx-auto  bg-transparent   border-transparent bg-clip-border rounded-md bg-gradient-to-tr from-rose-500 via-amber-500 to-blue-600 ">
+          <div className="abouslute  w-full h-full m-4 rounded-md z-40 border-2 bg-gray-700"></div>
           <Image
             src={"/elizabeth.png"}
             fill
             alt="profile"
             className="object-cover relative z-20"
           />
-          <span className="absolute inset-0 bg-black z-0 rounded-md"></span>
-        </motion.div>
+          <span className="absolute inset-0 bg-cyan-500 z-0 rounded-md"></span>
+        </div>
         <motion.div
           variants={animateText}
           initial="close"
           whileInView="open"
-          className="w-[90%] md:w-[50%] flex flex-col gap-4 items-center md:items-start justify-between mx-auto"
+          className="w-[90%] md:w-[50%] flex flex-col gap-2 items-center md:items-start justify-between mx-auto"
         >
           <motion.h2
             variants={animateText}
