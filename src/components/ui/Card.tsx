@@ -36,7 +36,7 @@ const Card = ({
   siteLink: string;
 }) => {
   return (
-    <motion.div className="relative flex flex-col md:flex-row min-w-80  min-h-[70vh] items-center justify-between gap-4  w-full rounded-lg  overflow-hidden ">
+    <motion.div className="relative flex flex-col  min-w-80  min-h-[70vh] items-center justify-between gap-4  w-full rounded-lg  overflow-hidden ">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -44,7 +44,7 @@ const Card = ({
           duration: 1,
           ease: "easeOut",
         }}
-        className="relative w-full md:w-[45%]  aspect-video   bg-gray-800 rounded-lg "
+        className="relative w-full aspect-video   bg-gray-800 rounded-lg "
       >
         <Image src={image} fill alt={name} className="   rounded-lg" />
       </motion.div>
@@ -52,18 +52,15 @@ const Card = ({
         variants={variants}
         initial="initial"
         whileInView="animate"
-        className="w-full md:w-[50%] flex flex-col gap-4 px-4 py-4"
+        className="flex flex-col gap-4 px-4 py-4"
       >
         <motion.h1
           variants={variants}
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-poppin font-semibold "
+          className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold "
         >
           {name}
         </motion.h1>
-        <motion.p
-          variants={variants}
-          className="font-lora text-lg md:text-xl text-gray-200 "
-        >
+        <motion.p variants={variants} className="font-lora text-sm  ">
           {description}
         </motion.p>
         <motion.div
