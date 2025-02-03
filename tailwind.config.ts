@@ -10,6 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "dark-bg": "#121212",
+        "primary-purple": "#BB86FC",
+        accents: "#03DAC6",
+        "text-white": "#ffffff",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         lavender: "#E6E6FA",

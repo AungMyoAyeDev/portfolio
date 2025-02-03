@@ -5,7 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 w-full py-12 px-4 md:px-6 rounded-t-lg flex flex-wrap gap-6 items-center justify-center md:justify-between bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-900">
+    <footer className="relative z-10 w-full py-12 px-4 md:px-6 rounded-t-lg flex flex-wrap gap-6 items-center justify-center md:justify-between bg-gradient-to-r from-neutral-500 via-neutral-600 to-neutral-500">
       <div className="text-xl font-poppin font-semibold ">
         Aung Myo Aye - Portfolio
       </div>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { Providers } from "./Providers";
 import Cursor from "@/components/ui/Cursor";
 
 export const metadata: Metadata = {
@@ -19,13 +18,12 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth 	snap-mandatory">
       <body>
         <Cursor />
-        <Providers>
-          <div className="max-w-7xl mx-auto">
-            <NavBar />
-            {children}
-            <Footer />
-          </div>
-        </Providers>
+
+        <div className="max-w-7xl mx-auto">
+          <NavBar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

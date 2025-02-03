@@ -26,8 +26,8 @@ const NavBar = () => {
           {open && <SideBar handleClick={handleClick} />}
         </AnimatePresence>
         <div>
-          <h1 className=" font-lora text-2xl md:text-3xl font-bold bg-orange-500 bg-clip-text text-transparent">
-            AMA <span className="hidden lg:inline"> -Portfolio</span>
+          <h1 className=" font-lora text-2xl md:text-3xl font-bold bg-primary-purple bg-clip-text text-transparent">
+            AMA<span className="hidden lg:inline">-Portfolio</span>
           </h1>
         </div>
         <div className="hidden md:flex items-center  text-xl font-lora font-semibold ">
@@ -42,7 +42,7 @@ const NavBar = () => {
               {active === link.id && (
                 <motion.span
                   layoutId="active-pill"
-                  className="absolute inset-0 bg-gradient-to-tr from-orange-400 to-purple-500  rounded-full"
+                  className="absolute inset-0 bg-gradient-to-tr from-accents to-accents/60  rounded-full"
                 ></motion.span>
               )}
             </a>
