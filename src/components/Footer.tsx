@@ -1,8 +1,5 @@
 import { contactLinks } from "@/constant";
-import React from "react";
-import { FaInstagram } from "react-icons/fa6";
-import { FaGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Footer = () => {
   return (

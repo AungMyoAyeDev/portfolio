@@ -6,28 +6,28 @@ import { animateText } from "./Skills";
 import TextReveal from "./ui/TextReveal";
 import Button from "./ui/Button";
 
-const imageVarient = {
-  initial: {
-    opacity: 0,
-    scale: 0,
-  },
-  inView: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      ease: "easeIn",
-      duration: 0.7,
-    },
-  },
-  animate: {
-    backgroundPosition: ["0% 50%", "100% 50%"],
-    transition: {
-      ease: "linear",
-      duration: 5,
-      repeat: Infinity,
-    },
-  },
-};
+// const imageVarient = {
+//   initial: {
+//     opacity: 0,
+//     scale: 0,
+//   },
+//   inView: {
+//     opacity: 1,
+//     scale: 1,
+//     transition: {
+//       ease: "easeIn",
+//       duration: 0.7,
+//     },
+//   },
+//   animate: {
+//     backgroundPosition: ["0% 50%", "100% 50%"],
+//     transition: {
+//       ease: "linear",
+//       duration: 5,
+//       repeat: Infinity,
+//     },
+//   },
+// };
 
 const About = () => {
   return (
