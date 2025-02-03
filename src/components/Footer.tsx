@@ -1,44 +1,27 @@
+import { contactLinks } from "@/constant";
 import React from "react";
 import { FaInstagram } from "react-icons/fa6";
-import { FaGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 w-full py-12 px-4 md:px-6 rounded-t-lg flex flex-wrap gap-6 items-center justify-center md:justify-between bg-gradient-to-r from-neutral-500 via-neutral-600 to-neutral-500">
+    <footer className="relative z-10 w-full py-12 px-4 md:px-6 rounded-t-lg flex flex-wrap gap-6 items-center justify-center md:justify-between">
       <div className="text-xl font-poppin font-semibold ">
         Aung Myo Aye - Portfolio
       </div>
 
       <div className="flex gap-4">
-        <a
-          href="https://github.com/AungMyoAye101"
-          target="_blank"
-          className="p-3 border border-cyan-400  rounded-full shadow-md bg-neutral-900 hover:bg-cyan-400 hover:text-black"
-        >
-          <FaGithub className="text-xl " />
-        </a>
-        <a
-          href="https://www.facebook.com/profile.php?id=61556195843942"
-          target="_blank"
-          className="p-3 border border-cyan-400  rounded-full shadow-md  bg-neutral-900 hover:bg-cyan-400 hover:text-black"
-        >
-          <FaFacebookF className="text-xl  " />
-        </a>
-        <a
-          href=""
-          target="_blank"
-          className="p-3 border border-cyan-400  rounded-full shadow-md hover:bg-cyan-400 bg-neutral-900 hover:text-black"
-        >
-          <FaLinkedin className="text-xl  " />
-        </a>
-        <a
-          href="https://www.instagram.com/aungmyoaye404/"
-          target="_blank"
-          className="p-3 border border-cyan-400  rounded-full shadow-md bg-neutral-900 hover:bg-cyan-400 hover:text-black"
-        >
-          <FaInstagram className="text-xl  " />
-        </a>
+        {contactLinks.map((item) => (
+          <a
+            key={item.id}
+            href={item.href}
+            title={item.name}
+            className="p-3  bg-cyan-400  rounded-full shadow-md  "
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
       <a
         href="mailto:aungmyoaye101@gmail.com"

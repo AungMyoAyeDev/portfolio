@@ -37,7 +37,7 @@ const About = () => {
         <div className=" relative w-[90%] md:w-[40%] h-[40vh] md:h-[65vh]   mx-auto  bg-transparent   border-transparent bg-clip-border rounded-md bg-gradient-to-tr from-rose-500 via-amber-500 to-blue-600 ">
           <div className="abouslute  w-full h-full m-4 rounded-md z-40 border-2 bg-gray-700"></div>
           <Image
-            src={"/elizabeth.png"}
+            src={"/images/profile.png"}
             fill
             alt="profile"
             className="object-cover relative z-20"
