@@ -8,19 +8,9 @@ import React from "react";
 const varients = {
   open: {
     x: "0%",
-    transition: {
-      when: "beforechild",
-      type: "spring",
-      stiffness: 50,
-      dumping: 20,
-    },
   },
   close: {
     x: "-100%",
-    transition: {
-      when: "afterChildren",
-      staggerChildren: 0.01,
-    },
   },
 };
 const childVarients = {

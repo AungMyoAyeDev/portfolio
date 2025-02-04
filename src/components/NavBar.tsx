@@ -27,7 +27,7 @@ const NavBar = () => {
         </AnimatePresence>
         <div>
           <h1 className=" font-lora text-2xl md:text-3xl font-bold bg-primary-purple bg-clip-text text-transparent">
-            AMA<span className="hidden lg:inline">-Portfolio</span>
+            AMA.
           </h1>
         </div>
         <div className="hidden md:flex items-center  text-xl font-lora font-semibold ">
@@ -36,13 +36,13 @@ const NavBar = () => {
               key={link.id}
               href={link.link}
               className="px-4 py-1 relative"
-              onMouseEnter={() => setActive(link.id)}
+              onClick={() => setActive(link.id)}
             >
               <span className="relative z-10 ">{link.name}</span>
               {active === link.id && (
                 <motion.span
                   layoutId="active-pill"
-                  className="absolute inset-0 bg-gradient-to-tr from-accents to-accents/60  rounded-full"
+                  className="absolute inset-0 bg-primary-purple  rounded-full"
                 ></motion.span>
               )}
             </a>

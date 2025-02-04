@@ -28,15 +28,17 @@ const Project = () => {
           <div
             key={i}
             className="relative px-4 py-2 text-base md:text-lg font-semibold font-poppin rounded-full cursor-pointer"
-            onMouseEnter={() => setActiveTab(i)}
-            onClick={() => filteredProjects(t)}
+            onClick={() => {
+              filteredProjects(t);
+              setActiveTab(i);
+            }}
           >
             <span className="relative z-10">{t}</span>
             {activeTab === i && (
               <motion.span
                 layoutId="activeTab"
                 transition={{ ease: "easeOut" }}
-                className="absolute inset-1 rounded-full bg-gradient-to-tr from-orange-500 via-purple-500 to-sky-500"
+                className="absolute inset-1 rounded-full bg-primary-purple"
               />
             )}
           </div>
