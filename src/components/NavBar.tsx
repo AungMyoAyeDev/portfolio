@@ -42,7 +42,7 @@ const NavBar = () => {
               {active === link.id && (
                 <motion.span
                   layoutId="active-pill"
-                  className="absolute inset-0 bg-primary-purple  rounded-full"
+                  className="absolute left-0 bottom-0 w-full h-1 bg-primary-purple  rounded-full"
                 ></motion.span>
               )}
             </a>

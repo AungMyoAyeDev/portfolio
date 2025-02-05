@@ -48,31 +48,26 @@ const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
               "
           >
             <motion.div
-              initial={{ y: 10, opacity: 0.5 }}
+              initial={{ y: 10, opacity: 0.1 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 delay: 0.3,
-                ease: "easeIn",
-                duration: 0.1,
+                ease: "easeOut",
+                duration: 0.2,
               }}
-              className="relative z-30 size-11 p-1  flex justify-center items-center overflow-hidden rounded-md bg-black  m-1"
+              className="relative z-30 size-11 p-1  flex justify-center items-center overflow-hidden rounded-lg  m-1"
             >
               <Image
                 src={skill.icon}
                 width={40}
                 height={40}
                 alt={skill.name}
-                className="group-hover:hidden object-contain"
+                className="object-contain"
               />
-              <div
-                className={`hidden group-hover:block  font-poppin text-white`}
-              >
-                {skill.count}%
-              </div>
             </motion.div>
 
             <motion.p
-              initial={{ y: 10, opacity: 0.5 }}
+              initial={{ y: 10, opacity: 0.1 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 delay: 0.3,
@@ -85,13 +80,9 @@ const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
             </motion.p>
 
             <div
-              className={`absolute bottom-0 z-20 w-0  group-hover:w-full h-full transition-all duration-500 ease-out ${
-                skill.count > 79
-                  ? "bg-emerald-400"
-                  : skill.count > 60
-                  ? "bg-cyan-400"
-                  : "bg-rose-400"
-              } `}
+              className={
+                "absolute bottom-0 z-20 w-0  group-hover:w-full h-full transition-all duration-500 ease-out bg-cyan-400 "
+              }
             ></div>
           </div>
         ))}
