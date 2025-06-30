@@ -41,15 +41,15 @@ const Form = () => {
       }}
       ref={form}
       action={sendEmail}
-      className=" w-full md:w-[60%] grid gap-4 "
+      className=" max-w-2xl mx-auto w-full  grid gap-4 rounded-lg shadow  bg-white/10 bg-opacity-30 backdrop-blur-sm p-4  border-2 border-white"
     >
       {success && (
-        <div className="px-4 py-2 font-poppin bg-green-500 rounded-lg text-center">
+        <div className="px-4 py-2 font-poppin border border-green-500 rounded-lg text-center">
           SUCCESS
         </div>
       )}
       {error && (
-        <div className="px-4 py-2 font-poppin bg-red-500 rounded-lg text-center">
+        <div className="px-4 py-2 font-poppin border border-red-500 rounded-lg text-center">
           Opps; Something went worng!
         </div>
       )}

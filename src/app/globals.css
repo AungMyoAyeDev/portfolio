@@ -6,12 +6,13 @@
 
 @layer utilities {
   .input-style {
-    @apply border-2 border-cyan-400 rounded-md shadow-md py-2 px-4 focus:outline-none focus:scale-105 focus:shadow-lg transition-transform ease-out duration-200;
+    @apply border-2 border-white rounded-md shadow-md py-2 px-4 bg-white bg-opacity-25 focus:outline-none focus:shadow-lg transition-transform ease-out duration-200;
   }
 
   .section-container {
-    @apply py-20 px-4 md:px-10  min-h-screen flex flex-col items-center  gap-8;
+    @apply py-20 px-4 md:px-10 min-h-screen flex flex-col items-center gap-8;
   }
+
   .heading {
     @apply font-poppin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4;
   }
@@ -19,8 +20,13 @@
   .para-heading {
     @apply text-base md:text-lg font-lora font-medium;
   }
+
   .bg-gradient-text {
-    @apply px-4 py-2 rounded hover:text-neutral-900  hover:bg-gradient-to-tr from-purple-400 to-orange-400 transition-all duration-200 ease-out;
+    @apply px-4 py-2 rounded hover:text-neutral-900 hover:bg-gradient-to-tr from-purple-400 to-orange-400 transition-all duration-200 ease-out;
+  }
+
+  .glass_effect {
+    @apply border-2 border-white bg-opacity-30
   }
 
   button {

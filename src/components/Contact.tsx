@@ -25,7 +25,15 @@ const Contact = () => {
   const inView = useInView(ref, { margin: "-100px" });
 
   return (
-    <section className="section-container" id="contact">
+    <section className="section-container relative text-white bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 " id="contact" >
+      <div className="absolute top-10 left-10 w-72 h-72 bg-pink-400/30 rounded-full blur-3xl opacity-80 animate-pulse"></div>
+
+      {/* Blurred Blob 2 */}
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl opacity-80 animate-pulse"></div>
+
+      {/* Blurred Blob 3 */}
+      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl opacity-80 animate-pulse"></div>
+
       <motion.div
         ref={ref}
         variants={varients}
