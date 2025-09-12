@@ -72,9 +72,9 @@ export const projects = [
       {
         icon: "/tailwindcss.svg",
         name: "Tailwind CSS",
-      },{
-        icon:"/typescript.svg",
-        name:"Typescript"
+      }, {
+        icon: "/typescript.svg",
+        name: "Typescript"
       }
     ],
   },
@@ -199,7 +199,7 @@ export const frontEnd = {
       name: "React Js",
       count: 70,
     },
- 
+
     {
       icon: "/jquery.svg",
       name: "Jquery",
@@ -242,7 +242,7 @@ export const backEnd = {
       count: 60,
     },
     {
-      icon: "/express.svg",
+      icon: "/expressjs.svg",
       name: "Express Js",
       count: 60,
     },

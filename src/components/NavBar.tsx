@@ -6,6 +6,7 @@ import SideBar from "./SideBar";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLinks } from "@/data";
 import Button from "./ui/Button";
+import BggradientBtn from "./ui/BgGradientBtn";
 const buttonVarients = {
   initial: {
     opacity: 0,
@@ -41,9 +42,9 @@ const NavBar = () => {
         >
           {open ? <FaXmark /> : <FaBars />}
         </div>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {open && <SideBar handleClick={handleClick} />}
-        </AnimatePresence>
+        </AnimatePresence> */}
         <div>
           <h1 className=" font-lora text-2xl md:text-3xl font-bold bg-primary-purple bg-clip-text text-transparent">
             AMA.
@@ -76,13 +77,15 @@ const NavBar = () => {
 
             <FaLocationArrow />
           </a> */}
-          <motion.a
+          {/* <motion.a
             variants={buttonVarients}
             href="mailto:aungmyoaye101@gmail.com"
             className="text-white"
           >
             <Button text="Content me" size="text-sm" />
-          </motion.a>
+          </motion.a> */}
+
+
         </div>
       </nav>
     </div>

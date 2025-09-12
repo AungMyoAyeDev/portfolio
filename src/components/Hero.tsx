@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TextReveal from "./ui/TextReveal";
 
 import BgGradientBtn from "./ui/BgGradientBtn";
@@ -42,6 +42,8 @@ const imageVarients = {
 };
 
 const Hero = () => {
+
+
   const intro = "Hi! I am Aung Myo Aye";
   const heroText =
     "A Full-Stack developer and UI/UX designer passionate about creating efficient, scalable web solutions.";
@@ -74,19 +76,19 @@ const Hero = () => {
         >
 
 
-          <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" />
+          {/* <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" /> */}
 
-          <a
+          {/* <a
             download
             href="/images/profile.png"
           >
             <Button text="Download Resume" />
-          </a>
+          </a> */}
         </motion.div>
       </div>
 
       {/* Profile image */}
-      <motion.div
+      {/* <motion.div
         variants={imageVarients}
         initial="initial"
         whileInView="inView"
@@ -114,7 +116,30 @@ const Hero = () => {
             className="object-cover object-center rounded-full relative z-20 "
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
+
+      <div className="relative w-full md:w-[40vw]  ">
+        <div className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
+
+          <Image
+            src={"/images/profile.png"}
+            fill
+            alt="Aung Myo Aye's profile photo"
+            className={'object-cover object-center rounded-full relative z-20 animate-colorCycle border-4 border-purple-400 '}
+          />
+
+          <div className="absolute -inset-4 z-10 rounded-full animate-spin ">
+            <Image
+
+              src={'/rocket.png'}
+              width={60}
+              height={60}
+              alt="Rocket icon"
+              className="bg-transparent"
+            />
+          </div>
+        </div>
+      </div>
       <div className="absoulte inset-0 -z-10">
         <Image
           src={"/images/black-bg.jpg"}

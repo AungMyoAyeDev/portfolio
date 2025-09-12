@@ -14,7 +14,7 @@
   }
 
   .heading {
-    @apply font-poppin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4;
+    @apply font-poppin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4 text-white/90;
   }
 
   .para-heading {
@@ -32,4 +32,30 @@
   button {
     @apply font-poppin text-base font-medium;
   }
+}
+
+@keyframes colorCycle {
+  0% {
+    background-color: purple;
+  }
+
+  25% {
+    background-color: orange;
+  }
+
+  50% {
+    background-color: cyan;
+  }
+
+  75% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: skyblue;
+  }
+}
+
+.animate-colorCycle {
+  animation: colorCycle 10s infinite alternate;
 }

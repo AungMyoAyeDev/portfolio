@@ -27,7 +27,7 @@ const Skills = () => {
   return (
     <section className="section-container" id="skill">
       <div className="flex flex-col items-center ">
-        <h1 className="heading">My Skills</h1>
+        <h1 className="heading ">My Skills</h1>
       </div>
       {/* My Skills  */}
 
@@ -35,7 +35,7 @@ const Skills = () => {
         {skills.map(({ id, image, title, description }) => (
           <MagicCard
             key={id}
-            className="  w-80 h-80 py-6 px-4 rounded-xl shadow-md  relative border border-cyan-500 "
+            className="  w-80 h-80 py-6 px-4 rounded-xl shadow-md  relative border border-black/90 "
           >
             <motion.div
               variants={animateText}
