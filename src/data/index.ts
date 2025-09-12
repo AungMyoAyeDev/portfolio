@@ -199,11 +199,7 @@ export const frontEnd = {
       name: "React Js",
       count: 70,
     },
-    {
-      icon: "/vue.svg",
-      name: "Vue Js",
-      count: 60,
-    },
+ 
     {
       icon: "/jquery.svg",
       name: "Jquery",
@@ -246,20 +242,17 @@ export const backEnd = {
       count: 60,
     },
     {
+      icon: "/express.svg",
+      name: "Express Js",
+      count: 60,
+    },
+    {
       icon: "/nextjs.svg",
       name: "Next Js",
       count: 70,
     },
-    {
-      icon: "/python.svg",
-      name: "Python",
-      count: 80,
-    },
-    {
-      icon: "/laravel.svg",
-      name: "Laravel",
-      count: 60,
-    },
+
+
   ],
 };
 

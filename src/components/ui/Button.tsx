@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-const MovingGradientBorderButton = ({ text }: { text: string }) => {
+const MovingGradientBorderButton = ({ text, size }: { text: string, size?: string }) => {
   return (
     <motion.button
-      className="relative inline-block px-6 py-2  text-white hover:text-orange-500 rounded-full bg-transparent "
+      className={`relative inline-block px-6 py-2  text-white hover:text-orange-500 rounded-full bg-transparent ${size}`}
       // Framer Motion animation
       animate={{
         backgroundPosition: ["0% 50%", "100% 50%"], // Moving border animation
@@ -11,7 +11,7 @@ const MovingGradientBorderButton = ({ text }: { text: string }) => {
       transition={{
         duration: 5, // Duration of the animation loop
         repeat: Infinity, // Infinite loop
-        ease: "linear", // Smooth transition
+        ease: "easeInOut", // Smooth transition
       }}
       style={{
         backgroundImage: "linear-gradient(90deg, cyan, purple, pink)", // Gradient border

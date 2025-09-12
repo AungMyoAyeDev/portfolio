@@ -28,20 +28,19 @@ const TextReveal = ({
         <motion.span
           variants={charVarients}
           key={i}
-          className={`${
-            char === "Aung" ||
-            char === "Myo" ||
-            char === "Aye" ||
-            char === "Full-Stack" ||
-            char === "UI/UX" ||
-            char === "Myanmar" ||
-            char === "Yadanabon" ||
-            char === "scalable" ||
-            char === "real-world" ||
-            char === "passionate"
+          className={`${char === "Aung" ||
+              char === "Myo" ||
+              char === "Aye" ||
+              char === "Full-Stack" ||
+              char === "UI/UX" ||
+              char === "Myanmar" ||
+              char === "Yadanabon" ||
+              char === "scalable" ||
+              char === "real-world" ||
+              char === "passionate"
               ? "text-orange-400"
-              : ""
-          }`}
+              : "text-white"
+            }`}
         >
           {char}
         </motion.span>

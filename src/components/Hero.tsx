@@ -11,18 +11,15 @@ import Button from "./ui/Button";
 const buttonVarients = {
   initial: {
     opacity: 0,
-    scale: 0,
     y: 50,
   },
   inView: {
     opacity: 1,
-    scale: 1,
     y: 0,
     transition: {
-      delay: 1,
-      ease: "easeOut",
-      staggerChildren: 0.1,
-      duration: 1,
+      delay: .5,
+      ease: "linear",
+      duration: .5
     },
   },
 };
@@ -37,7 +34,7 @@ const imageVarients = {
     opacity: 1,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "easeIn",
       stiffness: 30,
       dumping: 20,
     },
@@ -57,33 +54,38 @@ const Hero = () => {
       <div className="w-full md:w-[50vw]  flex flex-col gap-4 items-center text-center md:text-start md:items-start ">
         <TextReveal
           words={intro}
-          className="font-poppin text-base md:text-lg font-medium gap-1"
+          className="font-poppin text-base md:text-xl font-medium gap-1"
         />
         <TextReveal
           words={heroText}
           className="  font-poppin text-xl  md:text-3xl lg:text-4xl font-bold gap-2 justify-center  md:justify-start"
         />
 
-        <TextReveal
+        {/* <TextReveal
           words={tagline}
-          className="font-poppin  w-[90%] text-base md:text-xl font-light gap-1 justify-center md:justify-start"
-        />
+          className="font-poppin  w-[90%] text-base md:text-lg font-light gap-1 justify-center md:justify-start"
+        /> */}
 
         <motion.div
           variants={buttonVarients}
           initial="initial"
           whileInView="inView"
-          className="flex flex-wrap gap-4 justify-center items-center"
+          className="flex flex-wrap gap-4 justify-center items-center mt-4"
         >
-          <BgGradientBtn text="Get In Touch" />
-          <motion.a
-            variants={buttonVarients}
-            href="mailto:aungmyoaye101@gmail.com"
+
+
+          <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" />
+
+          <a
+            download
+            href="/images/profile.png"
           >
             <Button text="Download Resume" />
-          </motion.a>
+          </a>
         </motion.div>
       </div>
+
+      {/* Profile image */}
       <motion.div
         variants={imageVarients}
         initial="initial"
@@ -113,6 +115,14 @@ const Hero = () => {
           />
         </motion.div>
       </motion.div>
+      <div className="absoulte inset-0 -z-10">
+        <Image
+          src={"/images/black-bg.jpg"}
+          fill
+          alt="Aung Myo Aye's profile photo"
+          className="object-cover object-center  relative z-20 "
+        />
+      </div>
     </section>
   );
 };

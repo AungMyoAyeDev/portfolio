@@ -5,6 +5,25 @@ import { FaLocationArrow, FaXmark } from "react-icons/fa6";
 import SideBar from "./SideBar";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLinks } from "@/data";
+import Button from "./ui/Button";
+const buttonVarients = {
+  initial: {
+    opacity: 0,
+    scale: 0,
+    y: 50,
+  },
+  inView: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: 1,
+      ease: "easeOut",
+      staggerChildren: 0.1,
+      duration: 1,
+    },
+  },
+};
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +33,7 @@ const NavBar = () => {
     setOpen((pre) => !pre);
   };
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white shadow-md dark:bg-neutral-900 z-40   mx-auto">
+    <div className="fixed top-0 left-0 right-0 shadow-md dark:bg-neutral-900 z-40   mx-auto">
       <nav className="max-w-7xl mx-auto z-40 flex justify-between items-center px-4 md:px-6  py-3 backdrop-blur-sm">
         <div
           className="block md:hidden rounded-full text-cyan-400 border border-cyan-400 p-2 shadow-md cursor-pointer relative z-50"
@@ -38,7 +57,7 @@ const NavBar = () => {
               className="px-4 py-1 relative"
               onClick={() => setActive(link.id)}
             >
-              <span className="relative z-10 ">{link.name}</span>
+              <span className="relative z-10 text-white/80">{link.name}</span>
               {active === link.id && (
                 <motion.span
                   layoutId="active-pill"
@@ -49,14 +68,21 @@ const NavBar = () => {
           ))}
         </div>
         <div>
-          <a
+          {/* <a
             href="mailto:aungmyoaye101@gmail.com"
             className="flex gap-1 items-center font-medium font-poppin text-white hover:text-black p-2 rounded-full shadow-md  bg-gradient-to-tr from-orange-500 via-purple-500 to-sky-500"
           >
             <span className="hidden lg:block"> Contact Me</span>
 
             <FaLocationArrow />
-          </a>
+          </a> */}
+          <motion.a
+            variants={buttonVarients}
+            href="mailto:aungmyoaye101@gmail.com"
+            className="text-white"
+          >
+            <Button text="Content me" size="text-sm" />
+          </motion.a>
         </div>
       </nav>
     </div>
