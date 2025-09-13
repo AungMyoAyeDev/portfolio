@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <Skills />
       <TechSkill />
-      {/* <Project />
-      <About />
+      <Project />
+      {/* <About />
       <Contact /> */}
     </section>
   );

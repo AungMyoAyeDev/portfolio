@@ -1,22 +1,49 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 import Image from "next/image";
-
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const variants = {
-  initial: { y: 200 },
-  animate: {
+
+const containerVarient = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: "spring", stiffness: 100, damping: 15, staggerChildren: 0.2, when: "beforeChildren" },
+  },
+
+}
+
+const titleVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: "easeOut", delay: 0.5 },
+  },
+};
+
+// Variants for the icon animation (pop-up fade).
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 200, damping: 15, delay: 0.6 },
+  },
+};
+
+// Variants for the button animation (bottom-to-up fade).
+const buttonVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: {
-      staggerChildren: 0.1,
-      type: "spring",
-      stiffness: 50,
-      dumpind: 20,
-    },
+    transition: { duration: 0.4, ease: "easeOut", delay: 0.7 },
   },
 };
 
@@ -35,122 +62,75 @@ const Card = ({
   sourceCode: string;
   siteLink: string;
 }) => {
+
   return (
-    <motion.div className="relative flex flex-col md:flex-row max-w-4xl items-center justify-between gap-4  w-full rounded-lg  overflow-hidden ">
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1,
-          ease: "easeOut",
-        }}
-      >
-        <Image
-          src={image}
-          width={400}
-          height={400}
-          alt={name}
-          className="   min-w-80 max-w-xl rounded-lg aspect-video"
-        />
-      </motion.div>
-      <motion.div
-        variants={variants}
-        initial="initial"
-        whileInView="animate"
-        className="flex flex-col gap-4 px-4 py-4"
-      >
+    < motion.div
+      variants={containerVarient}
+      initial='hidden'
+      whileInView="visible"
+
+
+      className="bg-gray-800 rounded-lg overflow-hidden w-full border border-gray-500">
+      <div className="relative w-full aspect-video   overflow-hidden">
+        <Image src={image} fill alt={name} className="hover:scale-125 transition-transform duration-150 ease-in-out" />
+      </div>
+      <div className="flex flex-col gap-2 px-4 py-4">
         <motion.h1
-          variants={variants}
-          className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold "
-        >
+          variants={titleVariants}
+          initial='hidden'
+          whileInView="visible"
+          className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold text-white">
           {name}
         </motion.h1>
-        <motion.p variants={variants} className="font-lora text-sm  ">
-          {description}
-        </motion.p>
+        {/* <p className="font-lora text-sm  line-clamp-2 t">{description}</p> */}
         <motion.div
-          variants={variants}
-          className="flex items-center flex-wrap gap-2"
-        >
+
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.5, when: 'beforeChildren' }}
+          className="flex items-center flex-wrap ">
           {iconList.map((icon, i) => (
-            <div
+            <motion.div
+              variants={iconVariants}
+              initial='hidden'
+              whileInView="visible"
               key={i}
-              className="flex gap-2 items-center border border-cyan-500 rounded-lg px-2 py-1 hover:shadow-md hover:shadow-cyan-400 bg-blend-difference"
+              className="flex w-8 h-8 justify-center items-center rounded-full bg-gray-600 hover:bg-orange-400 p-1 -ml-1"
             >
-              <Image src={icon.icon} width={25} height={25} alt={icon.name} />{" "}
-              <span className=" font-poppin font-light">{icon.name}</span>
-            </div>
+              <Image src={icon.icon} width={18} height={18} alt={icon.name} />
+
+            </motion.div>
           ))}
         </motion.div>
-        <motion.div
-          variants={variants}
-          className="flex justify-between items-center"
-        >
-          <a
+        <div className="flex justify-between items-center text-orange-400">
+          <motion.a
+            variants={buttonVariants}
+            initial='hidden'
+            whileInView="visible"
             href={sourceCode}
             target="_blank"
-            className="group relative flex items-center gap-2 text-base md:text-lg font-poppin hover:text-purple-400"
+            className="group relative flex items-center gap-2 text-base md:text-sm font-poppin hover:text-purple-400"
           >
             <FaGithub />
             <span>Source Code</span>
             <span className=" absolute -bottom-2 h-1 bg-purple-400 w-0 group-hover:w-full rounded-lg transition-all duration-300"></span>
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            variants={buttonVariants}
+            initial='hidden'
+            whileInView="visible"
             href={siteLink}
             target="_blank"
-            className="group relative flex items-center gap-2 text-base md:text-lg font-poppin hover:text-purple-400"
+            className="group relative flex items-center gap-2 text-base md:text-sm font-poppin hover:text-purple-400"
           >
             <FaExternalLinkAlt />
             <span>Live Site</span>
             <span className=" absolute -bottom-2 h-1 bg-purple-400 w-0 group-hover:w-full rounded-lg transition-all duration-300"></span>
-          </a>
-        </motion.div>
-      </motion.div>
+          </motion.a>
+        </div>
+      </div>
     </motion.div>
-    // <section>
-    //   <div className="relative w-full aspect-video   bg-gray-800 rounded-lg ">
-    //     <Image src={image} fill alt={name} className="   rounded-lg" />
-    //   </div>
-    //   <div className="flex flex-col gap-4 px-4 py-4">
-    //     <h1 className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold ">
-    //       {name}
-    //     </h1>
-    //     <p className="font-lora text-sm  line-clamp-2">{description}</p>
-    //     <div className="flex items-center flex-wrap gap-2">
-    //       {iconList.map((icon, i) => (
-    //         <div
-    //           key={i}
-    //           className="flex gap-2 items-center border border-cyan-500 rounded-lg px-2 py-1 hover:shadow-md hover:shadow-cyan-400 bg-blend-difference"
-    //         >
-    //           <Image src={icon.icon} width={18} height={18} alt={icon.name} />{" "}
-    //           <span className=" font-poppin font-light text-xs">
-    //             {icon.name}
-    //           </span>
-    //         </div>
-    //       ))}
-    //     </div>
-    //     <div className="flex justify-between items-center">
-    //       <a
-    //         href={sourceCode}
-    //         target="_blank"
-    //         className="group relative flex items-center gap-2 text-base md:text-sm font-poppin hover:text-purple-400"
-    //       >
-    //         <FaGithub />
-    //         <span>Source Code</span>
-    //         <span className=" absolute -bottom-2 h-1 bg-purple-400 w-0 group-hover:w-full rounded-lg transition-all duration-300"></span>
-    //       </a>
-    //       <a
-    //         href={siteLink}
-    //         target="_blank"
-    //         className="group relative flex items-center gap-2 text-base md:text-sm font-poppin hover:text-purple-400"
-    //       >
-    //         <FaExternalLinkAlt />
-    //         <span>Live Site</span>
-    //         <span className=" absolute -bottom-2 h-1 bg-purple-400 w-0 group-hover:w-full rounded-lg transition-all duration-300"></span>
-    //       </a>
-    //     </div>
-    //   </div>
-    // </section>
+
   );
 };
 

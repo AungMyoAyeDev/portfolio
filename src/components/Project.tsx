@@ -33,7 +33,7 @@ const Project = () => {
               setActiveTab(i);
             }}
           >
-            <span className="relative z-10">{t}</span>
+            <span className="relative z-10 text-white">{t}</span>
             {activeTab === i && (
               <motion.span
                 layoutId="activeTab"
@@ -45,7 +45,7 @@ const Project = () => {
         ))}
       </div>
 
-      <main className="flex flex-col gap-4 md:gap-6  ">
+      <main className="grid grid-cols-1 md:grid-cols-2 w-full gap-6  ">
         {projectFilter.map((item) => (
           <Card
             key={item.id}
