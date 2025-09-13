@@ -59,3 +59,9 @@
 .animate-colorCycle {
   animation: colorCycle 10s infinite alternate;
 }
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}

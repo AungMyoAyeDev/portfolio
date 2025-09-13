@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import TextReveal from "./ui/TextReveal";
 
+
 import BgGradientBtn from "./ui/BgGradientBtn";
 import Button from "./ui/Button";
 
@@ -51,9 +52,9 @@ const Hero = () => {
   const tagline =
     "Crafting modern, responsive web applications with a touch of creativity.";
 
-  return (
+  return (<>
     <section className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center gap-10 py-20 px-4 md:px-8 ">
-      <div className="w-full md:w-[50vw]  flex flex-col gap-4 items-center text-center md:text-start md:items-start ">
+      <div className="w-full md:w-[50vw]  flex flex-col gap-4 items-center text-center md:text-start md:items-start relative z-10">
         <TextReveal
           words={intro}
           className="font-poppin text-base md:text-xl font-medium gap-1"
@@ -76,15 +77,19 @@ const Hero = () => {
         >
 
 
-          {/* <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" /> */}
+          <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" />
 
-          {/* <a
+          <a
             download
             href="/images/profile.png"
           >
             <Button text="Download Resume" />
-          </a> */}
+          </a>
         </motion.div>
+
+
+
+
       </div>
 
       {/* Profile image */}
@@ -118,6 +123,7 @@ const Hero = () => {
         </motion.div>
       </motion.div> */}
 
+
       <div className="relative w-full md:w-[40vw]  ">
         <div className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
 
@@ -140,15 +146,17 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absoulte inset-0 -z-10">
-        <Image
-          src={"/images/black-bg.jpg"}
-          fill
-          alt="Aung Myo Aye's profile photo"
-          className="object-cover object-center  relative z-20 "
-        />
-      </div>
+
+
     </section>
+    <video autoPlay
+      loop
+      muted
+      playsInline className="absolute top-0 left-0 w-full h-full object-cover  aspect-video" >
+      <source src="./video/space-video.mp4" type="video/mp4" />
+
+    </video>
+  </>
   );
 };
 

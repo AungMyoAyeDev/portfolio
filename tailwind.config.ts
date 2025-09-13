@@ -61,15 +61,17 @@ const config: Config = {
         lora: "Lora",
       },
       animation: {
-        "background-position-spin":
-          "background-position-spin 3000ms infinite alternate",
-        "spin": "spin 3000ms linear infinite "
+        "background-position-spin": "background-position-spin 3000ms infinite alternate",
+        "spin": "spin 4000ms linear infinite ",
+
+
       },
       keyframes: {
         "background-position-spin": {
           "0%": { backgroundPosition: "top center" },
           "100%": { backgroundPosition: "bottom center" },
         },
+
 
       },
     },
