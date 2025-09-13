@@ -14,7 +14,7 @@
   }
 
   .heading {
-    @apply font-poppin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4 text-white/90;
+    @apply font-poppin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4 text-white;
   }
 
   .para-heading {
@@ -58,10 +58,4 @@
 
 .animate-colorCycle {
   animation: colorCycle 10s infinite alternate;
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
 }

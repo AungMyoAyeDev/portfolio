@@ -31,20 +31,20 @@ const techVarients = {
 
 const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
   return (
-    <section className="w-full space-y-4 ">
-      <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-lora font-semibold ">
+    <section className="w-full space-y-6 ">
+      <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppin font-semibold text-white ">
         {title}
       </h1>
       <motion.section
         variants={techVarients}
         initial="hidden"
         animate="show"
-        className="flex flex-wrap items-center justify-center md:justify-start gap-5  "
+        className="flex flex-wrap items-center  gap-5  "
       >
         {skill.map((skill, i) => (
           <div
             key={i}
-            className="group relative flex  items-center  w-36  rounded-lg shadow-md gap-1 border-2 border-cyan-300
+            className="group relative flex  items-center  w-36  rounded-lg shadow-md gap-1 bg-gray-900 border-2 border-orange-400 hover:border-purple-500  overflow-hidden
               "
           >
             <motion.div
@@ -55,14 +55,14 @@ const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
                 ease: "easeOut",
                 duration: 0.2,
               }}
-              className="relative z-30 size-11 p-1  flex justify-center items-center overflow-hidden rounded-lg  m-1"
+              className="relative z-30 size-11 p-1  flex justify-center items-center overflow-hidden rounded-lg  m-1 bg-white"
             >
               <Image
                 src={skill.icon}
                 width={40}
                 height={40}
                 alt={skill.name}
-                className="object-contain"
+                className="object-contain drop-shadow-md"
               />
             </motion.div>
 
@@ -74,14 +74,14 @@ const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
                 ease: "linear",
                 duration: 0.1,
               }}
-              className="relative z-30 font-poppin font-semibold text-sm mr-1"
+              className="relative z-30 font-poppin font-semibold text-sm mr-1 text-white/90"
             >
               {skill.name}
             </motion.p>
 
             <div
               className={
-                "absolute bottom-0 z-20 w-0  group-hover:w-full h-full transition-all duration-500 ease-out bg-cyan-400 "
+                "absolute bottom-0 z-20 w-0  group-hover:w-full h-full transition-all duration-500 ease-out bg-purple-500 "
               }
             ></div>
           </div>

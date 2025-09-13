@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import TechSkills from "./TechSkills";
+import TechSkills from "./ui/TechSkills";
 import { backEnd, frontEnd, others, skills } from "@/data";
 import { MagicCard } from "./ui/MagicCard";
 import { motion } from "framer-motion";
@@ -67,9 +67,7 @@ const Skills = () => {
         ))}
       </div>
 
-      <TechSkills title={frontEnd.title} skill={frontEnd.skills} />
-      <TechSkills title={backEnd.title} skill={backEnd.skills} />
-      <TechSkills title={others.title} skill={others.skills} />
+
     </section>
   );
 };

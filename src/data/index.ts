@@ -264,19 +264,20 @@ export const others = {
       name: "Mongo DB",
       count: 60,
     },
-    {
-      icon: "/mysql.svg",
-      name: "MySQL",
-      count: 60,
-    },
-    {
-      icon: "/prisma-3.svg",
-      name: "Prisma",
-      count: 60,
-    },
+
     {
       icon: "/postgresql.svg",
       name: "Postgresql",
+      count: 40,
+    },
+    {
+      icon: "/git.svg",
+      name: "Git",
+      count: 40,
+    },
+    {
+      icon: "/github.svg",
+      name: "GitHub",
       count: 40,
     },
     {
