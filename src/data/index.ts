@@ -19,14 +19,14 @@ export const skills = [
     image: "/coding.png",
     title: " Full-Stack Development",
     description:
-      "Proficient in full-stack development using technologies such as  React, Next.js, Vue.js, Node.js, Express, and MongoDB.",
+      "Proficient in full-stack development using technologies such as  React js, Next.js,  Node.js, Express js, and MongoDB.",
   },
   {
     id: 3,
     image: "/database.png",
     title: " Database ",
     description:
-      " Experienced in designing and developing complex applications with database management using Prisma, MySQL, and MongoDB.",
+      " Experienced in designing and developing complex applications with database management using Prisma,Postgresql, and MongoDB.",
   },
 ];
 

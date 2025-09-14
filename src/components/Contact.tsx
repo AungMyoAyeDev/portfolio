@@ -61,8 +61,12 @@ const Contact = () => {
   };
 
   return (
-    <section className=" h-screen overflow-hidden relative z-10 space-y-6 py-24 px-4" id="contact">
-
+    <section className=" min-h-screen overflow-hidden relative z-10 space-y-6 py-24 px-4" id="contact">
+      <motion.h1
+        initial={{ opacity: 0, y: 6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: .5 }}
+        className="heading">Contact Me</motion.h1>
       <motion.div
         className=" max-w-xl mx-auto  py-8 px-6 bg-gray-800 rounded-2xl shadow-2xl space-y-4"
         variants={containerVariants}

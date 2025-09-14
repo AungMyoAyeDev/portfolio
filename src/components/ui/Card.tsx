@@ -78,6 +78,8 @@ const Card = ({
   return (
     < motion.div
       variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
       className="bg-gray-800 rounded-lg overflow-hidden w-full border border-gray-500">
       <div className="relative w-full aspect-video   overflow-hidden">
         <Image src={image} fill alt={name} className="hover:scale-125 transition-transform duration-150 ease-in-out" />

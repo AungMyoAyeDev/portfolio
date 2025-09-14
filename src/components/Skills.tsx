@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import TechSkills from "./ui/TechSkills";
-import { backEnd, frontEnd, others, skills } from "@/data";
+import { skills } from "@/data";
 import { MagicCard } from "./ui/MagicCard";
 import { motion } from "framer-motion";
 
@@ -27,7 +26,9 @@ const Skills = () => {
   return (
     <section className="section-container" id="skill">
       <div className="flex flex-col items-center ">
-        <h1 className="heading ">My Skills</h1>
+        <motion.h1 initial={{ opacity: 0, y: 6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: .5 }} className="heading ">My Skills</motion.h1>
       </div>
       {/* My Skills  */}
 

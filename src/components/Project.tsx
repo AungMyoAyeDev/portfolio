@@ -37,7 +37,9 @@ const Project = () => {
 
   return (
     <section className="section-container relative" id="project" ref={containerRef}>
-      <h1 className="heading">My Recent Projects</h1>
+      <motion.h1 initial={{ opacity: 0, y: 6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: .5 }} className="heading">My Recent Projects</motion.h1>
       <div className="rounded-full relative flex border-2 border-orange-400">
         {tab.map((t, i) => (
           <div
@@ -53,7 +55,7 @@ const Project = () => {
               <motion.span
                 layoutId="activeTab"
                 transition={{ ease: "easeOut" }}
-                className="absolute inset-1 rounded-full bg-primary-purple"
+                className="absolute inset-1 rounded-full bg-purple-600"
               />
             )}
           </div>
