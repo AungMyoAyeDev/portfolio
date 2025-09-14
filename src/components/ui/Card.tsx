@@ -6,6 +6,18 @@ import Image from "next/image";
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    },
+  },
+};
 
 const containerVarient = {
   hidden: { opacity: 0, scale: 0 },
@@ -65,11 +77,7 @@ const Card = ({
 
   return (
     < motion.div
-      variants={containerVarient}
-      initial='hidden'
-      whileInView="visible"
-
-
+      variants={itemVariants}
       className="bg-gray-800 rounded-lg overflow-hidden w-full border border-gray-500">
       <div className="relative w-full aspect-video   overflow-hidden">
         <Image src={image} fill alt={name} className="hover:scale-125 transition-transform duration-150 ease-in-out" />
@@ -84,7 +92,7 @@ const Card = ({
             className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold text-white">
             {name}
           </motion.h1>
-          {/* <p className="font-lora text-sm  line-clamp-2 t">{description}</p> */}
+
           <motion.div
 
             initial={{ opacity: 0 }}
@@ -105,6 +113,7 @@ const Card = ({
             ))}
           </motion.div>
         </div>
+        <p className=" text-sm  line-clamp-2 font-poppin text-white/90">{description}</p>
         <div className="flex justify-between items-center text-orange-400">
           <motion.a
             variants={buttonVariants}
