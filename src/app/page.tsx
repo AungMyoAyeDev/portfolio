@@ -12,8 +12,8 @@ export default function Home() {
       <Skills />
       <TechSkill />
       <Project />
-      {/* <About />
-      <Contact /> */}
+      <About />
+      <Contact />
     </section>
   );
 }

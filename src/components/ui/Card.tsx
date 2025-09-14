@@ -75,33 +75,36 @@ const Card = ({
         <Image src={image} fill alt={name} className="hover:scale-125 transition-transform duration-150 ease-in-out" />
       </div>
       <div className="flex flex-col gap-2 px-4 py-4">
-        <motion.h1
-          variants={titleVariants}
-          initial='hidden'
-          whileInView="visible"
-          className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold text-white">
-          {name}
-        </motion.h1>
-        {/* <p className="font-lora text-sm  line-clamp-2 t">{description}</p> */}
-        <motion.div
+        <div className="flex justify-between items-center">
 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ staggerChildren: 0.5, when: 'beforeChildren' }}
-          className="flex items-center flex-wrap ">
-          {iconList.map((icon, i) => (
-            <motion.div
-              variants={iconVariants}
-              initial='hidden'
-              whileInView="visible"
-              key={i}
-              className="flex w-8 h-8 justify-center items-center rounded-full bg-gray-600 hover:bg-orange-400 p-1 -ml-1"
-            >
-              <Image src={icon.icon} width={18} height={18} alt={icon.name} />
+          <motion.h1
+            variants={titleVariants}
+            initial='hidden'
+            whileInView="visible"
+            className="text-lg sm:text-xl md:text-2xl font-poppin font-semibold text-white">
+            {name}
+          </motion.h1>
+          {/* <p className="font-lora text-sm  line-clamp-2 t">{description}</p> */}
+          <motion.div
 
-            </motion.div>
-          ))}
-        </motion.div>
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.5, when: 'beforeChildren' }}
+            className="flex items-center flex-wrap ">
+            {iconList.map((icon, i) => (
+              <motion.div
+                variants={iconVariants}
+                initial='hidden'
+                whileInView="visible"
+                key={i}
+                className="flex w-8 h-8 justify-center items-center rounded-full bg-gray-700 border border-gray-600 hover:bg-orange-400 p-1 -ml-1"
+              >
+                <Image src={icon.icon} width={18} height={18} alt={icon.name} />
+
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
         <div className="flex justify-between items-center text-orange-400">
           <motion.a
             variants={buttonVariants}

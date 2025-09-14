@@ -59,7 +59,7 @@ export const projects = [
     id: 2,
     type: "Front-End",
     image: "p2.svg",
-    name: "Awarded Gaming Website",
+    name: "Awarded Gaming",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? ",
     sourceCode: "example.com",
