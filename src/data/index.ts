@@ -33,6 +33,126 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    type: "Full-Stack",
+    image: "/project/dev-overflow.jpg",
+    name: "DEV-Overflow",
+    description: "a dynamic and feature-rich web application designed for developers to ask and answer questions, engage in community discussions, and manage their profiles. Built with modern web technologies, the platform ensures an intuitive and seamless user experience.",
+
+    sourceCode: "https://github.com/AungMyoAye101/dev-overflow-nextjs",
+    siteLink: "https://dev-overflow-indol.vercel.app/",
+    iconList: [
+      {
+        icon: "/react.svg",
+        name: "React Js",
+      },
+      {
+        icon: "/typescript.svg",
+        name: "TypeScript",
+      },
+      {
+        icon: "/nextjs.svg",
+        name: "Next Js",
+      },
+      {
+        icon: "/mongodb.svg",
+        name: "Mongo Db",
+      },
+    ],
+  },
+  {
+    id: 2,
+    image: "/project/chat-app.png",
+    type: "Full-Stack",
+    name: "Chat App",
+    description: "A real-time chat application built with MongoDB, Express, React, Node.js, and Socket.IO.",
+    sourceCode: "https://github.com/AungMyoAye101/chat-app",
+    siteLink: "https://chat-app-woad-beta.vercel.app",
+    iconList: [
+      {
+        icon: "/react.svg",
+        name: "React Js",
+      },
+      {
+        icon: "/expressjs.svg",
+        name: "Express Js",
+      },
+      {
+        icon: "/mongodb.svg",
+        name: "Mongo Db",
+      },
+      {
+        icon: "/nodejs.svg",
+        name: "Node Js",
+      },
+      {
+        icon: "/typescript.svg",
+        name: "typescript",
+      },
+    ],
+  },
+  {
+    id: 3,
+    image: "/project/booking.jpg",
+    name: "Hotel Booking",
+    type: "Full-Stack",
+    description:
+      "a full-stack web application that allows users to search, book, and manage hotel reservations easily. It provides a seamless user experience with authentication, hotel and room management, booking features, and advanced search functionalities.",
+    sourceCode: "https://github.com/AungMyoAye101/Booking-MERN",
+    siteLink: "https://bookingbyama.vercel.app/",
+    iconList: [
+      {
+        icon: "/react.svg",
+        name: "React Js",
+      },
+      {
+        icon: "/react.svg",
+        name: "react Js",
+      },
+      {
+        icon: "/mongodb.svg",
+        name: "Mongo Db",
+      },
+      {
+        icon: "/nodejs.svg",
+        name: "Node Js",
+      },
+      {
+        icon: "/typescript.svg",
+        name: "TypeScript",
+      },
+    ],
+  },
+  {
+    id: 4,
+    image: "/project/mern-auth.jpg",
+    name: "MERN_AUTH",
+    type: "Full-Stack",
+    description: "A full-stack authentication system built with MongoDB, Express, React, Node.js, and TypeScript.",
+
+    sourceCode: "https://github.com/AungMyoAye101/AUTH-MERN",
+    siteLink: "https://simple-auth-7s1n.onrender.com",
+    iconList: [
+      {
+        icon: "/nodejs.svg",
+        name: "Node Js",
+      },
+      {
+        icon: "/react.svg",
+        name: "react Js",
+      },
+      {
+        icon: "/expressjs.svg",
+        name: "Express Js",
+      },
+      {
+        icon: "/mongodb.svg",
+        name: "Mongo Db",
+      },
+
+    ],
+  },
+  {
+    id: 5,
     type: "Front-End",
     image: "/shop.png",
     name: "Ecommerce ",
@@ -56,32 +176,9 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 7,
     type: "Front-End",
-    image: "p2.svg",
-    name: "Awarded Gaming",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? ",
-    sourceCode: "example.com",
-    siteLink: "example.com",
-    iconList: [
-      {
-        icon: "/react.svg",
-        name: "React Js",
-      },
-      {
-        icon: "/tailwindcss.svg",
-        name: "Tailwind CSS",
-      }, {
-        icon: "/typescript.svg",
-        name: "Typescript"
-      }
-    ],
-  },
-  {
-    id: 3,
-    type: "Front-End",
-    image: "/movieapp.jpg",
+    image: "/project/movie-app.jpg",
     name: "Movie Search",
     description:
       "The Movie Review Web App is a comprehensive platform for movie enthusiasts to explore and review trending movies and TV shows. This web application allows users to search for movies and TV shows, view personal details of each title, and receive personalized recommendations based on their preferences.",
@@ -103,7 +200,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 8,
     type: "Full-Stack",
     image: "/promptopia.png",
     name: "Promptopia",
@@ -130,60 +227,7 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 5,
-    image: "/p1.svg",
-    name: "Socail App",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium?Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? ",
-    sourceCode: "example.com",
-    siteLink: "example.com",
-    iconList: [
-      {
-        icon: "/react.svg",
-        name: "React Js",
-      },
-      {
-        icon: "/nextjs.svg",
-        name: "Next Js",
-      },
-      {
-        icon: "/mongodb.svg",
-        name: "Mongo Db",
-      },
-      {
-        icon: "/nodejs.svg",
-        name: "Node Js",
-      },
-    ],
-  },
-  {
-    id: 6,
-    image: "/p4.svg",
-    name: "Promptopia",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit.  quidem vitae, quas libero dolor ea laudantium?",
-    sourceCode: "example.com",
-    siteLink: "example.com",
-    iconList: [
-      {
-        icon: "/react.svg",
-        name: "React Js",
-      },
-      {
-        icon: "/nextjs.svg",
-        name: "Next Js",
-      },
-      {
-        icon: "/mongodb.svg",
-        name: "Mongo Db",
-      },
-      {
-        icon: "/nodejs.svg",
-        name: "Node Js",
-      },
-    ],
-  },
+
 ];
 
 export const frontEnd = {

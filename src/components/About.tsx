@@ -1,27 +1,10 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { animateText } from "./Skills";
 import TextReveal from "./ui/TextReveal";
 import Button from "./ui/Button";
 import { contactLinks } from "@/constant";
-
-const aboutContainerVarients = {
-  hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  },
-  trasition: {
-    ease: "easeInOut",
-    staggerChildren: 0.2,
-
-  }
-
-
-}
 
 const iconVarients = {
   initial: { opacity: 0, scale: 0 },

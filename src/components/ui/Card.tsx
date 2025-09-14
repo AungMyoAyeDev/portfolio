@@ -1,6 +1,6 @@
 "use client";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import React from "react";
@@ -19,15 +19,7 @@ const itemVariants = {
   },
 };
 
-const containerVarient = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { type: "spring", stiffness: 100, damping: 15, staggerChildren: 0.2, when: "beforeChildren" },
-  },
 
-}
 
 const titleVariants = {
   hidden: { opacity: 0, x: -50 },

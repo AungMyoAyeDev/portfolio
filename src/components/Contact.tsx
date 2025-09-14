@@ -1,24 +1,11 @@
 "use client";
 
-import React, { FormEvent, useRef, useState } from "react";
+import React, { FormEvent, useState } from "react";
 
-import { delay, easeInOut, motion, useInView } from "framer-motion";
-import Form from "./ui/form";
+import { motion } from "framer-motion";
 
-const varients = {
-  initial: {
-    opacity: 0,
-    y: 500,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
-    },
-  },
-};
+
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,8 +28,6 @@ const itemVariants = {
 
 
 const Contact = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { margin: "-100px" });
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -77,7 +62,7 @@ const Contact = () => {
           className="text-3xl sm:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500"
           variants={itemVariants}
         >
-          Let's Connect
+          Let &apos Connect
         </motion.h1>
 
         {isSubmitted ? (
@@ -87,8 +72,8 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl font-semibold text-white">Thank you!</h2>
-            <p className="mt-2 text-lg text-gray-400">Your message has been sent. I'll get back to you shortly.</p>
+            <h2 className="text-2xl font-semibold text-white">Thank you</h2>
+            <p className="mt-2 text-lg text-gray-400">Your message has been sent. I will get back to you shortly.</p>
           </motion.div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">

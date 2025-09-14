@@ -3,7 +3,7 @@
 import { projects } from "@/data";
 import Card from "./ui/Card";
 import { useRef, useState } from "react";
-import { delay, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -67,17 +67,20 @@ const Project = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-4  ">
-        {projectFilter.map((item) => (
-          <Card
-            key={item.id}
-            image={item.image}
-            name={item.name}
-            description={item.description}
-            iconList={item.iconList}
-            sourceCode={item.sourceCode}
-            siteLink={item.siteLink}
-          />
-        ))}
+        {projectFilter.map((item, i) => {
+          if (i < 6) {
+            return <Card
+              key={i}
+              image={item.image}
+              name={item.name}
+              description={item.description}
+              iconList={item.iconList}
+              sourceCode={item.sourceCode}
+              siteLink={item.siteLink}
+            />
+          }
+
+        })}
       </motion.main>
     </section>
   );

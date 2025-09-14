@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth 	snap-mandatory">
       <body className="bg-[#111311]">
-        {/* <Cursor /> */}
+        <Cursor />
 
         <div className="max-w-7xl mx-auto">
           <NavBar />

@@ -2,14 +2,15 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import SideBar from "./SideBar";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { NavLinks } from "@/data";
+import Link from "next/link";
 
 
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(0);
+
 
   const handleClick = () => {
     setOpen((pre) => !pre);
@@ -28,9 +29,9 @@ const NavBar = () => {
         <button className="block md:hidden text-lg text-white bg-purple-600 rounded-full p-2" onClick={handleClick}><FaBars /></button>
 
 
-        <a href="/">
+        <Link href="/">
           <h1 className="font-poppin font-bold text-white md:text-purple-500 text-2xl sm:text-2xl md:text-4xl ">AMA.</h1>
-        </a>
+        </Link>
         <div className="hidden md:flex items-center text-white/90">
           {
             NavLinks.map(link => (

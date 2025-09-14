@@ -2,10 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import TextReveal from "./ui/TextReveal";
-
-
 import BgGradientBtn from "./ui/BgGradientBtn";
 import Button from "./ui/Button";
 
@@ -25,32 +22,14 @@ const buttonVarients = {
   },
 };
 
-const imageVarients = {
-  initial: {
-    opacity: 0,
-    scale: 0,
-  },
-
-  inView: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "easeIn",
-      stiffness: 30,
-      dumping: 20,
-    },
-  },
-};
 
 const Hero = () => {
-
-
   const intro = "Hi! I am Aung Myo Aye";
   const heroText =
     "A Full-Stack developer and UI/UX designer passionate about creating efficient, scalable web solutions.";
 
-  const tagline =
-    "Crafting modern, responsive web applications with a touch of creativity.";
+  // const tagline =
+  //   "Crafting modern, responsive web applications with a touch of creativity.";
 
   return (<>
     <section className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center gap-6 py-20 px-4 md:px-8 overflow-hidden">
