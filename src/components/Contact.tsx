@@ -36,13 +36,30 @@ const Contact = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     // In a real application, you would handle form submission here,
     // for example, by sending the data to an API endpoint.
-    console.log('Form data submitted:', formData);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
+    try {
+      setIsSubmitted(true);
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      console.log(data)
+
+      setFormData({ name: '', email: '', message: '' });
+
+
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsSubmitted(false);
+    }
+
   };
 
   return (

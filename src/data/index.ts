@@ -154,7 +154,7 @@ export const projects = [
   {
     id: 5,
     type: "Front-End",
-    image: "/shop.png",
+    image: "/project/shop-react.jpg",
     name: "Ecommerce ",
     description:
       "This is a comprehensive e-commerce shop application built with React, Vite, and TypeScript. The app leverages the Fake Store API for product data and includes features such as responsive design, add to cart, search by text, category filtering, and a dynamic discount pricing mechanism at checkout. The UI includes skeleton loading components for a smooth user experience.",
