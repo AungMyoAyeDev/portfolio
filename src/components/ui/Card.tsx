@@ -72,11 +72,11 @@ const Card = ({
       variants={itemVariants}
       initial="hidden"
       whileInView="visible"
-      className="bg-gray-800 rounded-lg overflow-hidden w-full border border-gray-500">
-      <div className="relative w-full aspect-video   overflow-hidden">
-        <Image src={image} fill alt={name} className="hover:scale-125 transition-transform duration-150 ease-in-out" />
+      className="bg-gray-800 rounded-lg overflow-hidden w-full border border-gray-500 p-4">
+      <div className="relative w-full aspect-video   overflow-hidden rounded">
+        <Image src={image} fill alt={name} sizes="(max-width: 768px)" className="hover:scale-125 transition-transform duration-150 ease-in-out" />
       </div>
-      <div className="flex flex-col gap-2 px-4 py-4">
+      <div className="flex flex-col gap-2 mt-4">
         <div className="flex justify-between items-center">
 
           <motion.h1

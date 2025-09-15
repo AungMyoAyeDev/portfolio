@@ -76,6 +76,7 @@ const Hero = () => {
           <Image
             src={"/images/profile.png"}
             fill
+            sizes="(max-width:768px)"
             alt="Aung Myo Aye's profile photo"
             className={'object-cover object-center rounded-full relative z-20 animate-colorCycle border-4 border-purple-400 '}
           />

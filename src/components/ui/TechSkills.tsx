@@ -62,6 +62,7 @@ const TechSkills: FC<SkillsProp> = ({ title, skill }) => {
                 width={40}
                 height={40}
                 alt={skill.name}
+                sizes="(max-width:60px)"
                 className="object-contain drop-shadow-md"
               />
             </motion.div>

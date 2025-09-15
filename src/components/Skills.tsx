@@ -43,7 +43,7 @@ const Skills = () => {
               initial="close"
               whileInView="open"
             >
-              <Image src={image} width={60} height={40} alt="title" />
+              <Image src={image} width={60} height={40} alt="title" sizes="(max-width:400px)" />
 
               <div className="space-y-3 mt-2">
                 <motion.h1

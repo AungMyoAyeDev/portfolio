@@ -1,10 +1,7 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-
-import { motion } from "framer-motion";
-
-
+import { motion } from "framer-motion"
 
 
 const containerVariants = {
@@ -26,7 +23,13 @@ const itemVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-
+async function sendFeedback(data: { name: string, email: string, message: string }) {
+  await fetch("http://localhost:3000/api/sendMail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+}
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -36,30 +39,13 @@ const Contact = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // In a real application, you would handle form submission here,
     // for example, by sending the data to an API endpoint.
-    try {
-      setIsSubmitted(true);
-      const res = await fetch("/api/feedback", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
 
-      const data = await res.json();
-      console.log(data)
-
-      setFormData({ name: '', email: '', message: '' });
-
-
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setIsSubmitted(false);
-    }
-
+    sendFeedback(formData)
+    setIsSubmitted(true)
   };
 
   return (
@@ -79,7 +65,7 @@ const Contact = () => {
           className="text-3xl sm:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500"
           variants={itemVariants}
         >
-          Let &apos Connect
+          Let&apos;s Connect
         </motion.h1>
 
         {isSubmitted ? (

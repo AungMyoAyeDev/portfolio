@@ -1,28 +1,26 @@
 "use client";
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaLocationArrow } from "react-icons/fa";
 import SideBar from "./SideBar";
 import { AnimatePresence } from "framer-motion";
 import { NavLinks } from "@/data";
 import Link from "next/link";
 
-
+import { TbHeartHandshake } from "react-icons/tb";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
 
   const handleClick = () => {
-    setOpen((pre) => !pre);
+    setOpen(pre => !pre);
   };
   return (
     <div className="fixed top-0 left-0 right-0 shadow-md dark:bg-neutral-900 z-40   mx-auto">
-      <AnimatePresence>
+      {/* <AnimatePresence> */}
 
-        {
-          open && <SideBar handleClick={handleClick} />
-        }
-      </AnimatePresence>
+      <SideBar handleClick={handleClick} isOpen={open} />
+      {/* </AnimatePresence> */}
       <nav className="max-w-7xl mx-auto z-40 flex justify-between items-center px-4 md:px-6  py-3 backdrop-blur-sm">
 
 
@@ -35,14 +33,15 @@ const NavBar = () => {
         <div className="hidden md:flex items-center text-white/90">
           {
             NavLinks.map(link => (
-              <a key={link.id} href={link.link} className="relative group px-3 py-2 font-poppin text-lg font-semibold uppercase">
+              <Link key={link.id} href={link.link} className="relative group px-3 py-2 font-poppin text-lg font-semibold uppercase">
                 <span>{link.name}</span>
-                <span className=" absolute rounded-full h-1 bottom-0 left-0 w-0 bg-purple-600 group-hover:w-full transition-all  ease-in-out duration-200"></span></a>
+                <span className=" absolute rounded-full h-1 bottom-0 left-0 w-0 bg-purple-600 group-hover:w-full transition-all  ease-in-out duration-200"></span>
+              </Link>
             ))
           }
         </div>
         <div>
-          <a href="" className="bg-purple-600 px-4 py-2 text-sm md:text-base rounded-lg text-white hover:bg-orange-400">Contact me</a>
+          <Link href="mailto:aungmyoaye101@gmail.com" target="_blank" className="bg-purple-600 px-4 py-2 text-sm md:text-base rounded-lg text-white hover:bg-orange-400 flex justify-center items-center gap-2"><span className="hidden sm:block">Contact me</span> <TbHeartHandshake className="text-xl" /></Link>
         </div>
       </nav>
     </div>

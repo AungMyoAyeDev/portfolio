@@ -34,7 +34,7 @@ const About = () => {
 
           <div className="w-60 h-60 md:w-72 md:h-72 rounded-full relative bg-purple-600 overflow-hidden z-10 ">
 
-            <Image src={'/images/profile.png'} fill alt="profile photo" className=" object-scale-down  " />
+            <Image src={'/images/profile.png'} fill sizes="(max-width:768px)" alt="profile photo" className=" object-scale-down  " />
           </div>
           <div className="absolute -inset-2 border-t-2 border-orange-400 rounded-full  animate-spin" />
           <div className="absolute -inset-2 border-l-2 border-cyan-400 rounded-full  animate-spin " />
