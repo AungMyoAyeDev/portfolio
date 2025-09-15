@@ -2,7 +2,7 @@
 
 import React, { FormEvent, useState } from "react";
 import { motion } from "framer-motion"
-
+import emailjs from "@emailjs/browser"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,14 +22,10 @@ const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
+emailjs.init({
+  publicKey: '3EzNTtAHUCA8RvPyj',
+})
 
-async function sendFeedback(data: { name: string, email: string, message: string }) {
-  await fetch("http://localhost:3000/api/sendMail", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-}
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -41,11 +37,24 @@ const Contact = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // In a real application, you would handle form submission here,
-    // for example, by sending the data to an API endpoint.
 
-    sendFeedback(formData)
-    setIsSubmitted(true)
+    emailjs.send(
+      "service_jfthy5f",
+      "template_jn7xbx8",
+      formData,
+
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setIsSubmitted(true)
+    },
+      (error) => {
+        console.log('FAILED...', error);
+      },)
+
+
+
+
+
   };
 
   return (
