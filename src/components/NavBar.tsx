@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { FaBars, FaLocationArrow } from "react-icons/fa";
-import SideBar from "./SideBar";
+import { FaBars } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import { NavLinks } from "@/data";
 import Link from "next/link";
 
 import { TbHeartHandshake } from "react-icons/tb";
+import SideBar from "./SideBar";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -17,10 +17,11 @@ const NavBar = () => {
   };
   return (
     <div className="fixed top-0 left-0 right-0 shadow-md dark:bg-neutral-900 z-40   mx-auto">
-      {/* <AnimatePresence> */}
-
-      <SideBar handleClick={handleClick} isOpen={open} />
-      {/* </AnimatePresence> */}
+      <AnimatePresence>
+        {
+          open && <SideBar handleClick={handleClick} />
+        }
+      </AnimatePresence>
       <nav className="max-w-7xl mx-auto z-40 flex justify-between items-center px-4 md:px-6  py-3 backdrop-blur-sm">
 
 
