@@ -54,8 +54,8 @@ const Hero = () => {
           <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" />
 
           <a
-            download
-            href="/images/profile.png"
+            download="Aung_Myo_Aye_Resume.pdf"
+            href="/images/Aung_Myo_Aye_Resume.pdf"
           >
             <Button text="Download Resume" />
           </a>
