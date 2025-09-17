@@ -53,7 +53,7 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
             download
-            href="/images/profile.png"
+            href="/images/Aung_Myo_Aye_Resume.pdf"
             className="md:self-end self-center"
           >
             <Button text="Download Resume" />
