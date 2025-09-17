@@ -65,7 +65,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 200, dumping: 20 }}
+          transition={{ease:'linear' }}
           className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
 
           <Image
