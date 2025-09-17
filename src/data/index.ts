@@ -307,10 +307,10 @@ export const others = {
       name: "Framer Motion",
       count: 40,
     },
-    {
-      icon: "/wordpress.svg",
-      name: "Wordpress",
-      count: 40,
-    },
+    // {
+    //   icon: "/wordpress.svg",
+    //   name: "Wordpress",
+    //   count: 40,
+    // },
   ],
 };

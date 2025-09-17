@@ -37,7 +37,7 @@ const iconVariants = {
     opacity: 1,
     scale: 1,
     x: 0,
-    transition: { type: "spring", stiffness: 200, damping: 15, delay: 0.6 },
+    transition: { type: "spring", stiffness: 200, damping: 15, delay: 0.6, },
   },
 };
 
@@ -107,7 +107,11 @@ const Card = ({
             ))}
           </motion.div>
         </div>
-        <p className=" text-sm  line-clamp-2 font-poppin text-white/90">{description}</p>
+        <motion.p
+          variants={titleVariants}
+          initial='hidden'
+          whileInView="visible"
+          className=" text-sm  line-clamp-2 font-poppin text-white/90">{description}</motion.p>
         <div className="flex justify-between items-center text-orange-400">
           <motion.a
             variants={buttonVariants}

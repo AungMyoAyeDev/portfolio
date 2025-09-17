@@ -60,18 +60,13 @@ const Hero = () => {
             <Button text="Download Resume" />
           </a>
         </motion.div>
-
-
-
-
       </div>
-
-
-
-
-
       <div className="relative w-full md:w-[40vw]  ">
-        <div className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 200, dumping: 20 }}
+          className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
 
           <Image
             src={"/images/profile.png"}
@@ -91,7 +86,7 @@ const Hero = () => {
               className="bg-transparent size-10 sm:size-12 md:size-16"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
 
 
