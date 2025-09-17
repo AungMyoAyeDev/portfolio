@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/ui/Cursor";
+import SplashScreen from "@/components/SplashScreen";
 
 export const metadata: Metadata = {
   title: "Aung Myo Aye's Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Cursor />
 
         <div className="max-w-7xl mx-auto">
+          <SplashScreen />
           <NavBar />
           {children}
         </div>
