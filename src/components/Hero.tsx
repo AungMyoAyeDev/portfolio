@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import TextReveal from "./ui/TextReveal";
 import BgGradientBtn from "./ui/BgGradientBtn";
@@ -34,38 +33,34 @@ const Hero = () => {
   return (<>
     <section className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center gap-6 py-20 px-4 md:px-8 overflow-hidden">
       <div className="w-full md:w-[50vw]  flex flex-col gap-4 items-center text-center md:text-start md:items-start relative z-10">
-        <TextReveal
+        {/* <TextReveal
           words={intro}
           className="font-poppin text-base md:text-xl font-medium gap-1"
         />
         <TextReveal
           words={heroText}
           className="  font-poppin text-xl  md:text-3xl lg:text-4xl font-bold gap-2 justify-center  md:justify-start"
-        />
+        /> */}
 
-        <motion.div
-          variants={buttonVarients}
-          initial="initial"
-          whileInView="inView"
+        <div
+
           className="flex flex-wrap gap-4 justify-center items-center mt-4"
         >
 
 
-          <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" />
+          {/* <BgGradientBtn text="Get In Touch" link="mailto:example@gmail.com" /> */}
 
           <a
             download="Aung_Myo_Aye_Resume.pdf"
             href="/images/Aung_Myo_Aye_Resume.pdf"
           >
-            <Button text="Download Resume" />
+
           </a>
-        </motion.div>
+        </div>
       </div>
       <div className="relative w-full md:w-[40vw]  ">
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ease:'linear' }}
+        <div
+
           className="relative size-40 sm:size-[250px] md:size-[300px] mx-auto">
 
           <Image
@@ -86,7 +81,7 @@ const Hero = () => {
               className="bg-transparent size-10 sm:size-12 md:size-16"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
 
 

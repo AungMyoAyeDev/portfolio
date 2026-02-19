@@ -1,8 +1,7 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import { motion } from "framer-motion"
-import emailjs from "@emailjs/browser"
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,9 +21,6 @@ const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
-emailjs.init({
-  publicKey: '3EzNTtAHUCA8RvPyj',
-})
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });

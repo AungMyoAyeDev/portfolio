@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -14,8 +14,8 @@ const Cursor = () => {
     return () => window.removeEventListener("mousemove", mouseMove);
   }, []);
   return (
-    <motion.div
-      animate={{ x: position.x + 10, y: position.y + 10 }}
+    <div
+
       className="fixed z-50 "
     >
       <Image
@@ -24,7 +24,7 @@ const Cursor = () => {
         height={20}
         alt="butterfly coursor"
       />
-    </motion.div>
+    </div>
   );
 };
 
