@@ -41,10 +41,9 @@ export default function ThemeToggle() {
         <Switch
             isSelected={theme === "dark"}
             onChange={handleChange}
-            size="md"
+            size="lg"
 
         >
-            {theme === "dark" ? "Dark" : "Light"}
             <Switch.Control>
                 <Switch.Thumb>
                     <Switch.Icon>

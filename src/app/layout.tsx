@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "../components/nav-bar";
 
 
 
@@ -17,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased`}
+        className={` antialiased max-w-7xl mx-auto`}
       >
 
+        <NavBar />
 
         {children}
 

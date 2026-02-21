@@ -5,7 +5,7 @@ import ThemeToggle from "./ui/theme-toggle"
 
 const Hero = () => {
     return (
-        <section className="flex flex-col justify-center items-center h-screen gap-5 bg-background">
+        <section className="flex flex-col justify-center items-center h-screen gap-5 ">
             <Button variant="tertiary" isIconOnly className={"rounded "}>
                 <FaReact />
 
