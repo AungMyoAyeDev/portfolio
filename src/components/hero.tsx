@@ -1,40 +1,40 @@
 import { FcNext } from "react-icons/fc"
 import Button from "./ui/button"
-import { FaMobile, FaReact } from "react-icons/fa6"
+import { FaDownload, FaGithub, FaLinkedin, FaMailchimp, FaMobile, FaReact } from "react-icons/fa6"
 import ThemeToggle from "./ui/theme-toggle"
+import Link from "next/link"
+import { MdMail } from "react-icons/md"
+import { LuView } from "react-icons/lu"
+import { BsArrowDown, BsEyeFill, BsEyeglasses } from "react-icons/bs"
 
 const Hero = () => {
     return (
-        <section className="flex flex-col justify-center items-center h-screen gap-5 ">
-            <Button variant="tertiary" isIconOnly className={"rounded "}>
-                <FaReact />
+        <section className="min-h-screen flex flex-col justify-center items-center  gap-4 ">
+            <h1 className="font-bold text-4xl capitalize">I'm Aung Myo Aye</h1>
+            <h2 className="font-semibold text-2xl capitalize">A full stack | Backend focus develper</h2>
+            <p>I build structured, scalable web applications with clean architecture and production-ready backend systems.</p>
 
-            </Button>
-            <Button variant='secondary' className={"rounded "}>
-                Button
-
-            </Button>
-            <Button variant='outline' className={"rounded "}>
-                hello
-
-            </Button>
-            <Button variant='ghost' className={"rounded "}>
-                <FaMobile />
-                hello
-
-            </Button>
-            <Button variant='danger' className={"rounded "}>
-                <FcNext />
-                hello
-
-            </Button>
-            <ThemeToggle />
-            <div className="text-primary-foreground">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, molestiae corporis, veritatis et in, ex at ratione earum hic vero unde odio sint! Reprehenderit illo saepe doloremque repellendus amet. Dolorum.
-            </div>
-            <div className="w-20 h-20 bg-accent-soft-foreground">
+            <div className="flex items-center gap-4">
+                <Button variant='tertiary' className={"rounded capitalize"}>
+                    <BsEyeFill />
+                    view projects</Button>
+                <Button variant="primary" className={"rounded capitalize"}>
+                    <FaDownload />
+                    download resume</Button>
 
             </div>
+            <div className="flex items-center gap-4">
+                <Link href='/'>
+                    <FaGithub />
+                </Link>
+                <Link href='/'>
+                    <MdMail />
+                </Link>
+                <Link href='/'>
+                    <FaLinkedin />
+                </Link>
+            </div>
+
         </section>
     )
 }
