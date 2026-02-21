@@ -1,2 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "@heroui/styles";
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    /* Base */
+    --background: oklch(0.97 0.01 255);
+    --foreground: oklch(0.22 0.02 255);
+
+    /* Content Surfaces */
+    --content1: oklch(0.99 0.005 255);
+    --content2: oklch(0.95 0.01 255);
+    --content3: oklch(0.92 0.015 255);
+    --content4: oklch(0.88 0.02 255);
+
+    /* Divider */
+    --divider: oklch(0.88 0.01 255);
+
+    /* Primary – Indigo Blue */
+    --primary: oklch(0.58 0.16 265);
+    --primary-foreground: oklch(0.98 0.01 255);
+
+    /* Focus */
+    --focus: oklch(0.65 0.18 265);
+
+    /* Default (neutral buttons) */
+    --default: oklch(0.90 0.01 255);
+    --default-foreground: oklch(0.30 0.02 255);
+
+    /* Success / Warning / Danger */
+    --success: oklch(0.70 0.14 145);
+    --warning: oklch(0.80 0.15 85);
+    --danger: oklch(0.62 0.20 25);
+}
+
+[data-theme="dark"] {
+    /* Base */
+    --background: oklch(0.18 0.02 260);
+    --foreground: oklch(0.92 0.01 260);
+
+    /* Content Surfaces */
+    --content1: oklch(0.22 0.02 260);
+    --content2: oklch(0.26 0.02 260);
+    --content3: oklch(0.30 0.02 260);
+    --content4: oklch(0.35 0.02 260);
+
+    /* Divider */
+    --divider: oklch(0.35 0.02 260);
+
+    /* Primary – Brighter for dark */
+    --primary: oklch(0.70 0.17 265);
+    --primary-foreground: oklch(0.15 0.02 260);
+
+    /* Focus */
+    --focus: oklch(0.75 0.20 265);
+
+    /* Default */
+    --default: oklch(0.30 0.02 260);
+    --default-foreground: oklch(0.85 0.01 260);
+
+    /* Status */
+    --success: oklch(0.75 0.16 145);
+    --warning: oklch(0.85 0.17 85);
+    --danger: oklch(0.70 0.22 25);
+}
