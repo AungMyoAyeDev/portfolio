@@ -11,6 +11,7 @@
         "next": "16.1.6",
         "react": "19.2.3",
         "react-dom": "19.2.3",
+        "react-icons": "^5.5.0",
       },
       "devDependencies": {
         "@tailwindcss/postcss": "^4",
@@ -988,6 +989,8 @@
     "react-aria-components": ["react-aria-components@1.15.1", "", { "dependencies": { "@internationalized/date": "^3.11.0", "@internationalized/string": "^3.2.7", "@react-aria/autocomplete": "3.0.0-rc.5", "@react-aria/collections": "^3.0.2", "@react-aria/dnd": "^3.11.5", "@react-aria/focus": "^3.21.4", "@react-aria/interactions": "^3.27.0", "@react-aria/live-announcer": "^3.4.4", "@react-aria/overlays": "^3.31.1", "@react-aria/ssr": "^3.9.10", "@react-aria/textfield": "^3.18.4", "@react-aria/toolbar": "3.0.0-beta.23", "@react-aria/utils": "^3.33.0", "@react-aria/virtualizer": "^4.1.12", "@react-stately/autocomplete": "3.0.0-beta.4", "@react-stately/layout": "^4.5.3", "@react-stately/selection": "^3.20.8", "@react-stately/table": "^3.15.3", "@react-stately/utils": "^3.11.0", "@react-stately/virtualizer": "^4.4.5", "@react-types/form": "^3.7.17", "@react-types/grid": "^3.3.7", "@react-types/shared": "^3.33.0", "@react-types/table": "^3.13.5", "@swc/helpers": "^0.5.0", "client-only": "^0.0.1", "react-aria": "^3.46.0", "react-stately": "^3.44.0", "use-sync-external-store": "^1.6.0" }, "peerDependencies": { "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1", "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1" } }, "sha512-irGhZ+vBvoY9xJHf/qzPLLwFZ8cBUrYwPERGhgjE62dy/RXMUiEW+1DeTHz0OvtjbvFbhNp/I7XM9IaBvmLALg=="],
 
     "react-dom": ["react-dom@19.2.3", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.3" } }, "sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg=="],
+
+    "react-icons": ["react-icons@5.5.0", "", { "peerDependencies": { "react": "*" } }, "sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw=="],
 
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 
