@@ -7,10 +7,10 @@ import Button from './ui/button';
 const Projects = () => {
     return (
         <section className='py-6'>
-            <h1 className='text-2xl font-bold my-4'>Projects</h1>
-            <main className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4'>
+            <h1 className='head1'>Projects</h1>
+            <main className='grid grid-cols-1 sm:grid-cols-2  gap-4'>
 
-                <Card className='rounded p-0 border shadow'>
+                <Card className='rounded-lg p-0 border shadow'>
 
                     <div className='relative w-full aspect-video'>
                         <Image
