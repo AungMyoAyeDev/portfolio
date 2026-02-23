@@ -3,49 +3,121 @@ import React from 'react'
 import Button from './ui/button'
 import { BsEyeFill } from 'react-icons/bs'
 import { FaDownload } from 'react-icons/fa6'
+import { Card, CardContent } from '@heroui/react'
 
 const About = () => {
     return (
-        <section className=''>
+        <section
+            id="about"
+            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+        >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-            <div className='flex gap-12 justify-center items-center py-6'>
+                {/* Photo Block */}
+                <div className="relative">
+                    <Card className="bg-background/60 backdrop-blur-lg border border-default-200 shadow-xl rounded-2xl">
 
-                <div className='w-full md:w-2/4 flex flex-col gap-4'>
-                    <h1 className='head1'>About Me</h1>
-                    <h2 className='font-lg font-semibold text-lg'>
-                        Software engineer focused on building scalable, maintainable, and production-ready web applications.
-                    </h2>
-                    <p>
-                        I specialize in backend system design, authentication workflows, booking and payment logic, and structured API development. My approach emphasizes clean architecture, clear separation of concerns, and long-term maintainability.
+                        <Image
+                            src="/ama.jpg"
+                            alt="Aung Myo Aye"
+                            width={500}
+                            height={600}
+                            className="rounded-xl object-cover"
+                        />
+
+                    </Card>
+
+                    {/* Soft Glow Background */}
+                    <div className="absolute -z-10 inset-0 bg-gradient-to-br from-violet-500/20 to-transparent blur-3xl" />
+                </div>
+
+                {/* Content Block */}
+                <div>
+                    {/* Section Label */}
+                    <p className="text-sm tracking-widest uppercase text-violet-500 font-medium">
+                        About Me
                     </p>
-                    <p>I am comfortable working independently, translating business requirements into technical solutions, and shipping features from planning to deployment.</p>
 
-                    <div className=" flex items-center gap-4">
-                        <Button variant='tertiary' className={"rounded capitalize"}>
-                            <BsEyeFill />
-                            view projects</Button>
-                        <Button variant="primary" className={"rounded capitalize text-foreground"}>
-                            <FaDownload />
-                            download resume</Button>
+                    {/* Heading */}
+                    <h2 className="mt-4 text-3xl lg:text-4xl font-bold leading-tight">
+                        Backend-Focused Full Stack Developer
+                        <span className="block text-default-500 text-lg font-medium mt-2">
+                            Building Scalable & Real-World Systems
+                        </span>
+                    </h2>
 
+                    {/* Bio */}
+                    <div className="mt-6 space-y-4 text-default-600 leading-relaxed">
+                        <p>
+                            I am a second-year English major with strong technical training in
+                            full-stack development. My primary focus is backend architecture,
+                            authentication systems, and scalable application design.
+                        </p>
+
+                        <p>
+                            I build real-world systems including booking platforms and utility
+                            management systems, applying clean code principles and modern
+                            development practices.
+                        </p>
+
+                        <p>
+                            My goal is to contribute to remote and international teams by
+                            delivering reliable, production-ready software.
+                        </p>
+                    </div>
+
+                    {/* Highlight Cards */}
+                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
+                            <CardContent>
+                                <h4 className="font-semibold">🎓 Education</h4>
+                                <p className="text-sm text-default-500">
+                                    English Major + IT Certifications
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
+
+                            <h4 className="font-semibold">⚙ Focus</h4>
+                            <p className="text-sm text-default-500">
+                                Backend Systems & API Design
+                            </p>
+
+                        </Card>
+
+                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
+
+                            <h4 className="font-semibold">🌍 Goal</h4>
+                            <p className="text-sm text-default-500">
+                                Remote & International Roles
+                            </p>
+
+                        </Card>
+                    </div>
+
+                    {/* Mini Stats */}
+                    <div className="mt-10 flex gap-10 text-sm text-default-500">
+                        <div>
+                            <p className="text-2xl font-bold text-foreground">10+</p>
+                            <p>Projects Built</p>
+                        </div>
+                        <div>
+                            <p className="text-2xl font-bold text-foreground">2</p>
+                            <p>Flagship Systems</p>
+                        </div>
+                        <div>
+                            <p className="text-2xl font-bold text-foreground">2+ Years</p>
+                            <p>Learning & Building</p>
+                        </div>
                     </div>
                 </div>
-                <aside className=' '>
-
-                    <Image
-                        src={'/ama.jpg'}
-                        alt='Aung Myo Aye photo'
-                        width={300}
-                        height={300}
-                        className='aspect-square object-cover border-6 border-accent/40 rounded-full shadow shadow-accent'
-                    />
-
-
-                </aside>
             </div>
-
         </section>
     )
 }
 
 export default About
+
+// components/sections/AboutSection.tsx
+

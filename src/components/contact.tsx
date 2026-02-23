@@ -1,95 +1,76 @@
+// components/sections/ContactSection.tsx
 
 "use client";
 
+import {
+    Card,
 
-import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
-import { BiCheck } from "react-icons/bi";
+    Input,
 
-export function Basic() {
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const data: Record<string, string> = {};
+    Button,
+    TextArea,
+} from "@heroui/react";
 
-        // Convert FormData to plain object
-        formData.forEach((value, key) => {
-            data[key] = value.toString();
-        });
-
-        alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
-    };
-
+export default function ContactSection() {
     return (
-        <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
-            <TextField
-                isRequired
-                name="email"
-                type="email"
-                validate={(value) => {
-                    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-                        return "Please enter a valid email address";
-                    }
+        <section
+            id="contact"
+            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+        >
+            <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
+                Contact
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-                    return null;
-                }}
-            >
-                <Label>Email</Label>
-                <Input placeholder="john@example.com" />
-                <FieldError />
-            </TextField>
-
-            <TextField
-                isRequired
-                minLength={8}
-                name="password"
-                type="password"
-                validate={(value) => {
-                    if (value.length < 8) {
-                        return "Password must be at least 8 characters";
-                    }
-                    if (!/[A-Z]/.test(value)) {
-                        return "Password must contain at least one uppercase letter";
-                    }
-                    if (!/[0-9]/.test(value)) {
-                        return "Password must contain at least one number";
-                    }
-
-                    return null;
-                }}
-            >
-                <Label>Password</Label>
-                <Input placeholder="Enter your password" />
-                <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
-                <FieldError />
-            </TextField>
-
-            <div className="flex gap-2">
-                <Button type="submit">
-                    <BiCheck />
-                    Submit
-                </Button>
-                <Button type="reset" variant="secondary">
-                    Reset
-                </Button>
-            </div>
-        </Form>
-    );
-}
-
-const Contact = () => {
-    return (
-        <section className="py-6">
-            <h1>Contact </h1>
-            <div>
+                {/* LEFT SIDE - Contact Info */}
                 <div>
-                    <h1>
 
-                    </h1>
+
+                    <h2 className="mt-4 text-3xl lg:text-4xl font-bold">
+                        Let’s Work Together
+                    </h2>
+
+                    <p className="mt-6 text-default-600 leading-relaxed">
+                        I'm currently open to remote opportunities and collaboration
+                        on scalable backend or full-stack projects.
+                        Feel free to reach out — I’ll respond as soon as possible.
+                    </p>
+
+
                 </div>
-                <Basic />
+
+                {/* RIGHT SIDE - Contact Form */}
+                <Card className="bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl shadow-xl">
+                    <Card.Content className="p-8 space-y-6">
+                        <Input
+
+                            placeholder="Enter your name"
+
+                        />
+
+                        <Input
+                            placeholder="Enter your email"
+                            type="email"
+                            variant="secondary"
+
+                        />
+
+                        <TextArea
+
+                            placeholder="Write your message..."
+
+
+                        />
+
+                        <Button
+
+                            className="w-full font-medium"
+                        >
+                            Send Message
+                        </Button>
+                    </Card.Content>
+                </Card>
             </div>
         </section>
-    )
+    );
 }
-
-export default Contact
