@@ -35,7 +35,7 @@ export default function ThemeToggle() {
         localStorage.setItem("theme", newTheme);
     };
 
-    if (!mounted) return null; // Prevent hydration mismatch
+    // if (!mounted) return null; // Prevent hydration mismatch
 
     return (
         <Switch

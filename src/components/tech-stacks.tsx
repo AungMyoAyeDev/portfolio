@@ -58,8 +58,8 @@ const TechStacks = () => {
 
     return (
         <section >
-            <h1 className='head1'>Tech Stack</h1>
-            <h2 className="head3">Technologies I use to build scalable and production-ready applications.</h2>
+            <h1 className='head1 text-center'>Tech Stack</h1>
+            <h2 className="head3 text-center">Technologies I use to build scalable and production-ready applications.</h2>
             <main className='grid grid-cols-1 sm:grid-cols-3  gap-4 my-4'>
                 {
                     techStacksData.map((stack, index) => (
