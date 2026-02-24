@@ -8,7 +8,7 @@ import TechStacks from '../components/tech-stacks';
 
 export default function Home() {
   return (
-    <section className='px-4'>
+    <section className='px-6'>
       <Hero />
       <TechStacks />
       <About />
@@ -18,3 +18,4 @@ export default function Home() {
     </section >
   );
 }
+

@@ -10,7 +10,9 @@ import { BsArrowDown, BsEyeFill, BsEyeglasses } from "react-icons/bs"
 
 const Hero = () => {
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center  gap-4 ">
+        <section
+            id="portfolio"
+            className=" flex flex-col justify-center items-center  gap-4 ">
 
             <h1 className="font-bold text-4xl capitalize">I'm Aung Myo Aye</h1>
             <h2 className="font-semibold text-2xl capitalize">A full stack | Backend focus develper</h2>
@@ -26,14 +28,22 @@ const Hero = () => {
 
             </div>
             <div className="flex items-center gap-4">
-                <Link href='/'>
+                <Link href='/'><Button isIconOnly variant="tertiary">
+
                     <FaGithub />
+                </Button>
                 </Link>
                 <Link href='/'>
-                    <MdMail />
+                    <Button isIconOnly variant="tertiary">
+
+                        <MdMail />
+                    </Button>
                 </Link>
                 <Link href='/'>
-                    <FaLinkedin />
+                    <Button isIconOnly variant="tertiary">
+
+                        <FaLinkedin />
+                    </Button>
                 </Link>
             </div>
 

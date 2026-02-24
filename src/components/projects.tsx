@@ -166,7 +166,7 @@ export default function Projects() {
         >
             {/* Section Header */}
             <div className="text-center mb-16">
-                <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
+                <p className="text-sm uppercase tracking-widest text-accent font-medium">
                     Selected Projects
                 </p>
                 <h2 className="mt-4 text-3xl lg:text-4xl font-bold">
