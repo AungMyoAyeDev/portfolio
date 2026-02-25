@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <section className='px-6'>
       <Hero />
-      <TechStacks />
+      {/* <TechStacks />
       <About />
       <Featured />
       <Projects />
-      <Contact />
+      <Contact /> */}
     </section >
   );
 }

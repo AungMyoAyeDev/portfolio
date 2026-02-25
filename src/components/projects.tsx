@@ -162,7 +162,7 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
         >
             {/* Section Header */}
             <div className="text-center mb-16">

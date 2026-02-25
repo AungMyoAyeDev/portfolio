@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "../components/nav-bar";
 import Footer from "../components/footer";
+import { ThemeProvider } from "./provider";
 
 
 
@@ -21,12 +22,21 @@ export default function RootLayout({
       <body
         className={` antialiased max-w-6xl mx-auto`}
       >
+        <ThemeProvider
+          attribute={"class"}
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
 
-        <NavBar />
+        >
 
-        {children}
-        <Footer />
 
+
+          {/* <NavBar /> */}
+
+          {children}
+          {/* <Footer /> */}
+        </ThemeProvider>
       </body>
     </html>
   );

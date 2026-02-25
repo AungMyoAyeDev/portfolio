@@ -57,9 +57,9 @@ const TechStacks = () => {
 
 
     return (
-        <section >
-            <h1 className='head1 text-center'>Tech Stack</h1>
-            <h2 className="head3 text-center">Technologies I use to build scalable and production-ready applications.</h2>
+        <section className="min-h-screen py-12">
+            <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-center'>Tech Stack</h1>
+            <h2 className="text-base sm:text-lg md:text-xl text-center">Technologies I use to build scalable and production-ready applications.</h2>
             <main className='grid grid-cols-1 sm:grid-cols-3  gap-4 my-4'>
                 {
                     techStacksData.map((stack, index) => (

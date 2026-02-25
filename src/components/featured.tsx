@@ -45,7 +45,7 @@ export default function FeaturedProject() {
     return (
         <section
             id="featured-project"
-            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
         >
             {/* Section Header */}
             <div className="space-y-4 mb-4 text-center">

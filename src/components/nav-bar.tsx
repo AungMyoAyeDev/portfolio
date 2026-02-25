@@ -64,7 +64,7 @@ export default function Navbar() {
 
                             <Button
                                 variant='outline'
-                                className={' capitalize font-medium hover:bg-accent-hover hover:text-white'}
+                                className={' capitalize font-medium hover:bg-accent'}
 
 
 

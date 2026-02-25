@@ -15,7 +15,7 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
         >
             <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
                 Contact

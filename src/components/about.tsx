@@ -3,13 +3,13 @@ import React from 'react'
 import Button from './ui/button'
 import { BsEyeFill } from 'react-icons/bs'
 import { FaDownload } from 'react-icons/fa6'
-import { Card, CardContent } from '@heroui/react'
+
 
 const About = () => {
     return (
         <section
             id="about"
-            className="relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
