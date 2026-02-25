@@ -37,7 +37,9 @@
 
 // components/sections/FeaturedProject.tsx
 
-import { Card, Button, Chip } from "@heroui/react";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -63,7 +65,7 @@ export default function FeaturedProject() {
 
             {/* Project Card */}
             <Card className="bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl shadow-xl">
-                <Card.Content className="p-4">
+                <CardContent className="p-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                         {/* Project Image */}
@@ -98,12 +100,15 @@ export default function FeaturedProject() {
 
                             {/* Tech Stack */}
                             <div className=" flex flex-wrap gap-3">
-                                <Chip variant="primary">Next.js</Chip>
-                                <Chip variant="primary">Node.js</Chip>
-                                <Chip variant="primary">Express</Chip>
-                                <Chip variant="primary">MongoDB</Chip>
-                                <Chip variant="primary">JWT</Chip>
-                                <Chip variant="primary">Tailwind CSS</Chip>
+                                <Button>
+                                    nextjs
+                                </Button>
+                                <Button>
+                                    nextjs
+                                </Button>
+                                <Button>
+                                    nextjs
+                                </Button>
                             </div>
 
                             {/* Action Buttons */}
@@ -126,7 +131,7 @@ export default function FeaturedProject() {
                         </div>
 
                     </div>
-                </Card.Content>
+                </CardContent>
             </Card>
         </section>
     );

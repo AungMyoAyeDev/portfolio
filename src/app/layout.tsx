@@ -18,13 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={` antialiased max-w-6xl mx-auto`}
       >
         <ThemeProvider
           attribute={"class"}
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
 
@@ -32,10 +32,10 @@ export default function RootLayout({
 
 
 
-          {/* <NavBar /> */}
+          <NavBar />
 
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -9,6 +9,7 @@ import {
 
     Button,
     TextArea,
+    CardContent,
 } from "@heroui/react";
 
 export default function ContactSection() {
@@ -41,7 +42,7 @@ export default function ContactSection() {
 
                 {/* RIGHT SIDE - Contact Form */}
                 <Card className="bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl shadow-xl">
-                    <Card.Content className="p-8 space-y-6">
+                    <CardContent className="p-8 space-y-6">
                         <Input
 
                             placeholder="Enter your name"
@@ -64,11 +65,11 @@ export default function ContactSection() {
 
                         <Button
 
-                            className="w-full font-medium"
+
                         >
                             Send Message
                         </Button>
-                    </Card.Content>
+                    </CardContent>
                 </Card>
             </div>
         </section>

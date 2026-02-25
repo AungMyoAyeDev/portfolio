@@ -4,9 +4,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+
 import Image from "next/image";
 import ThemeToggle from "./ui/theme-toggle";
+import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
     "portfolio", "about", "projects", "contact"
@@ -28,11 +29,9 @@ export default function Navbar() {
 
 
         <nav
-
-
-            className={`max-w-6xl mx-auto fixed top-1 left-0 right-0 z-50 rounded-full py-1.5 px-4   transition-all duration-300 flex gap-4 justify-between items-center 
+            className={`max-w-6xl mx-auto fixed top-1 left-0 right-0 z-50 rounded-full py-1.5 px-4 border border-border   transition-all duration-300 flex gap-4 justify-between items-center 
         ${isScrolled
-                    ? "bg-background/70 backdrop-blur-xl border-b border-default-200  shadow-sm shadow-accent/10"
+                    ? "bg-background/70 backdrop-blur-xl  shadow-sm shadow-accent/10"
                     : "bg-background"
                 }`}
         >
@@ -46,7 +45,7 @@ export default function Navbar() {
                         height={40}
                         className="rounded-full object-cover w-10 h-10"
                     />
-                    <span className="text-name font-bold text-lg   uppercase">Aung Myo AYe</span>
+                    <span className="text-primary  font-bold text-lg   uppercase hidden md:block">Aung Myo AYe</span>
 
 
                 </Link>
@@ -56,24 +55,27 @@ export default function Navbar() {
             <div className="hidden md:flex gap-2 items-center">
                 {
                     NAV_LINKS.map(item => (
-                        <Link
-                            href={`#${item}`}
+                        <Button
+                            asChild
 
+                            variant='outline'
+
+                            size={'sm'}
                             key={item}
+                            className="rounded-full capitalize"
                         >
-
-                            <Button
-                                variant='outline'
-                                className={' capitalize font-medium hover:bg-accent'}
-
+                            <Link
+                                href={`#${item}`}
 
 
                             >
 
                                 {item}
+                            </Link>
 
-                            </Button>
-                        </Link>
+
+                        </Button>
+
                     ))
                 }
 

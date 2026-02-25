@@ -1,125 +1,8 @@
 "use client";
-// import { Card } from '@heroui/react'
-// import Image from 'next/image';
-// import React from 'react'
-// import Button from './ui/button';
-
-// const Projects = () => {
-//     return (
-//         <section className='py-6'>
-//             <h1 className='head1'>Projects</h1>
-//             <main className='grid grid-cols-1 sm:grid-cols-2  gap-4'>
-
-//                 <Card className='rounded-lg p-0 border shadow'>
-
-//                     <div className='relative w-full aspect-video'>
-//                         <Image
-//                             src={'/mockup-design.png'}
-//                             alt='Booking project photo'
-//                             fill
-//                             className='aspect-video object-cover'
-//                         />
-
-//                     </div>
-
-//                     <Card.Header className='p-2'>
 
 
-
-
-//                         <h1 className='text-xl font-bold'>project name</h1>
-
-//                         <Button variant='tertiary' className={'rounded'}>View </Button>
-//                     </Card.Header>
-
-
-//                 </Card>
-
-//                 <Card className='rounded p-0 border shadow'>
-
-//                     <div className='relative w-full aspect-video'>
-//                         <Image
-//                             src={'/mockup-design.png'}
-//                             alt='Booking project photo'
-//                             fill
-//                             className='aspect-video object-cover'
-//                         />
-
-//                     </div>
-
-//                     <Card.Header className='p-2'>
-
-
-
-
-//                         <h1 className='text-xl font-bold'>project name</h1>
-
-//                         <Button variant='tertiary' className={'rounded'}>View </Button>
-//                     </Card.Header>
-
-
-//                 </Card>
-
-//                 <Card className='rounded p-0 border shadow'>
-
-//                     <div className='relative w-full aspect-video'>
-//                         <Image
-//                             src={'/mockup-design.png'}
-//                             alt='Booking project photo'
-//                             fill
-//                             className='aspect-video object-cover'
-//                         />
-
-//                     </div>
-
-//                     <Card.Header className='p-2'>
-
-
-
-
-//                         <h1 className='text-xl font-bold'>project name</h1>
-
-//                         <Button variant='tertiary' className={'rounded'}>View </Button>
-//                     </Card.Header>
-
-
-//                 </Card>
-
-//                 <Card className='rounded p-0 border shadow'>
-
-//                     <div className='relative w-full aspect-video'>
-//                         <Image
-//                             src={'/mockup-design.png'}
-//                             alt='Booking project photo'
-//                             fill
-//                             className='aspect-video object-cover'
-//                         />
-
-//                     </div>
-
-//                     <Card.Header className='p-2'>
-
-
-
-
-//                         <h1 className='text-xl font-bold'>project name</h1>
-
-//                         <Button variant='tertiary' className={'rounded'}>View </Button>
-//                     </Card.Header>
-
-
-//                 </Card>
-
-//             </main>
-//         </section>
-//     )
-// }
-
-// export default Projects
-
-// components/sections/ProjectsGrid.tsx
-
-import { Card, Chip } from "@heroui/react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -186,7 +69,7 @@ export default function Projects() {
 
                             className="group bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl transition-all  hover:shadow-2xl"
                         >
-                            <Card.Content className="p-0">
+                            <CardContent className="p-0">
                                 {/* Image */}
                                 <div className="relative mb-6 overflow-hidden rounded-xl">
                                     <Image
@@ -211,12 +94,12 @@ export default function Projects() {
                                 {/* Tech Stack */}
                                 <div className="mt-5 flex flex-wrap gap-2">
                                     {project.tech.map((tech, i) => (
-                                        <Chip key={i} size="sm" variant="tertiary">
+                                        <Button key={i} size="sm" variant='outline'>
                                             {tech}
-                                        </Chip>
+                                        </Button>
                                     ))}
                                 </div>
-                            </Card.Content>
+                            </CardContent>
                         </Card>
                     </Link>
                 ))}

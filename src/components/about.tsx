@@ -1,6 +1,6 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
-import React from 'react'
-import Button from './ui/button'
+
 import { BsEyeFill } from 'react-icons/bs'
 import { FaDownload } from 'react-icons/fa6'
 
@@ -13,28 +13,24 @@ const About = () => {
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-                {/* Photo Block */}
-                <div className="relative">
-                    <Card className="bg-background/60 backdrop-blur-lg border border-default-200 shadow-xl rounded-2xl">
+                <Card className='relative w-full aspect-square p-4'>
+                    <Image
+                        src="/ama.jpg"
+                        alt="Aung Myo Aye"
+                        fill
+                        className=" object-cover w-full h-auto aspect-square rounded-xl"
+                    />
 
-                        <Image
-                            src="/ama.jpg"
-                            alt="Aung Myo Aye"
-                            width={500}
-                            height={600}
-                            className="rounded-xl object-cover"
-                        />
+                </Card>
 
-                    </Card>
+                {/* Soft Glow Background */}
+                {/* <div className="absolute -z-10 inset-0 bg-gradient-to-br from-violet-500/20 to-transparent blur-3xl" /> */}
 
-                    {/* Soft Glow Background */}
-                    <div className="absolute -z-10 inset-0 bg-gradient-to-br from-violet-500/20 to-transparent blur-3xl" />
-                </div>
 
                 {/* Content Block */}
                 <div>
                     {/* Section Label */}
-                    <p className="text-sm tracking-widest uppercase text-violet-500 font-medium">
+                    <p className="text-sm tracking-widest uppercase text-primary font-medium">
                         About Me
                     </p>
 
@@ -66,38 +62,10 @@ const About = () => {
                         </p>
                     </div>
 
-                    {/* Highlight Cards */}
-                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
-                            <CardContent>
-                                <h4 className="font-semibold">🎓 Education</h4>
-                                <p className="text-sm text-default-500">
-                                    English Major + IT Certifications
-                                </p>
-                            </CardContent>
-                        </Card>
 
-                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
-
-                            <h4 className="font-semibold">⚙ Focus</h4>
-                            <p className="text-sm text-default-500">
-                                Backend Systems & API Design
-                            </p>
-
-                        </Card>
-
-                        <Card className="bg-default-100/60 backdrop-blur-md border border-default-200 rounded-xl">
-
-                            <h4 className="font-semibold">🌍 Goal</h4>
-                            <p className="text-sm text-default-500">
-                                Remote & International Roles
-                            </p>
-
-                        </Card>
-                    </div>
 
                     {/* Mini Stats */}
-                    <div className="mt-10 flex gap-10 text-sm text-default-500">
+                    <div className="mt-4 flex gap-10 text-sm text-default-500">
                         <div>
                             <p className="text-2xl font-bold text-foreground">10+</p>
                             <p>Projects Built</p>
