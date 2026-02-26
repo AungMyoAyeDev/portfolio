@@ -2,8 +2,7 @@
 
 
 
-import { Button } from "@/components/ui/button";
-import { TECH_STACKS } from "../lib/utitly";
+import { Button } from "@/src/components/ui/button";
 import {
     Card,
     CardAction,
@@ -12,7 +11,8 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/src/components/ui/card"
+import { TECH_STACKS } from "../lib/utils";
 
 
 
@@ -47,10 +47,10 @@ const TechStacks = () => {
                                             variant='outline'
                                             size="sm"
                                         >
-                                            <tech.icon
+                                            {/* <tech.icon
                                                 className="text-lg"
                                                 style={{ color: tech.color }}
-                                            />
+                                            /> */}
                                             <span className="text-xs" >{tech.name}</span>
                                         </Button>
                                     ))}

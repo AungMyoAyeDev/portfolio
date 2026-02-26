@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 import ThemeToggle from "./ui/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 
 const NAV_LINKS = [
     "portfolio", "about", "projects", "contact"

@@ -2,15 +2,12 @@
 
 "use client";
 
-import {
-    Card,
+import { Button } from "@/src/components/ui/button";
+import { Card, CardContent } from "@/src/components/ui/card";
+import { Input } from "@/src/components/ui/input";
+import { Textarea } from "@/src/components/ui/textarea";
 
-    Input,
 
-    Button,
-    TextArea,
-    CardContent,
-} from "@heroui/react";
 
 export default function ContactSection() {
     return (
@@ -52,11 +49,11 @@ export default function ContactSection() {
                         <Input
                             placeholder="Enter your email"
                             type="email"
-                            variant="secondary"
+
 
                         />
 
-                        <TextArea
+                        <Textarea
 
                             placeholder="Write your message..."
 
