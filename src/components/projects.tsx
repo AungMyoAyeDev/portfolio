@@ -2,7 +2,7 @@
 
 
 import { Button } from "@/src/components/ui/button";
-import { Card, CardContent } from "@/src/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -64,44 +64,47 @@ export default function Projects() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
-                    <Link key={index} href={project.link}>
-                        <Card
 
-                            className="group bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl transition-all  hover:shadow-2xl"
-                        >
-                            <CardContent className="p-0">
-                                {/* Image */}
-                                <div className="relative mb-6 overflow-hidden rounded-xl">
-                                    <Image
-                                        src={'/mockup-design.png'}
-                                        alt={project.title}
-                                        width={600}
-                                        height={400}
-                                        className="rounded-xl object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                </div>
+                    <Card className="p-0 ">
+                        <CardHeader className=" group p-0 relative  overflow-hidden rounded-xl w-full aspect-video">
 
-                                {/* Title */}
-                                <h3 className="text-xl font-semibold">
-                                    {project.title}
-                                </h3>
+                            <Image
+                                src={'/mockup-design.png'}
+                                alt={project.title}
+                                fill
+                                className="rounded-xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                            />
 
-                                {/* Description */}
-                                <p className="mt-3 text-default-600 text-sm leading-relaxed">
-                                    {project.description}
-                                </p>
+                        </CardHeader>
 
-                                {/* Tech Stack */}
-                                <div className="mt-5 flex flex-wrap gap-2">
-                                    {project.tech.map((tech, i) => (
-                                        <Button key={i} size="sm" variant='outline'>
-                                            {tech}
-                                        </Button>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </Link>
+                        <CardContent >
+
+                            <h3 className="text-xl font-semibold">
+                                {project.title}
+                            </h3>
+
+
+                            <p className="mt-3 text-default-600 text-sm leading-relaxed">
+                                {project.description}
+                            </p>
+
+                            <div className="flex gap-2">
+                                {project.tech.map((tech, i) => (
+                                    <Button key={i} size="sm" variant='outline'>
+                                        {tech}
+                                    </Button>
+                                ))}
+                            </div>
+                        </CardContent>
+                        <CardFooter className="justify-between p-4">
+
+
+                            <Button variant={'link'}>View Demo</Button>
+                            <Button>Soure Code</Button>
+
+                        </CardFooter>
+                    </Card>
+
                 ))}
             </div>
         </section>

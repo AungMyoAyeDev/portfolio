@@ -3,25 +3,37 @@
 import Link from "next/link"
 
 import { Button } from "@/src/components/ui/button";
-import { Download, View } from "lucide-react";
+import { ArrowDown, Circle, Donut, Dot, Download, Search, Target, View, ViewIcon } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/utils";
+import { Badge } from "./ui/badge";
 
 
 
 
 const Hero = () => {
     return (
-        <section
+        <main
             id="portfolio"
-            className="min-h-screen py-12 flex flex-col justify-center items-center gap-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tightest leading-[1.05]">I'm Aung Myo Aye</h1>
-            <h2 className="mt-4 text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">A full stack | Backend focus develper</h2>
-            <p >I build structured, scalable web applications with clean architecture and production-ready backend systems.</p>
+            className="min-h-screen  flex flex-col justify-center  items-center gap-6 relative ">
+            <div className="space-y-4 ">
 
 
-            <div className="flex items-center gap-4">
+                <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
+                    I'm Aung Myo Aye
+                </h1>
+                <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
+                    A full stack | Backend focus developer
+                </h2>
+                <p className="text-center">
+                    I build structured,
+                    scalable web applications  <br /> with clean architecture and
+                    production-ready backend systems.
+                </p>
+            </div>
+
+            <div className="flex items-center justify-center flex-wrap gap-4">
                 <Button variant='secondary' className={" capitalize "}>
-                    <View />
+                    <Search />
                     view projects</Button>
                 <Button variant="default" className={" capitalize "}>
                     <Download />
@@ -37,10 +49,10 @@ const Hero = () => {
                             asChild
                             variant="outline"
                             size={'icon'}
-                            className="rounded-full"
+                            className="rounded-full hover:-translate-y-1 transition-all ease-in-out "
                         >
                             <Link href={item.link}>
-                                <item.icon />
+                                <item.icon className="text-primary" />
                             </Link>
 
 
@@ -53,7 +65,13 @@ const Hero = () => {
 
             </div>
 
-        </section>
+            <Button size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
+                <ArrowDown />
+            </Button>
+            <Badge variant={'secondary'} className="absolute z-10 right-4 bottom-24 text-green-500">
+                <Target className="text-xl" /> Avaliable for hiring...
+            </Badge>
+        </main>
     )
 }
 
