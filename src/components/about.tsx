@@ -62,12 +62,12 @@ const About = () => {
                     {/* Mini Stats */}
                     <div className="mt-4 flex gap-4 text-sm text-default-500">
                         <div>
-                            <p className="text-2xl font-bold text-foreground">10+</p>
+                            <p className="text-2xl font-bold text-foreground">20+</p>
                             <p>Projects Built</p>
                         </div>
                         <div>
                             <p className="text-2xl font-bold text-foreground">
-                                2 Team</p>
+                                3+  Team</p>
                             <p> Collabration projects</p>
                         </div>
                         <div>

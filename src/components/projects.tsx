@@ -3,8 +3,10 @@
 
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
+import { ExternalLink, Github, Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
 
 const projects = [
     {
@@ -65,42 +67,46 @@ export default function Projects() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
 
-                    <Card className="p-0" key={index}>
-                        <CardHeader className=" group p-0 relative  overflow-hidden rounded-xl w-full aspect-video">
+                    <Card className="p-0 overflow-hidden" key={index}>
+                        <CardHeader className=" group p-0 relative  overflow-hidden  w-full aspect-video">
 
                             <Image
                                 src={'/mockup-design.png'}
                                 alt={project.title}
                                 fill
-                                className="rounded-xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                className=" object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                             />
 
                         </CardHeader>
 
-                        <CardContent >
+                        <CardContent className="space-y-2 px-4" >
 
                             <h3 className="text-xl font-semibold">
                                 {project.title}
                             </h3>
 
 
-                            <p className="mt-3 text-default-600 text-sm leading-relaxed">
+                            <p className="text-muted-foreground text-sm leading-relaxed">
                                 {project.description}
                             </p>
 
                             <div className="flex gap-2">
                                 {project.tech.map((tech, i) => (
-                                    <Button key={i} size="sm" variant='outline'>
-                                        {tech}
-                                    </Button>
+                                    <Badge key={i} variant='secondary' className="rounded-full">
+                                        <Github /> {tech}
+                                    </Badge>
                                 ))}
                             </div>
                         </CardContent>
-                        <CardFooter className="justify-between p-4">
+                        <CardFooter className="justify-between  pb-2 px-4">
 
 
-                            <Button variant={'link'}>View Demo</Button>
-                            <Button>Soure Code</Button>
+                            <Button variant={'link'}>
+                                <ExternalLink />
+                                View Live Demo</Button>
+                            <Button>
+                                <Github />
+                                Soure Code</Button>
 
                         </CardFooter>
                     </Card>

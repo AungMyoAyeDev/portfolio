@@ -40,8 +40,10 @@
 
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
 
 export default function FeaturedProject() {
     return (
@@ -64,8 +66,8 @@ export default function FeaturedProject() {
             </div>
 
             {/* Project Card */}
-            <Card className="bg-background/60 backdrop-blur-xl border border-default-200 rounded-2xl shadow-xl">
-                <CardContent className="p-4">
+            <Card >
+                <CardContent >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                         {/* Project Image */}
@@ -99,34 +101,24 @@ export default function FeaturedProject() {
                             </p>
 
                             {/* Tech Stack */}
-                            <div className=" flex flex-wrap gap-3">
-                                <Button>
-                                    nextjs
-                                </Button>
-                                <Button>
-                                    nextjs
-                                </Button>
-                                <Button>
-                                    nextjs
-                                </Button>
+                            <div className=" flex flex-wrap gap-2">
+                                <Badge variant={'secondary'}>Next js</Badge>
+                                <Badge variant={'secondary'}>Next js</Badge>
+                                <Badge variant={'secondary'}>Next js</Badge>
+                                <Badge variant={'secondary'}>Next js</Badge>
                             </div>
 
                             {/* Action Buttons */}
-                            <div className=" flex gap-4">
-                                <Button
+                            <div className="flex justify-between  items-center ">
 
 
-                                >
-                                    View Live Demo
-                                </Button>
+                                <Button variant={'link'}>
+                                    <ExternalLink />
+                                    View Live Demo</Button>
+                                <Button>
+                                    <Github />
+                                    Soure Code</Button>
 
-                                <Button
-
-
-
-                                >
-                                    View GitHub
-                                </Button>
                             </div>
                         </div>
 

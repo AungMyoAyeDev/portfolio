@@ -1,12 +1,16 @@
 // components/layout/Footer.tsx
 
+import { Download, Github } from "lucide-react";
 import Link from "next/link";
+import { SOCIAL_LINKS } from "../lib/utils";
+import { Button } from "./ui/button";
 
 
 export default function Footer() {
     return (
-        <footer className="relative mt-24 border-t border-default-200 bg-background/60 backdrop-blur-xl">
-            <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+        <footer className="relative  border-t border-border bg-background/60 backdrop-blur-xl">
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
 
                 {/* Top Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -20,6 +24,7 @@ export default function Footer() {
                             Backend-focused full stack developer building scalable,
                             production-ready systems with modern technologies.
                         </p>
+
                     </div>
 
                     {/* Navigation */}
@@ -28,6 +33,11 @@ export default function Footer() {
                             Navigation
                         </h4>
                         <ul className="mt-4 space-y-3 text-sm text-default-600">
+                            <li>
+                                <Link href="/" className="hover:text-foreground transition-colors">
+                                    Home
+                                </Link>
+                            </li>
                             <li>
                                 <Link href="#about" className="hover:text-foreground transition-colors">
                                     About
@@ -51,52 +61,46 @@ export default function Footer() {
                         <h4 className="font-semibold text-sm uppercase tracking-wider">
                             Connect
                         </h4>
-                        <ul className="mt-4 space-y-3 text-sm text-default-600">
-                            <li>
-                                <Link
-                                    href="https://github.com/"
-                                    target="_blank"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    GitHub
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="https://linkedin.com/"
-                                    target="_blank"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    LinkedIn
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="mailto:aungmyoaye@email.com"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    Email
-                                </Link>
-                            </li>
+                        <ul className="mt-4 space-y-2 text-sm text-default-600">
+                            {
+                                SOCIAL_LINKS.map(item => (
+                                    <li key={item.name}>
+                                        <Button variant={'secondary'} size={'icon'} asChild >
+                                            <Link
+                                                href={item.link}
+                                                target="_blank"
+                                                className="hover:text-foreground transition-colors"
+                                            >
+                                                <item.icon />
+                                            </Link>
+                                        </Button>
+
+                                    </li>
+                                ))
+                            }
+
+
                         </ul>
                     </div>
                 </div>
 
+                <div className="flex justify-between">
+                    <small>© 2026 Aung Myo Aye. All rights reserved.</small>
+                    <Button variant="default" className={" capitalize "} asChild>
+                        <Link href={'/globe.svg'} target="_blank" download>
+                            <Download />
+                            download resume
+                        </Link>
 
 
-                {/* Bottom Bar */}
-                <div className="flex flex-col md:flex-row items-center justify-between text-sm text-default-500 gap-4">
-                    <p>
-                        © {new Date().getFullYear()} Aung Myo Aye. All rights reserved.
-                    </p>
-                    <p>
-                        Built with Next.js & HeroUI v3
-                    </p>
+                    </Button>
                 </div>
             </div>
 
+
+
             {/* Subtle Background Glow */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-violet-500/5 to-transparent blur-3xl" />
+
         </footer>
     );
 }

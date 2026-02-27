@@ -15,7 +15,7 @@ export const sendEmail = async (formData: FormData): Promise<FormState> => {
         const name = formData.get("name") as string;
         const email = formData.get("email") as string;
         const message = formData.get("message") as string;
-        console.log(name, email, message)
+
         const success = await resend.emails.send({
             from: "onboarding@resend.dev",
             to: "aungmyoaye101@gmail.com",
@@ -29,7 +29,7 @@ export const sendEmail = async (formData: FormData): Promise<FormState> => {
         <p>${message}</p>
       `,
         });
-        console.log(success)
+
         return { success: true, message: "Message sent! We'll be in touch." };
     } catch (error) {
         return { success: false, message: "Failed to send message. Try again later." };

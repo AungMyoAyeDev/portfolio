@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ThemeToggle from "./ui/theme-toggle";
 import { Button } from "@/src/components/ui/button";
+import { Contact, Handshake } from "lucide-react";
 
 const NAV_LINKS = [
     "portfolio", "about", "projects", "contact"
@@ -86,8 +87,13 @@ export default function Navbar() {
                 <ThemeToggle />
                 <Button
                     className="rounded-full"
+                    asChild
                 >
-                    Let's contact
+                    <Link href={"mailto:aungmyoayedev@gmail.com"}>
+                        <Handshake />
+                        Let's contact
+                    </Link>
+
                 </Button>
             </div>
         </nav>

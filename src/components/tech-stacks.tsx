@@ -34,7 +34,7 @@ const TechStacks = () => {
                         <Card key={index} >
 
                             <CardHeader >
-                                <stack.icon className="text-6xl text-primary" />
+                                <stack.icon className="text-2xl text-primary" />
                                 <CardTitle className='text-xl font-bold'>{stack.name}</CardTitle>
                                 <CardDescription>
                                     {stack.description}
@@ -46,7 +46,7 @@ const TechStacks = () => {
                                         <Badge
                                             key={idx}
                                             variant='outline'
-
+                                            className="bg-primary/75 text-primary-foreground"
                                         >
                                             {tech.name}
                                         </Badge>
