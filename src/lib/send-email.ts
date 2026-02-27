@@ -6,8 +6,7 @@ export type FormState = {
     success: boolean,
     message: string
 }
-export const sendEmail = async (formData: FormData): Promise<FormState> => {
-    console.log(formData, "In ")
+export const sendEmail = async (prevState: FormState, formData: FormData): Promise<FormState> => {
     try {
         const api_key = process.env.RESEND_API_KEY;
         console.log(api_key)
@@ -15,8 +14,10 @@ export const sendEmail = async (formData: FormData): Promise<FormState> => {
         const name = formData.get("name") as string;
         const email = formData.get("email") as string;
         const message = formData.get("message") as string;
-
-        const success = await resend.emails.send({
+        if (!name || !email || !message) {
+            return { success: false, message: "Please fill out all fields." };
+        }
+        const { error } = await resend.emails.send({
             from: "onboarding@resend.dev",
             to: "aungmyoaye101@gmail.com",
             subject: `New message from ${name}`,
@@ -29,9 +30,12 @@ export const sendEmail = async (formData: FormData): Promise<FormState> => {
         <p>${message}</p>
       `,
         });
-
-        return { success: true, message: "Message sent! We'll be in touch." };
+        if (error) {
+            return { success: false, message: "Failed to send email. Try again later." };
+        }
+        return { success: true, message: "Thanks you for your message . I'll conatct as soon as possible." };
     } catch (error) {
+        console.warn(error)
         return { success: false, message: "Failed to send message. Try again later." };
     }
 

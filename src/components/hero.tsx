@@ -3,7 +3,7 @@
 import Link from "next/link"
 
 import { Button } from "@/src/components/ui/button";
-import { ArrowDown, Circle, Donut, Dot, Download, Search, Target, View, ViewIcon } from "lucide-react";
+import { ArrowDown, Download, Search, Target, } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/utils";
 import { Badge } from "./ui/badge";
 
@@ -19,7 +19,7 @@ const Hero = () => {
 
 
                 <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
-                    I'm Aung Myo Aye
+                    I&apos;m Aung Myo Aye
                 </h1>
                 <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
                     A full stack | Backend focus developer

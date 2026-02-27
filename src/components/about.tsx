@@ -18,7 +18,7 @@ const About = () => {
                         fill
                         className=" object-cover w-full h-auto aspect-square  p-2 rounded-xl"
                     />
-                    <div className="absolute -z-10 inset-0 bg-gradient-to-br from-violet-500/20 to-transparent blur-3xl" />
+
                 </Card>
 
                 {/* Soft Glow Background */}

@@ -1,25 +1,17 @@
 "use client";
 
-
-
-import { Button } from "@/src/components/ui/button";
 import {
     Card,
-    CardAction,
+
     CardContent,
     CardDescription,
-    CardFooter,
+
     CardHeader,
     CardTitle,
 } from "@/src/components/ui/card"
 import { TECH_STACKS } from "../lib/utils";
 import { Badge } from "./ui/badge";
 
-
-
-
-
-const COLORS = ["success", "accent", "danger", "default", "warning"]
 const TechStacks = () => {
 
 

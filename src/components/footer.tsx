@@ -1,6 +1,6 @@
 // components/layout/Footer.tsx
 
-import { Download, Github } from "lucide-react";
+import { Download } from "lucide-react";
 import Link from "next/link";
 import { SOCIAL_LINKS } from "../lib/utils";
 import { Button } from "./ui/button";

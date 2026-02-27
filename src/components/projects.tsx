@@ -1,11 +1,8 @@
 "use client";
-
-
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
-import { ExternalLink, Github, Link2 } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { Badge } from "./ui/badge";
 
 const projects = [
@@ -51,11 +48,11 @@ export default function Projects() {
         >
             {/* Section Header */}
             <div className="text-center mb-16">
-                <p className="text-sm uppercase tracking-widest text-accent font-medium">
-                    Selected Projects
+                <p className="text-sm uppercase tracking-widest text-primary font-medium">
+                    My Best Projects
                 </p>
                 <h2 className="mt-4 text-3xl lg:text-4xl font-bold">
-                    Systems I've Built
+                    Systems I Have Built
                 </h2>
                 <p className="mt-4 text-default-500 max-w-2xl mx-auto">
                     A collection of production-focused applications demonstrating backend

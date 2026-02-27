@@ -4,11 +4,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
 import Image from "next/image";
 import ThemeToggle from "./ui/theme-toggle";
 import { Button } from "@/src/components/ui/button";
-import { Contact, Handshake } from "lucide-react";
+import { Handshake } from "lucide-react";
 
 const NAV_LINKS = [
     "portfolio", "about", "projects", "contact"
@@ -91,7 +90,7 @@ export default function Navbar() {
                 >
                     <Link href={"mailto:aungmyoayedev@gmail.com"}>
                         <Handshake />
-                        Let's contact
+                        Let&apos;s contact
                     </Link>
 
                 </Button>
