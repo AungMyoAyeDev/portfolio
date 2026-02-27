@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-import { Code, Facebook, Github, Icon, Linkedin, LucidePenTool, Server, TicketCheck, Toolbox, ToolCase } from "lucide-react";
+import { Code, Facebook, Github, Icon, Linkedin, LucidePenTool, Server, Settings, TicketCheck, Toolbox, ToolCase } from "lucide-react";
 
 
 
@@ -57,7 +57,7 @@ export const TECH_STACKS = [
   {
     name: 'DevOps & Tools',
     description: 'Deployment, testing and production optimization.',
-    icon: ToolCase,
+    icon: Settings,
     techStack: [
       { name: 'Socket.IO', icon: Icon, color: '#010101' },
       { name: 'Prisma', icon: Icon, color: '#0EA5A4' },

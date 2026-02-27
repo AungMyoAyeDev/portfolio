@@ -31,8 +31,8 @@ export default function Navbar() {
         <nav
             className={`max-w-6xl mx-auto fixed top-1 left-0 right-0 z-50 rounded-full py-1.5 px-4 border border-border   transition-all duration-300 flex gap-4 justify-between items-center 
         ${isScrolled
-                    ? "bg-background/70 backdrop-blur-xl  shadow-sm shadow-accent/10"
-                    : "bg-background"
+                    ? "bg-card/70 backdrop-blur-xl  shadow-sm shadow-accent/10"
+                    : "bg-card"
                 }`}
         >
             {/* Brand */}
@@ -82,8 +82,13 @@ export default function Navbar() {
             </div>
 
             {/* Right Side */}
-            <div>
+            <div className="flex items-center gap-2">
                 <ThemeToggle />
+                <Button
+                    className="rounded-full"
+                >
+                    Let's contact
+                </Button>
             </div>
         </nav>
 

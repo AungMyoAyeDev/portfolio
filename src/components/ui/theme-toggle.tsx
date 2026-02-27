@@ -26,7 +26,7 @@ const ThemeToggle = () => {
     }
 
     return (
-        <Button size={'icon'} className={"rounded-full "}
+        <Button variant={'secondary'} size={'icon'} className={"rounded-full "}
             onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
             aria-label="Toggle theme"
         >

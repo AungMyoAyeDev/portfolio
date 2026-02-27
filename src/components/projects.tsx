@@ -65,7 +65,7 @@ export default function Projects() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
 
-                    <Card className="p-0 ">
+                    <Card className="p-0" key={index}>
                         <CardHeader className=" group p-0 relative  overflow-hidden rounded-xl w-full aspect-video">
 
                             <Image

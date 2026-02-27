@@ -32,12 +32,21 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center justify-center flex-wrap gap-4">
-                <Button variant='secondary' className={" capitalize "}>
-                    <Search />
-                    view projects</Button>
-                <Button variant="default" className={" capitalize "}>
-                    <Download />
-                    download resume</Button>
+                <Button variant='secondary' className={" capitalize "} asChild>
+                    <Link href={'mailto:aungmyoayedev@gmail.com'}>
+
+                        <Search />
+                        view projects
+                    </Link>
+                </Button>
+                <Button variant="default" className={" capitalize "} asChild>
+                    <Link href={'/globe.svg'} target="_blank" download>
+                        <Download />
+                        download resume
+                    </Link>
+
+
+                </Button>
 
             </div>
             <div className="flex items-center gap-4">
@@ -65,10 +74,12 @@ const Hero = () => {
 
             </div>
 
-            <Button size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
-                <ArrowDown />
+            <Button asChild size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
+                <Link href={'#about'}>
+                    <ArrowDown />
+                </Link>
             </Button>
-            <Badge variant={'secondary'} className="absolute z-10 right-4 bottom-24 text-green-500">
+            <Badge variant={'outline'} className="absolute z-10 right-4 bottom-28 text-green-500">
                 <Target className="text-xl" /> Avaliable for hiring...
             </Badge>
         </main>
