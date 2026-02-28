@@ -69,7 +69,7 @@ export default function FeaturedProject() {
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex justify-between  items-center ">
+                            <div className="flex justify-between ">
 
 
                                 <Button variant={'link'}>

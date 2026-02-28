@@ -11,6 +11,7 @@ import {
 } from "@/src/components/ui/card"
 import { TECH_STACKS } from "../lib/utils";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 const TechStacks = () => {
 
@@ -37,10 +38,17 @@ const TechStacks = () => {
                                     {stack.techStack.map((tech, idx) => (
                                         <Badge
                                             key={idx}
-                                            variant='outline'
-                                            className="bg-primary/75 text-primary-foreground"
+                                            variant="secondary"
+                                        // className="border-primary"
+
                                         >
-                                            {tech.name}
+                                            <Image
+                                                src={tech.icon}
+                                                alt={tech.name + "icon"}
+                                                width={24}
+                                                height={24}
+                                            />
+                                            <span className="text-xs font-light leading-tight">{tech.name}</span>
                                         </Badge>
                                     ))}
                                 </div>

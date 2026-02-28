@@ -4,41 +4,8 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/c
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import { projects } from "../lib/utils";
 
-const projects = [
-    {
-        title: "Hotel Booking System",
-        description:
-            "Full-stack booking platform with JWT authentication, room availability tracking and admin dashboard.",
-        image: "/projects/hotel.png",
-        tech: ["Next.js", "Node.js", "MongoDB", "JWT"],
-        link: "#",
-    },
-    {
-        title: "Utility Management System",
-        description:
-            "Role-based system for managing billing, payments, and service records with secure API architecture.",
-        image: "/projects/utility.png",
-        tech: ["React", "Express", "MongoDB"],
-        link: "#",
-    },
-    {
-        title: "Real-Time Chat App",
-        description:
-            "Socket.IO powered messaging app with typing indicators, read receipts and file uploads.",
-        image: "/projects/chat.png",
-        tech: ["MERN", "Socket.IO"],
-        link: "#",
-    },
-    {
-        title: "Authentication System",
-        description:
-            "Reusable authentication module using JWT, bcrypt and secure cookie handling.",
-        image: "/projects/auth.png",
-        tech: ["Node.js", "JWT", "Redux Toolkit"],
-        link: "#",
-    },
-];
 
 export default function Projects() {
     return (
@@ -87,15 +54,26 @@ export default function Projects() {
                                 {project.description}
                             </p>
 
-                            <div className="flex gap-2">
-                                {project.tech.map((tech, i) => (
-                                    <Badge key={i} variant='secondary' className="rounded-full">
-                                        <Github /> {tech}
-                                    </Badge>
+                            <div className="flex ">
+                                {project.techStack.map((tech, i) => (
+                                    <Button
+                                        key={i}
+                                        variant='outline'
+                                        size={'icon'}
+                                        className={`rounded-full  border-2 border-secondary`}
+                                    >
+                                        <Image
+                                            src={tech.icon}
+                                            alt="icon"
+                                            width={24}
+                                            height={24}
+
+                                        />
+                                    </Button>
                                 ))}
                             </div>
                         </CardContent>
-                        <CardFooter className="justify-between  pb-2 px-4">
+                        <CardFooter className="justify-between mb-4 px-4">
 
 
                             <Button variant={'link'}>
