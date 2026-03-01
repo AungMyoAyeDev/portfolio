@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-import { Facebook, Github, LayoutPanelLeft, Linkedin, Server, Settings, } from "lucide-react";
+import { Facebook, Github, icons, LayoutPanelLeft, Linkedin, Server, Settings, } from "lucide-react";
 
 
 
@@ -33,14 +33,13 @@ export const TECH_STACKS = [
     description: 'Building responsive and interactive user interfaces.',
     icon: LayoutPanelLeft,
     techStack: [
-      { name: "HTML5", icon: "/icons/html5.svg" },
-      { name: "Css", icon: "/icons/css3.svg" },
+
       { name: 'JavaScript', icon: '/icons/js.svg' },
       { name: "TypeScript", icon: "/icons/typescript.svg" },
       { name: 'React', icon: '/icons/react.svg', },
       { name: 'Next.js', icon: 'icons/nextjs.svg', },
+      { name: "Css", icon: '/icons/css3.svg' },
       { name: 'Tailwind CSS', icon: '/icons/tailwindcss.svg', },
-      { name: 'TanStack Query', icon: '/icons/tanstack.svg', },
 
 
     ]
@@ -53,11 +52,11 @@ export const TECH_STACKS = [
     techStack: [
       { name: 'Node.js', icon: '/icons/nodejs.svg', },
       { name: 'Express', icon: '/icons/expressjs.svg', },
+      { name: "NestJs", icon: "/icons/nestjs.svg" },
       { name: 'MongoDB', icon: '/icons/mongodb.svg', },
-      { name: "Mongoose", icon: "/icons/mongoose.svg" },
       { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
       { name: "Prisma", icon: "/icons/prisma.svg" },
-      { name: "Firebase", icon: "/icons/firebase.svg" }
+
     ]
   },
   {
@@ -68,7 +67,7 @@ export const TECH_STACKS = [
       { name: "Git", icon: "/icons/git.svg" },
       { name: "Jest", icon: "/icons/jest.svg" },
       { name: "Docker", icon: "/icons/docker.svg" },
-      { name: "Cloudinary", icon: "/icons/cloudinary.svg" },
+
       { name: "Sentry", icon: "/icons/sentry.svg" },
     ]
   }

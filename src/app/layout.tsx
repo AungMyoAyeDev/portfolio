@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` antialiased max-w-7xl mx-auto`}
+        className={` antialiased max-w-7xl mx-auto px-4`}
       >
         <ThemeProvider
           attribute={"class"}

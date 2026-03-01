@@ -12,22 +12,20 @@ import { Badge } from "./ui/badge";
 
 const Hero = () => {
     return (
-        <main
+        <section
             id="portfolio"
-            className="min-h-screen  flex flex-col justify-center  items-center gap-6 relative ">
+            className="min-h-screen  flex flex-col  items-center gap-6 relative ">
             <div className="space-y-4 ">
 
 
                 <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
-                    I&apos;m Aung Myo Aye
+                    Hello ,  I&apos;m Aung Myo Aye
                 </h1>
                 <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
-                    A full stack | Backend focus developer
+                    A Full Stack Developer Building Scalable Web Applications
                 </h2>
-                <p className="text-center">
-                    I build structured,
-                    scalable web applications  <br /> with clean architecture and
-                    production-ready backend systems.
+                <p className="text-center ">
+                    I build modern web applications from frontend to infrastructure  focusing on scalability, security, and long-term maintainability
                 </p>
             </div>
 
@@ -64,8 +62,6 @@ const Hero = () => {
                                 <item.icon className="text-primary" />
                             </Link>
 
-
-
                         </Button>
                     ))
                 }
@@ -79,10 +75,10 @@ const Hero = () => {
                     <ArrowDown />
                 </Link>
             </Button>
-            <Badge variant={'outline'} className="absolute z-10 right-4 bottom-28 text-green-500">
+            <Badge variant={'outline'} className="hidden sm:block absolute z-10 right-2 bottom-28 text-green-500">
                 <Target className="text-xl" /> Avaliable for hiring...
             </Badge>
-        </main>
+        </section>
     )
 }
 

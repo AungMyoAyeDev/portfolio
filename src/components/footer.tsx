@@ -21,7 +21,7 @@ export default function Footer() {
                             Aung Myo Aye
                         </h3>
                         <p className="mt-4 text-default-600 text-sm leading-relaxed">
-                            Backend-focused full stack developer building scalable,
+                            A full stack developer building scalable,
                             production-ready systems with modern technologies.
                         </p>
 
@@ -84,7 +84,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-6">
                     <small>© 2026 Aung Myo Aye. All rights reserved.</small>
                     <Button variant="default" className={" capitalize "} asChild>
                         <Link href={'/globe.svg'} target="_blank" download>

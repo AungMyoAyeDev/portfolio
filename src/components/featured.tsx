@@ -9,10 +9,10 @@ export default function FeaturedProject() {
     return (
         <section
             id="featured-project"
-            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
+
         >
             {/* Section Header */}
-            <div className="space-y-4 mb-4 text-center">
+            <div className="space-y-4  text-center">
                 <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
                     Featured Project
                 </p>
@@ -26,13 +26,13 @@ export default function FeaturedProject() {
             </div>
 
             {/* Project Card */}
-            <Card >
-                <CardContent >
+            <Card className="py-4">
+                <CardContent className="px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                         {/* Project Image */}
                         <div className="relative">
-                            <div className="absolute -z-10 inset-0 bg-leniar-to-br from-violet-500/20 to-transparent blur-3xl" />
+
                             <Image
                                 src="/mockup-design.png"
                                 alt="Hotel Booking Website"
@@ -45,7 +45,7 @@ export default function FeaturedProject() {
                         {/* Project Content */}
                         <div className="space-y-4">
                             <h3 className="text-2xl font-semibold">
-                                Scalable Booking Platform for Hotels
+                                Booking Managment Platform for Hotels
                             </h3>
 
                             <p className=" text-default-600 leading-relaxed">

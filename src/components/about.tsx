@@ -7,9 +7,10 @@ const About = () => {
     return (
         <section
             id="about"
-            className=""
         >
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-0 max-w-4xl mx-auto">
+            <div
+                className="grid grid-cols-1 md:grid-cols-2  gap-4 sm:gap-6 max-w-6xl mx-auto"
+            >
 
                 <Card className='relative w-full sm:w-sm aspect-square rounded-xl'>
                     <Image
@@ -26,7 +27,7 @@ const About = () => {
 
 
                 {/* Content Block */}
-                <div className='space-y-6 '>
+                <div >
                     {/* Section Label */}
                     <p className="text-sm tracking-widest uppercase text-primary font-medium">
                         About Me

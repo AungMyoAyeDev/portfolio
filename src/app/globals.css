@@ -171,7 +171,7 @@ html {
     }
 
     section {
-        @apply py-16 sm:py-24 px-6 sm:px-8
+        @apply py-16 sm:py-24
     }
 
     .head-1 {

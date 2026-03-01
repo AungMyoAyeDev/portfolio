@@ -11,17 +11,16 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="min-h-screen relative py-24 px-6 lg:px-8 max-w-6xl mx-auto"
         >
             {/* Section Header */}
-            <div className="text-center mb-16">
+            <div className="text-center space-y-4 mb-4">
                 <p className="text-sm uppercase tracking-widest text-primary font-medium">
                     My Best Projects
                 </p>
-                <h2 className="mt-4 text-3xl lg:text-4xl font-bold">
-                    Systems I Have Built
+                <h2 className="text-3xl lg:text-4xl font-bold">
+                    Projects I Have Built
                 </h2>
-                <p className="mt-4 text-default-500 max-w-2xl mx-auto">
+                <p className="text-default-500 max-w-2xl mx-auto">
                     A collection of production-focused applications demonstrating backend
                     architecture, scalable APIs, and full-stack integration.
                 </p>
