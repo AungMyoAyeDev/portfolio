@@ -14,70 +14,77 @@ const Hero = () => {
     return (
         <section
             id="portfolio"
-            className="min-h-screen  flex flex-col  items-center gap-6 relative ">
-            <div className="space-y-4 ">
+            className="min-h-screen relative ">
+            <div className=" flex flex-col gap-6 items-center max-w-4xl mx-auto mt-14">
+                <div className="space-y-6 ">
 
 
-                <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
-                    Hello ,  I&apos;m Aung Myo Aye
-                </h1>
-                <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
-                    A Full Stack Developer Building Scalable Web Applications
-                </h2>
-                <p className="text-center ">
-                    I build modern web applications from frontend to infrastructure  focusing on scalability, security, and long-term maintainability
-                </p>
-            </div>
+                    <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
+                        Hello ,  I&apos;m Aung Myo Aye
+                    </h1>
+                    <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
+                        A Full Stack Developer Building Scalable Web Applications
+                    </h2>
+                    <p className="text-center ">
+                        I build modern web applications from frontend to infrastructure <br /> focusing on scalability, security, and long-term maintainability
+                    </p>
+                </div>
 
-            <div className="flex items-center justify-center flex-wrap gap-4">
-                <Button variant='secondary' className={" capitalize "} asChild>
-                    <Link href={'mailto:aungmyoayedev@gmail.com'}>
+                <div className="flex items-center justify-center flex-wrap gap-4">
+                    <Button variant='secondary' className={" capitalize "} asChild>
+                        <Link href={'mailto:aungmyoayedev@gmail.com'}>
 
-                        <Search />
-                        view projects
+                            <Search />
+                            view projects
+                        </Link>
+                    </Button>
+                    <Button variant="default" className={" capitalize "} asChild>
+                        <Link href={'/globe.svg'} target="_blank" download>
+                            <Download />
+                            download resume
+                        </Link>
+
+
+                    </Button>
+
+                </div>
+                <div className="flex items-center gap-4">
+                    {
+                        SOCIAL_LINKS.map(item => (
+                            <Button
+                                key={item.name}
+
+                                asChild
+                                variant="outline"
+                                size={'icon'}
+                                className="rounded-full hover:-translate-y-1 transition-all ease-in-out "
+                            >
+                                <Link href={item.link}>
+                                    <item.icon className="text-primary" />
+                                </Link>
+
+                            </Button>
+                        ))
+                    }
+
+
+
+                </div>
+
+                <Button asChild size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
+                    <Link href={'#about'}>
+                        <ArrowDown />
                     </Link>
                 </Button>
-                <Button variant="default" className={" capitalize "} asChild>
-                    <Link href={'/globe.svg'} target="_blank" download>
-                        <Download />
-                        download resume
-                    </Link>
-
-
-                </Button>
-
             </div>
-            <div className="flex items-center gap-4">
-                {
-                    SOCIAL_LINKS.map(item => (
-                        <Button
-                            key={item.name}
+            <Badge
 
-                            asChild
-                            variant="outline"
-                            size={'icon'}
-                            className="rounded-full hover:-translate-y-1 transition-all ease-in-out "
-                        >
-                            <Link href={item.link}>
-                                <item.icon className="text-primary" />
-                            </Link>
-
-                        </Button>
-                    ))
-                }
-
-
-
-            </div>
-
-            <Button asChild size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
-                <Link href={'#about'}>
-                    <ArrowDown />
-                </Link>
-            </Button>
-            <Badge variant={'outline'} className="hidden sm:block absolute z-10 right-2 bottom-28 text-green-500">
+                variant={'outline'}
+                className="hidden sm:flex absolute z-10 right-4 bottom-4 text-green-500 "
+            >
                 <Target className="text-xl" /> Avaliable for hiring...
             </Badge>
+
         </section>
     )
 }

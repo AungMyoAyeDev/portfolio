@@ -9,10 +9,10 @@ const About = () => {
             id="about"
         >
             <div
-                className="grid grid-cols-1 md:grid-cols-2  gap-4 sm:gap-6 max-w-6xl mx-auto"
+                className="grid grid-cols-1 md:grid-cols-2  gap-4 sm:gap-6 max-w-6xl mx-auto bg-green-400"
             >
 
-                <Card className='relative w-full sm:w-sm aspect-square rounded-xl'>
+                <Card className='relative w-full sm:w-sm aspect-square rounded-xl bg-amber-500'>
                     <Image
                         src="/ama.jpg"
                         alt="Aung Myo Aye"
@@ -27,7 +27,7 @@ const About = () => {
 
 
                 {/* Content Block */}
-                <div >
+                <div className='bg-amber-200'>
                     {/* Section Label */}
                     <p className="text-sm tracking-widest uppercase text-primary font-medium">
                         About Me

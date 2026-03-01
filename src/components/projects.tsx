@@ -3,8 +3,9 @@ import { Button } from "@/src/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { projects } from "../lib/utils";
+import { PROJECTS } from "../lib/project-data";
+import Link from "next/link";
+
 
 
 export default function Projects() {
@@ -28,28 +29,30 @@ export default function Projects() {
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {projects.map((project, index) => (
-
+                {PROJECTS.map((project, index) => (
                     <Card className="p-0 overflow-hidden" key={index}>
-                        <CardHeader className=" group p-0 relative  overflow-hidden  w-full aspect-video">
-
+                        <CardHeader
+                            className=" group p-0 relative  overflow-hidden  w-full aspect-video"
+                        >
                             <Image
-                                src={'/mockup-design.png'}
+                                src={project.image}
                                 alt={project.title}
                                 fill
-                                className=" object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                             />
-
                         </CardHeader>
 
-                        <CardContent className="space-y-2 px-4" >
-
+                        <CardContent
+                            className="space-y-2 px-4"
+                        >
                             <h3 className="text-xl font-semibold">
                                 {project.title}
                             </h3>
 
 
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                            <p
+                                className="text-muted-foreground text-sm leading-relaxed"
+                            >
                                 {project.description}
                             </p>
 
@@ -72,15 +75,27 @@ export default function Projects() {
                                 ))}
                             </div>
                         </CardContent>
-                        <CardFooter className="justify-between mb-4 px-4">
+                        <CardFooter
+                            className="justify-between mb-4 px-4"
+                        >
+                            <Button
+                                variant={'link'}
+                                asChild
+                            >
+                                <Link href={project.links.live}>
+                                    <ExternalLink />
+                                    View Live Demo
+                                </Link>
 
-
-                            <Button variant={'link'}>
-                                <ExternalLink />
-                                View Live Demo</Button>
-                            <Button>
-                                <Github />
-                                Soure Code</Button>
+                            </Button>
+                            <Button asChild>
+                                <Link
+                                    href={project.links.github}
+                                >
+                                    <Github />
+                                    Soure Code
+                                </Link>
+                            </Button>
 
                         </CardFooter>
                     </Card>

@@ -8,14 +8,14 @@ import TechStacks from '../components/tech-stacks';
 
 export default function Home() {
   return (
-    <section >
+    <>
       <Hero />
       <TechStacks />
       <About />
       <Featured />
       <Projects />
       <Contact />
-    </section >
+    </ >
   );
 }
 

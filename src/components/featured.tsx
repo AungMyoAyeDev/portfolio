@@ -12,7 +12,7 @@ export default function FeaturedProject() {
 
         >
             {/* Section Header */}
-            <div className="space-y-4  text-center">
+            <div className="space-y-4  text-center mb-4">
                 <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
                     Featured Project
                 </p>
@@ -28,7 +28,7 @@ export default function FeaturedProject() {
             {/* Project Card */}
             <Card className="py-4">
                 <CardContent className="px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
 
                         {/* Project Image */}
                         <div className="relative">
