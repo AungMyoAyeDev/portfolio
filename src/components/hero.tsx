@@ -15,7 +15,7 @@ const Hero = () => {
         <section
             id="portfolio"
             className="min-h-screen relative ">
-            <div className=" flex flex-col gap-6 items-center max-w-4xl mx-auto mt-14">
+            <div className=" flex flex-col gap-6 items-center max-w-4xl mx-auto mt-16">
                 <div className="space-y-6 ">
 
 

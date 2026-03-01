@@ -33,7 +33,7 @@ const TechStacks = () => {
                 {
                     TECH_STACKS.map((stack, index) => (
                         <Card key={index}
-                            className="w-full"
+                            className="w-full shadow-xl"
                         >
 
                             <CardHeader  >

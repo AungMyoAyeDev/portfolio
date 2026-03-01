@@ -28,22 +28,25 @@ export default function Projects() {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12">
                 {PROJECTS.map((project, index) => (
-                    <Card className="p-0 overflow-hidden" key={index}>
+                    <Card className=" overflow-hidden" key={index}>
                         <CardHeader
-                            className=" group p-0 relative  overflow-hidden  w-full aspect-video"
+
                         >
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                            />
+                            <div className=" group  relative  overflow-hidden   aspect-video rounded-lg">
+
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
                         </CardHeader>
 
                         <CardContent
-                            className="space-y-2 px-4"
+                            className="space-y-2 "
                         >
                             <h3 className="text-xl font-semibold">
                                 {project.title}
@@ -76,7 +79,7 @@ export default function Projects() {
                             </div>
                         </CardContent>
                         <CardFooter
-                            className="justify-between mb-4 px-4"
+                            className="justify-between "
                         >
                             <Button
                                 variant={'link'}

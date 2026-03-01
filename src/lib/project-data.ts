@@ -78,4 +78,24 @@ export const PROJECTS = [
             github: "/",
         },
     },
+    {
+        title: "Hotel Booking System",
+        description:
+            "Full-stack booking platform with JWT authentication, room availability tracking and admin dashboard.",
+        image: "/projects/booking.png",
+        techStack: [
+            { name: 'Node.js', icon: '/icons/nodejs.svg', },
+            { name: 'Express', icon: '/icons/expressjs.svg', },
+            { name: 'MongoDB', icon: '/icons/mongodb.svg', },
+            { name: "Mongoose", icon: "/icons/mongoose.svg" },
+            { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
+            { name: "Prisma", icon: "/icons/prisma.svg" },
+            { name: "Firebase", icon: "/icons/firebase.svg" }
+        ],
+        links: {
+            live: "https://hotel-booking-virid-two.vercel.app",
+            live2: "https://booking-dashboard-one.vercel.app",
+            github: "https://github.com/AungMyoAye101/hotel-booking"
+        },
+    }
 ];

@@ -43,7 +43,7 @@ export default function FeaturedProject() {
                         </div>
 
                         {/* Project Content */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 flex flex-col justify-between">
                             <h3 className="text-2xl font-semibold">
                                 Booking Managment Platform for Hotels
                             </h3>
