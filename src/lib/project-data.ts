@@ -23,10 +23,13 @@ export const FEATURE_PROJECT = {
 export const PROJECTS = [
     {
         title: "Utility Management System",
-        description:
+        shortDescription:
             "Role-based system for managing billing, payments, and service records with secure API architecture.",
+
+        fullDescription:
+            "Role- based system for managing billing, payments, and service records with secure API architecture.Role - based system for managing billing, payments, and service records with secure API architecture ",
         image: "/projects/ums.jpg",
-        techStack: [
+        techStacks: [
             { name: 'Node.js', icon: '/icons/nodejs.svg', },
             { name: 'Express', icon: '/icons/expressjs.svg', },
             { name: 'MongoDB', icon: '/icons/mongodb.svg', },
@@ -42,10 +45,12 @@ export const PROJECTS = [
     },
     {
         title: "Real-Time Chat App",
-        description:
+        shortDescription:
             "Socket.IO powered messaging app with typing indicators, read receipts and file uploads.",
+        fullDescription:
+            "Role- based system for managing billing, payments, and service records with secure API architecture.Role - based system for managing billing, payments, and service records with secure API architecture ",
         image: "/projects/chat.jpg",
-        techStack: [
+        techStacks: [
             { name: 'Node.js', icon: '/icons/nodejs.svg', },
             { name: 'Express', icon: '/icons/expressjs.svg', },
             { name: 'MongoDB', icon: '/icons/mongodb.svg', },
@@ -61,10 +66,12 @@ export const PROJECTS = [
     },
     {
         title: "Authentication System",
-        description:
+        shortDescription:
             "Reusable authentication module using JWT, bcrypt and secure cookie handling.",
+        fullDescription:
+            "Role- based system for managing billing, payments, and service records with secure API architecture.Role - based system for managing billing, payments, and service records with secure API architecture ",
         image: "/projects/mern-auth.jpg",
-        techStack: [
+        techStacks: [
             { name: 'Node.js', icon: '/icons/nodejs.svg', },
             { name: 'Express', icon: '/icons/expressjs.svg', },
             { name: 'MongoDB', icon: '/icons/mongodb.svg', },
@@ -80,10 +87,13 @@ export const PROJECTS = [
     },
     {
         title: "Hotel Booking System",
-        description:
+        shortDescription:
             "Full-stack booking platform with JWT authentication, room availability tracking and admin dashboard.",
+
+        fullDescription:
+            "Role- based system for managing billing, payments, and service records with secure API architecture.Role - based system for managing billing, payments, and service records with secure API architecture ",
         image: "/projects/booking.png",
-        techStack: [
+        techStacks: [
             { name: 'Node.js', icon: '/icons/nodejs.svg', },
             { name: 'Express', icon: '/icons/expressjs.svg', },
             { name: 'MongoDB', icon: '/icons/mongodb.svg', },
