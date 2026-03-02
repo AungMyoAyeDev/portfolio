@@ -1,16 +1,16 @@
 export const FEATURE_PROJECT = {
     title: "Hotel Booking System",
     description:
-        "Full-stack booking platform with JWT authentication, room availability tracking and admin dashboard.",
+        "A production-style hotel reservation platform built with MERN and Next.js (BFF architecture), featuring secure booking workflows, advanced filtering, role-based dashboards, and scalable API design. Deployed and structured to simulate real-world  operations.",
     image: "/projects/hotel.png",
-    techStack: [
+    techStacks: [
+        { name: 'React', icon: '/icons/react.svg', },
+        { name: 'Nextjs', icon: '/icons/nextjs.svg', },
+        { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
         { name: 'Node.js', icon: '/icons/nodejs.svg', },
         { name: 'Express', icon: '/icons/expressjs.svg', },
         { name: 'MongoDB', icon: '/icons/mongodb.svg', },
-        { name: "Mongoose", icon: "/icons/mongoose.svg" },
-        { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
-        { name: "Prisma", icon: "/icons/prisma.svg" },
-        { name: "Firebase", icon: "/icons/firebase.svg" }
+
     ],
     links: {
         live: "https://hotel-booking-virid-two.vercel.app",

@@ -219,9 +219,13 @@ body[style] {
     }
 }
 
+
+
 .animate-fadeIn {
     animation: fadeIn 0.25s ease-out forwards;
 }
+
+
 
 .animate-scaleIn {
     animation: scaleIn 0.25s ease-out forwards;

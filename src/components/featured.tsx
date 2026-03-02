@@ -1,9 +1,11 @@
 
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, LayoutDashboard } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import { FEATURE_PROJECT } from "../lib/project-data";
+import Link from "next/link";
 
 export default function FeaturedProject() {
     return (
@@ -45,13 +47,11 @@ export default function FeaturedProject() {
                         {/* Project Content */}
                         <div className="space-y-4 flex flex-col justify-between">
                             <h3 className="text-2xl font-semibold">
-                                Booking Managment Platform for Hotels
+                                Booking Managment System
                             </h3>
 
                             <p className=" text-default-600 leading-relaxed">
-                                Designed and developed a complete booking system allowing users
-                                to search rooms, check availability, manage reservations, and
-                                authenticate securely using JWT-based authentication.
+                                {FEATURE_PROJECT.description}
                             </p>
 
                             <p className=" text-default-600 leading-relaxed">
@@ -61,23 +61,57 @@ export default function FeaturedProject() {
                             </p>
 
                             {/* Tech Stack */}
-                            <div className=" flex flex-wrap gap-2">
-                                <Badge variant={'secondary'}>Next js</Badge>
-                                <Badge variant={'secondary'}>Next js</Badge>
-                                <Badge variant={'secondary'}>Next js</Badge>
-                                <Badge variant={'secondary'}>Next js</Badge>
+
+                            <div className="flex gap-1 flex-wrap">
+
+
+                                {
+                                    FEATURE_PROJECT.techStacks.map((tech, idx) => (
+                                        <Badge
+                                            key={idx}
+                                            variant="outline"
+                                            className="rounded-full px-2 py-1 hover:border-primary"
+                                        >
+                                            <Image
+                                                src={tech.icon}
+                                                alt={tech.name + " icon"}
+                                                width={24}
+                                                height={24}
+                                            />
+                                            {tech.name}
+                                        </Badge>
+                                    ))
+                                }
                             </div>
 
                             {/* Action Buttons */}
                             <div className="flex justify-between ">
 
 
-                                <Button variant={'link'}>
-                                    <ExternalLink />
-                                    View Live Demo</Button>
-                                <Button>
-                                    <Github />
-                                    Soure Code</Button>
+                                <div>
+                                    <Button variant={'link'} asChild>
+
+
+                                        <Link href={FEATURE_PROJECT.links.live} target="_blank">
+                                            <ExternalLink />
+                                            View Live Demo
+                                        </Link>
+                                    </Button>
+                                    <Button variant={'link'} asChild>
+                                        <Link href={FEATURE_PROJECT.links.live2} target="_blank">
+                                            <LayoutDashboard />
+                                            View Live Dashboard
+                                        </Link>
+                                    </Button>
+
+
+                                </div>
+                                <Button asChild>
+                                    <Link href={FEATURE_PROJECT.links.github} target="_blank">
+                                        <Github />
+                                        Source Code
+                                    </Link>
+                                </Button>
 
                             </div>
                         </div>

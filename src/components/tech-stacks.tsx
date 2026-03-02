@@ -44,12 +44,12 @@ const TechStacks = () => {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent >
-                                <div className="flex flex-wrap gap-1 ">
+                                <div className="flex flex-wrap gap-2 ">
                                     {stack.techStack.map((tech, idx) => (
                                         <Badge
                                             key={idx}
                                             variant="secondary"
-                                        // className="border-primary"
+                                            className="hover:border-primary hover:shadow-xs shadow-primary/25"
 
                                         >
                                             <Image

@@ -6,6 +6,7 @@ import { Button } from "@/src/components/ui/button";
 import { ArrowDown, Download, Search, Target, } from "lucide-react";
 import { SOCIAL_LINKS } from "../lib/utils";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 
 
@@ -14,7 +15,7 @@ const Hero = () => {
     return (
         <section
             id="portfolio"
-            className="min-h-screen relative ">
+            className="min-h-screen relative overflow-hidden">
             <div className=" flex flex-col gap-6 items-center max-w-4xl mx-auto mt-16">
                 <div className="space-y-6 ">
 
@@ -80,11 +81,36 @@ const Hero = () => {
             <Badge
 
                 variant={'outline'}
-                className="hidden sm:flex absolute z-10 right-4 bottom-4 text-green-500 "
+                className="hidden sm:flex absolute z-10 right-4 bottom-4 text-green-500 animate-pulse"
             >
                 <Target className="text-xl" /> Avaliable for hiring...
             </Badge>
 
+
+            {/* Background images */}
+
+            <Image
+                src={'/icons/react.svg'}
+                alt="react icon"
+                width={45}
+                height={45}
+                className="absolute -z-10 bottom-4 animate-spin duration-1000 opacity-80"
+
+            />
+            <Image
+                src={'/icons/react.svg'}
+                alt="react icon"
+                width={600}
+                height={600}
+                className="absolute right-0 top-0 -z-10 opacity-3 rotate-12 translate-x-1/2 "
+            />
+            <Image
+                src={'/icons/react.svg'}
+                alt="react icon"
+                width={600}
+                height={600}
+                className="absolute left-0 top-0 -z-10  rotate-12 -translate-x-1/2 -translate-y-10 opacity-3  "
+            />
         </section>
     )
 }
