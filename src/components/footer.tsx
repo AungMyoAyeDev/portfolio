@@ -84,7 +84,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex justify-between mt-6">
+                <div className="flex flex-wrap-reverse gap-4 justify-between mt-6">
                     <small>© 2026 Aung Myo Aye. All rights reserved.</small>
                     <Button variant="default" className={" capitalize "} asChild>
                         <Link href={'/globe.svg'} target="_blank" download>
@@ -99,7 +99,6 @@ export default function Footer() {
 
 
 
-            {/* Subtle Background Glow */}
 
         </footer>
     );

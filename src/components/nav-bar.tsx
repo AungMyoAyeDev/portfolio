@@ -8,7 +8,7 @@ import { Button } from "@/src/components/ui/button";
 import { Handshake } from "lucide-react";
 
 const NAV_LINKS = [
-    "portfolio", "about", "projects", "contact"
+    "about", "projects", "contact"
 ]
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
             >
                 {/* Brand */}
                 <div >
-                    <Link href="/" className="flex items-center gap-1 ">
+                    <Link href="#" className="flex items-center gap-1 ">
                         <Image
                             src={'/ama.jpg'}
                             alt="aung myo aye photo"

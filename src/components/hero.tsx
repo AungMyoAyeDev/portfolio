@@ -21,13 +21,13 @@ const Hero = () => {
 
 
                     <h1 className="capitalize  text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tightest leading-[1.05]">
-                        Hello ,  I&apos;m Aung Myo Aye
+                        Hello,  I&apos;m Aung Myo Aye
                     </h1>
                     <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
-                        A Full Stack Developer Building Scalable Web Applications
+                        Full Stack Developer | Scalable Web Applications
                     </h2>
                     <p className="text-center ">
-                        I build modern web applications from frontend to infrastructure <br /> focusing on scalability, security, and long-term maintainability
+                        I build modern web applications from frontend to infrastructure <br /> Focusing on scalability, security, and long-term maintainability
                     </p>
                 </div>
 

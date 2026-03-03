@@ -1,7 +1,8 @@
 "use client";
-import { Download, Mail, MapPin, PhoneCall } from "lucide-react";
+import { ArrowUp, Download, Mail, MapPin, PhoneCall } from "lucide-react";
 import Link from "next/link";
 import ContactForm from "./contact-form";
+import { Button } from "./ui/button";
 
 
 export default function ContactSection() {
@@ -10,7 +11,6 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className=""
         >
             <p className="text-sm uppercase tracking-widest text-primary font-medium my-4">
                 Contact
@@ -22,16 +22,16 @@ export default function ContactSection() {
 
 
                     <h2 className=" text-3xl lg:text-4xl font-bold">
-                        Let’s Work Together
+                        Let&apos;s Work Together
                     </h2>
 
                     <p className=" text-default-600 leading-relaxed">
-                        I'm currently open to remote opportunities and collaboration
+                        I&apos;m currently open to remote opportunities and collaboration
                         on scalable backend or full-stack projects.
 
                     </p>
                     <p className=" text-default-600 leading-relaxed">
-                        Feel free to reach out — I’ll respond as soon as possible.
+                        Feel free to reach out — I&apos;ll respond as soon as possible.
                     </p>
                     <p
                         className="flex items-center gap-4">
@@ -63,6 +63,21 @@ export default function ContactSection() {
                 <ContactForm />
 
             </div>
+
+            <div className="flex justify-center mt-12">
+                <Button
+                    variant={'secondary'}
+                    size={'icon'}
+                    className="rounded-full animate-bounce"
+                    asChild
+                >
+                    <Link href={'#'}>
+                        <ArrowUp />
+                    </Link>
+
+                </Button>
+            </div>
+
         </section>
     );
 }

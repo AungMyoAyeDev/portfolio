@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-import { Facebook, Github, icons, LayoutPanelLeft, Linkedin, Server, Settings, } from "lucide-react";
+import { Facebook, Github, LayoutPanelLeft, Linkedin, Server, Settings, } from "lucide-react";
 
 
 

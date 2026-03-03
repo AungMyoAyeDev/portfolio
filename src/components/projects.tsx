@@ -112,7 +112,7 @@ export default function Projects() {
 
                     {/* Modal Content */}
                     <Card
-                        className="relative z-10 w-[90%] h-[90%]  max-w-2xl bg-background rounded-2xl shadow-2xl p-6 animate-scaleIn ">
+                        className="relative z-10 w-[90%] h-[90%]  max-w-xl bg-background rounded-2xl shadow-2xl p-6 animate-scaleIn ">
 
                         <Button
                             size="icon"

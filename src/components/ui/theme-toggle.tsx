@@ -5,38 +5,42 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-
-const ThemeToggle = () => {
+export function ThemeToggle() {
     const { resolvedTheme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    const handelMount = () => {
-        setMounted(true)
-    }
+
     useEffect(() => {
-        handelMount()
+        setMounted(true)
     }, [])
 
     if (!mounted) {
         return (
             <Button
-                variant='outline'
-                size={'icon'}
-                className={"rounded-full "}
+                variant="outline"
+                size="icon"
+                className="rounded-full"
                 aria-label="Toggle theme"
             />
         )
     }
 
+
+    const isDark = resolvedTheme === "dark"
+
     return (
-        <Button variant={'secondary'} size={'icon'} className={"rounded-full "}
-            onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
-            aria-label="Toggle theme"
+        <Button
+            variant="outline"
+            size="icon"
+            className="rounded-full"
+
+            onClick={() => setTheme(isDark ? "light" : "dark")}
         >
-            {resolvedTheme === "light" ?
+            {isDark ? (
+                <Sun />
+            ) : (
                 <Moon />
-                : <Sun />}
+            )}
         </Button>
     )
 }
-
 export default ThemeToggle
