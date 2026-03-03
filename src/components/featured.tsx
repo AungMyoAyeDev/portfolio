@@ -1,7 +1,7 @@
 
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent } from "@/src/components/ui/card";
-import { ExternalLink, Github, LayoutDashboard } from "lucide-react";
+import { Check, ExternalLink, Github, LayoutDashboard } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { FEATURE_PROJECT } from "../lib/project-data";
@@ -14,17 +14,40 @@ export default function FeaturedProject() {
 
         >
             {/* Section Header */}
-            <div className="space-y-4  text-center mb-4">
+            <div className=" flex flex-col gap-4 items-center mb-4">
                 <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
                     Featured Project
                 </p>
                 <h2 className=" text-3xl lg:text-4xl font-bold">
                     Hotel Booking Management System
                 </h2>
-                <p className=" text-default-500 max-w-2xl mx-auto">
+                <p className=" text-default-500 max-w-2xl mx-auto text-center">
                     A full-stack booking platform with authentication, room management,
                     availability tracking, and secure payment-ready architecture.
                 </p>
+                {/* Tech Stack */}
+
+                <div className="flex gap-1 flex-wrap">
+
+
+                    {
+                        FEATURE_PROJECT.techStacks.map((tech, idx) => (
+                            <Badge
+                                key={idx}
+                                variant="outline"
+                                className="rounded-full px-2 py-1 hover:border-primary"
+                            >
+                                <Image
+                                    src={tech.icon}
+                                    alt={tech.name + " icon"}
+                                    width={24}
+                                    height={24}
+                                />
+                                {tech.name}
+                            </Badge>
+                        ))
+                    }
+                </div>
             </div>
 
             {/* Project Card */}
@@ -54,35 +77,23 @@ export default function FeaturedProject() {
                                 {FEATURE_PROJECT.description}
                             </p>
 
-                            <p className=" text-default-600 leading-relaxed">
+                            {/* <p className=" text-default-600 leading-relaxed">
                                 The system includes admin dashboards, booking status tracking,
                                 role-based access control, and optimized API performance for
                                 scalable deployment.
-                            </p>
-
-                            {/* Tech Stack */}
-
-                            <div className="flex gap-1 flex-wrap">
-
-
+                            </p> */}
+                            <ul className="space-y-2">
+                                <li>Key Features are :</li>
                                 {
-                                    FEATURE_PROJECT.techStacks.map((tech, idx) => (
-                                        <Badge
-                                            key={idx}
-                                            variant="outline"
-                                            className="rounded-full px-2 py-1 hover:border-primary"
-                                        >
-                                            <Image
-                                                src={tech.icon}
-                                                alt={tech.name + " icon"}
-                                                width={24}
-                                                height={24}
-                                            />
-                                            {tech.name}
-                                        </Badge>
+                                    FEATURE_PROJECT.keyFeatures.map((feature, idx) => (
+                                        <li key={idx} className="flex gap-2 items-center text-sm">
+                                            <Check className="text-green-600" />
+                                            {feature}
+                                        </li>
                                     ))
                                 }
-                            </div>
+                            </ul>
+
 
                             {/* Action Buttons */}
                             <div className="flex justify-between ">
@@ -100,7 +111,7 @@ export default function FeaturedProject() {
                                     <Button variant={'link'} asChild>
                                         <Link href={FEATURE_PROJECT.links.live2} target="_blank">
                                             <LayoutDashboard />
-                                            View Live Dashboard
+                                            View Dashboard
                                         </Link>
                                     </Button>
 

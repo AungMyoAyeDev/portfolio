@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/src/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
-import { ExternalLink, Github, Info, X } from "lucide-react";
+import { Check, ExternalLink, Github, Info, LayoutDashboard, X } from "lucide-react";
 import Image from "next/image";
 import { PROJECTS } from "../lib/project-data";
 import Link from "next/link";
@@ -143,48 +143,69 @@ export default function Projects() {
                                 {activeProject.fullDescription}
                             </p>
 
-                            <div className="flex gap-1 flex-wrap">
-
-
+                            <ul className="space-y-2 mb-4 bg-muted text-muted-foreground p-2 rounded">
+                                <li>Key Features are :</li>
                                 {
-                                    activeProject.techStacks.map((tech, idx) => (
-                                        <Badge
-                                            key={idx}
-                                            variant="outline"
-                                            className="rounded-full px-2 py-1"
-                                        >
-                                            <Image
-                                                src={tech.icon}
-                                                alt={tech.name + " icon"}
-                                                width={24}
-                                                height={24}
-                                            />
-                                            {tech.name}
-                                        </Badge>
+                                    activeProject.keyFeatures.map((feature, idx) => (
+                                        <li key={idx} className="flex gap-2 items-center text-sm">
+                                            <Check className="text-green-600" />
+                                            {feature}
+                                        </li>
                                     ))
                                 }
+                            </ul>
+
+                            <div className="space-y-2">
+
+
+                                <h4>Tech Stacks are : </h4>
+                                <div className="flex gap-1 flex-wrap">
+
+
+                                    {
+                                        activeProject.techStacks.map((tech, idx) => (
+                                            <Badge
+                                                key={idx}
+                                                variant="outline"
+                                                className="rounded-full px-2 py-1"
+                                            >
+                                                <Image
+                                                    src={tech.icon}
+                                                    alt={tech.name + " icon"}
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                                {tech.name}
+                                            </Badge>
+                                        ))
+                                    }
+                                </div>
                             </div>
                         </CardContent>
 
-                        <CardFooter className=" justify-between">
-                            <div className="space-x-2">
-                                <Button variant="link" asChild>
-                                    <Link href={activeProject.links.live}>
-                                        <ExternalLink className="mr-1 h-4 w-4" />
-                                        Live Demo
+                        <CardFooter className="flex-wrap items-center justify-between gap-2">
+
+                            <Button variant="link" asChild>
+                                <Link href={activeProject.links.live}  >
+                                    <ExternalLink />
+                                    Live Demo
+                                </Link>
+                            </Button>
+                            {
+                                activeProject.links.live2
+                                && <Button variant="link" asChild>
+                                    <Link href={activeProject.links.live}  >
+                                        <LayoutDashboard />
+                                        View Dashboard
                                     </Link>
                                 </Button>
-                                <Button variant="link" asChild>
-                                    <Link href={activeProject.links.live}>
-                                        <ExternalLink className="mr-1 h-4 w-4" />
-                                        Live Demo
-                                    </Link>
-                                </Button>
-                            </div>
+                            }
+
+
 
                             <Button asChild>
-                                <Link href={activeProject.links.github}>
-                                    <Github className="mr-1 h-4 w-4" />
+                                <Link href={activeProject.links.github} className="w-full sm:w-fit" >
+                                    <Github />
                                     Source Code
                                 </Link>
                             </Button>

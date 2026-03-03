@@ -72,7 +72,7 @@ const Hero = () => {
 
                 </div>
 
-                <Button asChild size={'icon'} variant={'secondary'} className="animate-bounce rounded-full">
+                <Button asChild size={'icon'} variant={'secondary'} className=" mt-4 animate-bounce rounded-full">
                     <Link href={'#about'}>
                         <ArrowDown />
                     </Link>
