@@ -21,7 +21,7 @@ const About = () => {
                 <CardContent className='flex flex-col md:flex-row gap-6 md:gap-10'>
                     <div className='relative w-full max-w-sm aspect-square rounded-xl '>
                         <Image
-                            src="/ama.jpg"
+                            src="/aungmyoaye.jpg"
                             alt="Aung Myo Aye"
                             fill
                             className=" object-cover w-full h-auto aspect-square  p-2 rounded-xl"
@@ -34,9 +34,6 @@ const About = () => {
 
                     {/* Content Block */}
                     <div className='flex flex-col justify-between'>
-
-
-
                         {/* Bio */}
                         <div className=" space-y-4 leading-relaxed">
                             <p>
@@ -67,14 +64,14 @@ const About = () => {
                             <div>
                                 <p
                                     className="text-2xl font-bold text-foreground">
-                                    10+
+                                    5+
                                 </p>
                                 <p>Projects Built</p>
                             </div>
                             <div>
                                 <p className="text-2xl font-bold text-foreground">
-                                    3+  Team</p>
-                                <p> Collabration projects</p>
+                                    2+</p>
+                                <p>Team Collabration projects</p>
                             </div>
                             <div>
                                 <p className="text-2xl font-bold text-foreground">3+ Years</p>

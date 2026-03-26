@@ -40,7 +40,7 @@ export default function Navbar() {
                 <div >
                     <Link href="#" className="flex items-center gap-1 ">
                         <Image
-                            src={'/ama.jpg'}
+                            src={'/aungmyoaye.jpg'}
                             alt="aung myo aye photo"
                             width={40}
                             height={40}

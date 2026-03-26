@@ -9,7 +9,6 @@ export type FormState = {
 export const sendEmail = async (prevState: FormState, formData: FormData): Promise<FormState> => {
     try {
         const api_key = process.env.RESEND_API_KEY;
-        console.log(api_key)
         const resend = new Resend(api_key);
         const name = formData.get("name") as string;
         const email = formData.get("email") as string;
@@ -31,12 +30,21 @@ export const sendEmail = async (prevState: FormState, formData: FormData): Promi
       `,
         });
         if (error) {
-            return { success: false, message: "Failed to send email. Try again later." };
+            return {
+                success: false,
+                message: "Failed to send email. Try again later."
+            };
         }
-        return { success: true, message: "Thanks you for your message . I'll conatct as soon as possible." };
+        return {
+            success: true,
+            message: "Thanks you for your message . I'll conatct you as soon as possible."
+        };
     } catch (error) {
-        console.warn(error)
-        return { success: false, message: "Failed to send message. Try again later." };
+        console.error("Unexpect error:", error)
+        return {
+            success: false,
+            message: "Failed to send message. Try again later."
+        };
     }
 
 }
