@@ -22,7 +22,7 @@ const Hero = () => {
                         Hello,  I&apos;m Aung Myo Aye
                     </h1>
                     <h2 className="capitalize  text-center  text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed">
-                        Full Stack Developer | Scalable Web Applications
+                        Full Stack Software Engineer
                     </h2>
                     <p className="text-center ">
                         I build modern web applications from frontend to infrastructure <br /> Focusing on scalability, security, and long-term maintainability
@@ -31,16 +31,16 @@ const Hero = () => {
 
                 <div className="flex items-center justify-center flex-wrap gap-4">
                     <Button variant='secondary' className={" capitalize "} asChild>
-                        <Link href={'mailto:aungmyoayedev@gmail.com'}>
+                        <Link href={'#projects'}>
 
                             <Search />
-                            view projects
+                            Explore My Work
                         </Link>
                     </Button>
                     <Button variant="default" className={" capitalize "} asChild>
-                        <Link href={'/globe.svg'} target="_blank" download>
+                        <Link href={'/globe.svg'} target="_blank" >
                             <Download />
-                            download resume
+                            Let&apos;s contact
                         </Link>
 
 
@@ -80,7 +80,7 @@ const Hero = () => {
                 variant={'outline'}
                 className="hidden sm:flex absolute z-10 right-4 bottom-4 text-green-500 animate-pulse"
             >
-                <Target className="text-xl" /> Avaliable for hiring...
+                <Target className="text-xl" /> Avaliable for hire...
             </Badge>
 
 

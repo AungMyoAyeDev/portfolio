@@ -71,7 +71,7 @@ const About = () => {
                             <div>
                                 <p className="text-2xl font-bold text-foreground">
                                     2+</p>
-                                <p>Team Collabration projects</p>
+                                <p>Team Collaborations</p>
                             </div>
                             <div>
                                 <p className="text-2xl font-bold text-foreground">3+ Years</p>

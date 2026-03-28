@@ -1,31 +1,66 @@
-export const FEATURE_PROJECT = {
-    title: "Hotel Booking System",
-    description:
-        "A production-style hotel reservation platform built with MERN and Next.js (BFF architecture), featuring secure booking workflows, advanced filtering, role-based dashboards, and scalable API design. Deployed and structured to simulate real-world  operations.",
-    image: "/projects/hotel.png",
-    techStacks: [
-        { name: 'React', icon: '/icons/react.svg', },
-        { name: 'Nextjs', icon: '/icons/nextjs.svg', },
-        { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
-        { name: 'Node.js', icon: '/icons/nodejs.svg', },
-        { name: 'Express', icon: '/icons/expressjs.svg', },
-        { name: 'MongoDB', icon: '/icons/mongodb.svg', },
+export const FEATURE_PROJECTS = [
+    {
+        title: "Utility Management System",
+        shortDescription:
+            "Role-based system for managing billing, payments, and service records with secure API architecture.",
+        description:
+            "Role-based system for managing billing, payments, and service records with secure API architecture.",
+        image: "/projects/ums.jpg",
 
-    ],
-    keyFeatures: [
-        "Hotel , room ,booking and payment managment",
-        "Secure room booking workflow",
-        "User review and rating system",
-        "Room inventory and pricing control",
+        techStacks: [
+            { name: 'React', icon: '/icons/react.svg', },
+            { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
+            { name: 'Node.js', icon: '/icons/nodejs.svg' },
+            { name: 'Express', icon: '/icons/expressjs.svg' },
+            { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
+            { name: "Prisma", icon: "/icons/prisma.svg" },
 
+        ],
+        keyFeatures: [
+            "Role-based access control (Admin, Staff, Customer)",
+            "Automated billing and invoice generation",
+            "Payment tracking and transaction history",
+            "Service request and record management",
+            "Secure RESTful API with validation layer",
+            "Modular backend architecture for scalability"
+        ],
+        links: {
+            live: "https://tenant-web-app-omega.vercel.app/",
+            live2: "https://utility-management-system-dashboard.vercel.app",
+            github: "https://github.com/AungMyoAye101/ums-dashboard",
 
-    ],
-    links: {
-        live: "https://hotel-booking-virid-two.vercel.app",
-        live2: "https://booking-dashboard-one.vercel.app",
-        github: "https://github.com/AungMyoAye101/hotel-booking"
+        },
     },
-}
+    {
+        title: "Hotel Booking System",
+        shortDescription: "A full-stack booking platform with authentication, room management, availability tracking, and secure payment-ready architecture.",
+        description:
+            "A production-style hotel reservation platform built with MERN and Next.js (BFF architecture), featuring secure booking workflows, advanced filtering, role-based dashboards, and scalable API design. Deployed and structured to simulate real-world  operations.",
+        image: "/projects/booking.png",
+        techStacks: [
+            { name: 'React', icon: '/icons/react.svg', },
+            { name: 'Nextjs', icon: '/icons/nextjs.svg', },
+            { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
+            { name: 'Node.js', icon: '/icons/nodejs.svg', },
+            { name: 'Express', icon: '/icons/expressjs.svg', },
+            { name: 'MongoDB', icon: '/icons/mongodb.svg', },
+
+        ],
+        keyFeatures: [
+            "Hotel , room ,booking and payment managment",
+            "Secure room booking workflow",
+            "User review and rating system",
+            "Room inventory and pricing control",
+
+
+        ],
+        links: {
+            live: "https://hotel-booking-virid-two.vercel.app",
+            live2: "https://booking-dashboard-one.vercel.app",
+            github: "https://github.com/AungMyoAye101/hotel-booking"
+        },
+    },
+]
 
 
 export const PROJECTS = [
@@ -64,75 +99,75 @@ export const PROJECTS = [
         },
     },
 
-    {
-        title: "Real-Time Chat App",
-        shortDescription:
-            "Socket.IO powered messaging app with typing indicators, read receipts and file uploads.",
+    // {
+    //     title: "Real-Time Chat App",
+    //     shortDescription:
+    //         "Socket.IO powered messaging app with typing indicators, read receipts and file uploads.",
 
-        fullDescription:
-            "A real-time messaging platform supporting user-to-user and group communication with persistent message storage and live interaction features.",
+    //     fullDescription:
+    //         "A real-time messaging platform supporting user-to-user and group communication with persistent message storage and live interaction features.",
 
-        image: "/projects/chat.jpg",
+    //     image: "/projects/chat.jpg",
 
-        keyFeatures: [
-            "Real-time messaging using Socket.IO",
-            "Typing indicators and read receipts",
-            "User-to-user and group chat support",
-            "File upload and media sharing",
-            "Persistent message history with MongoDB",
-            "JWT-based authentication with protected routes"
-        ],
+    //     keyFeatures: [
+    //         "Real-time messaging using Socket.IO",
+    //         "Typing indicators and read receipts",
+    //         "User-to-user and group chat support",
+    //         "File upload and media sharing",
+    //         "Persistent message history with MongoDB",
+    //         "JWT-based authentication with protected routes"
+    //     ],
 
-        techStacks: [
-            { name: 'React', icon: '/icons/react.svg', },
-            { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
-            { name: 'Node.js', icon: '/icons/nodejs.svg' },
-            { name: 'Express', icon: '/icons/expressjs.svg' },
-            { name: 'MongoDB', icon: '/icons/mongodb.svg' },
-            { name: "Mongoose", icon: "/icons/mongoose.svg" },
+    //     techStacks: [
+    //         { name: 'React', icon: '/icons/react.svg', },
+    //         { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
+    //         { name: 'Node.js', icon: '/icons/nodejs.svg' },
+    //         { name: 'Express', icon: '/icons/expressjs.svg' },
+    //         { name: 'MongoDB', icon: '/icons/mongodb.svg' },
+    //         { name: "Mongoose", icon: "/icons/mongoose.svg" },
 
-        ],
+    //     ],
 
-        links: {
-            live: "/",
-            github: "/",
-        },
-    },
+    //     links: {
+    //         live: "/",
+    //         github: "/",
+    //     },
+    // },
 
-    {
-        title: "Authentication System",
-        shortDescription:
-            "Reusable authentication module using JWT, bcrypt and secure cookie handling.",
+    // {
+    //     title: "Authentication System",
+    //     shortDescription:
+    //         "Reusable authentication module using JWT, bcrypt and secure cookie handling.",
 
-        fullDescription:
-            "A secure and reusable authentication module implementing JWT-based access control, password hashing, and HTTP-only cookie management for modern web applications.",
+    //     fullDescription:
+    //         "A secure and reusable authentication module implementing JWT-based access control, password hashing, and HTTP-only cookie management for modern web applications.",
 
-        image: "/projects/mern-auth.jpg",
+    //     image: "/projects/mern-auth.jpg",
 
-        keyFeatures: [
-            "JWT access and refresh token implementation",
-            "Password hashing using bcrypt",
-            "HTTP-only cookie authentication",
-            "Role-based authorization middleware",
-            "Input validation with structured schemas",
-            "Reusable authentication architecture"
-        ],
+    //     keyFeatures: [
+    //         "JWT access and refresh token implementation",
+    //         "Password hashing using bcrypt",
+    //         "HTTP-only cookie authentication",
+    //         "Role-based authorization middleware",
+    //         "Input validation with structured schemas",
+    //         "Reusable authentication architecture"
+    //     ],
 
-        techStacks: [
-            { name: 'Node.js', icon: '/icons/nodejs.svg' },
-            { name: 'Express', icon: '/icons/expressjs.svg' },
-            { name: 'MongoDB', icon: '/icons/mongodb.svg' },
-            { name: "Mongoose", icon: "/icons/mongoose.svg" },
-            { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
-            { name: "Prisma", icon: "/icons/prisma.svg" },
-            { name: "Firebase", icon: "/icons/firebase.svg" }
-        ],
+    //     techStacks: [
+    //         { name: 'Node.js', icon: '/icons/nodejs.svg' },
+    //         { name: 'Express', icon: '/icons/expressjs.svg' },
+    //         { name: 'MongoDB', icon: '/icons/mongodb.svg' },
+    //         { name: "Mongoose", icon: "/icons/mongoose.svg" },
+    //         { name: 'PostgreSQL', icon: '/icons/postgresql.svg' },
+    //         { name: "Prisma", icon: "/icons/prisma.svg" },
+    //         { name: "Firebase", icon: "/icons/firebase.svg" }
+    //     ],
 
-        links: {
-            live: "/",
-            github: "/",
-        },
-    },
+    //     links: {
+    //         live: "/",
+    //         github: "/",
+    //     },
+    // },
 
     {
         title: "Hotel Booking System",
