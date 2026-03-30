@@ -47,11 +47,9 @@ export default function ContactSection() {
                         <MapPin /> Mandalay , Myanmar
                     </p>
                     <Link
-                        href={'/globe.svg'}
+                        href={'/Aung_Myo_Aye_FullStack_Resume.pdf'}
                         target="_blank"
-                        download
                         className="flex items-center gap-4"
-
                     >
                         <Download /> Download resume
                     </Link>
@@ -71,7 +69,7 @@ export default function ContactSection() {
                     className="rounded-full animate-bounce"
                     asChild
                 >
-                    <Link href={'#'}>
+                    <Link href={'/#'}>
                         <ArrowUp />
                     </Link>
 

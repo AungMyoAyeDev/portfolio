@@ -87,7 +87,7 @@ export default function Footer() {
                 <div className="flex flex-wrap-reverse gap-4 justify-between mt-6">
                     <small>© 2026 Aung Myo Aye. All rights reserved.</small>
                     <Button variant="default" className={" capitalize "} asChild>
-                        <Link href={'/globe.svg'} target="_blank" download>
+                        <Link href={'/Aung_Myo_Aye_FullStack_Resume.pdf'} target="_blank" >
                             <Download />
                             download resume
                         </Link>

@@ -7,6 +7,7 @@ import { PROJECTS } from "../lib/project-data";
 import Link from "next/link";
 import { useState } from "react";
 import { Badge } from "./ui/badge";
+import ScrollReveal from "./scroll-reveal";
 
 export default function Projects() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -40,13 +41,16 @@ export default function Projects() {
                     }`}
             >
                 {PROJECTS.map((project, index) => (
-                    <Card
-                        key={index}
+                    <ScrollReveal
+                        key={project.title}
+                        variant="pop"
+                        delay={120 + index * 120}
                         className={`transition-all duration-300 ${activeIndex === index ? "opacity-0 scale-95" : ""
                             }`}
                     >
+                        <Card className="project-popup-card">
                         <CardHeader>
-                            <div className="relative aspect-video rounded-lg overflow-hidden">
+                            <div className="scroll-image relative aspect-video rounded-lg overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
@@ -97,7 +101,8 @@ export default function Projects() {
                                 View Details
                             </Button>
                         </CardFooter>
-                    </Card>
+                        </Card>
+                    </ScrollReveal>
                 ))}
             </div>
 

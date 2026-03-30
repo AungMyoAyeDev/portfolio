@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { FEATURE_PROJECTS } from "../lib/project-data";
 import Link from "next/link";
+import ScrollReveal from "./scroll-reveal";
 
 export default function FeaturedProject() {
     return (
@@ -17,7 +18,7 @@ export default function FeaturedProject() {
                 FEATURE_PROJECTS.map((data, i) => (
                     <div key={data.title}>
                         {/* Section Header */}
-                        <div className=" flex flex-col gap-3 items-center mb-4">
+                        <ScrollReveal className="flex flex-col gap-3 items-center mb-4" delay={i * 70}>
                             <p className="text-sm uppercase tracking-widest text-violet-500 font-medium">
                                 Featured Project {i + 1}
                             </p>
@@ -51,15 +52,16 @@ export default function FeaturedProject() {
                                     ))
                                 }
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Project Card */}
-                        <Card className="py-4">
+                        <ScrollReveal variant="pop" delay={120 + i * 120}>
+                            <Card className="project-popup-card py-4">
                             <CardContent className="px-4">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
 
                                     {/* Project Image */}
-                                    <div className="relative">
+                                    <div className="scroll-image relative">
 
                                         <Image
                                             src={data.image}
@@ -127,7 +129,8 @@ export default function FeaturedProject() {
 
                                 </div>
                             </CardContent>
-                        </Card>
+                            </Card>
+                        </ScrollReveal>
                     </div>
                 ))
             }

@@ -18,7 +18,7 @@ export const SOCIAL_LINKS = [
   {
     name: "linkedIn",
     icon: Linkedin,
-    link: "https://www.linkedin.com/in/aung-myo-aye-119017311"
+    link: "https://www.linkedin.com/in/aung-myo-aye-4b88143b4"
   },
   {
     name: "github",
@@ -40,7 +40,6 @@ export const TECH_STACKS = [
       { name: 'Next.js', icon: 'icons/nextjs.svg', },
       { name: "Css", icon: '/icons/css3.svg' },
       { name: 'Tailwind CSS', icon: '/icons/tailwindcss.svg', },
-
 
     ]
   },
@@ -65,10 +64,10 @@ export const TECH_STACKS = [
     icon: Settings,
     techStack: [
       { name: "Git", icon: "/icons/git.svg" },
+      { name: "Tanstack Query", icon: "/icons/tanstack.svg" },
       { name: "Jest", icon: "/icons/jest.svg" },
-      { name: "Docker", icon: "/icons/docker.svg" },
-
-      { name: "Sentry", icon: "/icons/sentry.svg" },
+      // { name: "Docker", icon: "/icons/docker.svg" },
+      // { name: "Sentry", icon: "/icons/sentry.svg" },
     ]
   }
 ];

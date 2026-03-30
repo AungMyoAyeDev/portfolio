@@ -219,6 +219,48 @@ body[style] {
     }
 }
 
+@keyframes floatPathA {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(10px, -14px, 0) rotate(6deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes floatPathB {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(-12px, -10px, 0) rotate(-7deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes floatPathC {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, -12px, 0) scale(1.08);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
 
 
 .animate-fadeIn {
@@ -229,4 +271,118 @@ body[style] {
 
 .animate-scaleIn {
     animation: scaleIn 0.25s ease-out forwards;
+}
+
+.floating-tech-icon {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.85;
+    filter: drop-shadow(0 8px 16px color-mix(in oklab, var(--primary) 16%, transparent));
+    will-change: transform;
+}
+
+.float-path-a {
+    animation-name: floatPathA;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.float-path-b {
+    animation-name: floatPathB;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.float-path-c {
+    animation-name: floatPathC;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-path-a,
+    .float-path-b,
+    .float-path-c {
+        animation: none;
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+    filter: blur(1.5px);
+    transition-property: opacity, transform, filter, box-shadow;
+    transition-duration: 820ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.reveal-pop {
+    transform: translateY(40px) scale(0.9);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.scroll-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.85rem;
+}
+
+.scroll-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: color-mix(in oklab, var(--background) 82%, transparent);
+    transition: opacity 900ms ease;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.scroll-image img {
+    opacity: 0.34;
+    transform: scale(1.1);
+    transition: opacity 820ms ease, transform 960ms ease, filter 880ms ease;
+    filter: saturate(0.88);
+}
+
+.scroll-reveal.is-visible .scroll-image img {
+    opacity: 1;
+    transform: scale(1);
+    filter: saturate(1);
+}
+
+.scroll-reveal.is-visible .scroll-image::after {
+    opacity: 0;
+}
+
+.project-popup-card {
+    transition: box-shadow 600ms ease, border-color 600ms ease, transform 450ms ease;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.scroll-reveal.is-visible .project-popup-card {
+    box-shadow: 0 24px 44px rgba(15, 23, 42, 0.16);
+    border-color: color-mix(in oklab, var(--primary) 38%, var(--border));
+}
+
+.project-popup-card:hover {
+    transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal.reveal-pop,
+    .scroll-image::after,
+    .scroll-image img,
+    .project-popup-card {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
 }

@@ -1,5 +1,34 @@
 export const FEATURE_PROJECTS = [
     {
+        title: "Hotel Booking Management System",
+        shortDescription: "A full-stack booking platform with authentication, room management, availability tracking, and secure payment-ready architecture.",
+        description:
+            "A production-style hotel reservation platform built with MERN and Next.js (BFF architecture), featuring secure booking workflows, advanced filtering, role-based dashboards, and scalable API design. Deployed and structured to simulate real-world  operations.",
+        image: "/projects/booking.png",
+        techStacks: [
+            { name: 'React', icon: '/icons/react.svg', },
+            { name: 'Nextjs', icon: '/icons/nextjs.svg', },
+            { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
+            { name: 'Node.js', icon: '/icons/nodejs.svg', },
+            { name: 'Express', icon: '/icons/expressjs.svg', },
+            { name: 'MongoDB', icon: '/icons/mongodb.svg', },
+
+        ],
+        keyFeatures: [
+            "Engineered BFF layer in Next.js to improve security and optimize client-server communication",
+            "Achieved major performance gains: Web LCP 3.57s → 0.98s, Dashboard 4.0s → 1.74",
+            "Built dynamic hotel & room filtering system (city, price range, rating, guest count, dates)",
+            "Designed transaction-safe availability system to prevent overlapping bookings",
+
+
+        ],
+        links: {
+            live: "https://hotel-booking-virid-two.vercel.app",
+            live2: "https://booking-dashboard-one.vercel.app",
+            github: "https://github.com/AungMyoAye101/hotel-booking-management"
+        },
+    },
+    {
         title: "Utility Management System",
         shortDescription:
             "Role-based system for managing billing, payments, and service records with secure API architecture.",
@@ -25,39 +54,10 @@ export const FEATURE_PROJECTS = [
             "Modular backend architecture for scalability"
         ],
         links: {
-            live: "https://tenant-web-app-omega.vercel.app/",
+            live: "https://tenant-web-app-ums.vercel.app",
             live2: "https://utility-management-system-dashboard.vercel.app",
-            github: "https://github.com/AungMyoAye101/ums-dashboard",
+            github: "https://github.com/AungMyoAye101/Utility-Management-System",
 
-        },
-    },
-    {
-        title: "Hotel Booking System",
-        shortDescription: "A full-stack booking platform with authentication, room management, availability tracking, and secure payment-ready architecture.",
-        description:
-            "A production-style hotel reservation platform built with MERN and Next.js (BFF architecture), featuring secure booking workflows, advanced filtering, role-based dashboards, and scalable API design. Deployed and structured to simulate real-world  operations.",
-        image: "/projects/booking.png",
-        techStacks: [
-            { name: 'React', icon: '/icons/react.svg', },
-            { name: 'Nextjs', icon: '/icons/nextjs.svg', },
-            { name: 'TailwindCss', icon: '/icons/tailwindcss.svg', },
-            { name: 'Node.js', icon: '/icons/nodejs.svg', },
-            { name: 'Express', icon: '/icons/expressjs.svg', },
-            { name: 'MongoDB', icon: '/icons/mongodb.svg', },
-
-        ],
-        keyFeatures: [
-            "Hotel , room ,booking and payment managment",
-            "Secure room booking workflow",
-            "User review and rating system",
-            "Room inventory and pricing control",
-
-
-        ],
-        links: {
-            live: "https://hotel-booking-virid-two.vercel.app",
-            live2: "https://booking-dashboard-one.vercel.app",
-            github: "https://github.com/AungMyoAye101/hotel-booking"
         },
     },
 ]
