@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aung Myo Aye - Full Stack Developer Portfolio
 
-## Getting Started
+A modern, responsive, and animated personal portfolio website built with Next.js, React, Tailwind CSS, and Shadcn UI. It showcases my skills, experience, and featured projects as a Full Stack Software Engineer.
 
-First, run the development server:
 
+
+- **Modern Tech Stack**: Built with the latest Next.js App Router and React 19.
+- **Responsive Design**: Fully responsive layout that looks great on mobile, tablet, and desktop devices.
+- **Dark/Light Mode**: Integrated theme toggling using `next-themes` for a seamless user experience.
+- **Smooth Animations**: Custom scroll reveal animations and floating elements to make the UI feel alive.
+- **Accessible UI**: Utilizes Radix UI primitives via Shadcn UI for highly accessible and customizable components.
+- **Working Contact Form**: Integrated with **Resend** for server-side email dispatching without needing an external mail client.
+- **SEO Optimized**: Standard metadata and semantic HTML tags.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/) & [Radix UI](https://www.radix-ui.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: Custom CSS Keyframes & Intersection Observer API
+- **Email Service**: [Resend](https://resend.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## 📦 Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed. It is recommended to use `npm`, `yarn`, `pnpm`, or `bun`.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/AungMyoAye101/portfolio.git](https://github.com/AungMyoAye101/portfolio.git)
+   cd portfolio
+   ```
+2. Install dependencies:
 ```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+3. Set up Environment Variables:
+Create a `.env.local` file in the root of your project and add your Resend API Key for the contact form to work.
+```bash
+RESEND_API_KEY=your_resend_api_key_here
+```
+4. Start the depeloved server;
+ ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open `http://localhost:3000` with your browser to see the result.
+6. Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+├── public/               # Static assets (images, icons, resume PDF)
+├── src/
+│   ├── app/              # Next.js App Router pages and global layouts
+│   ├── components/       # Reusable React components (Hero, About, Projects, etc.)
+│   │   └── ui/           # Shadcn UI base components
+│   ├── lib/              # Utility functions, project data, and server actions
+│   └── hooks/            # Custom React hooks (if any)
+├── components.json       # Shadcn UI configuration
+├── next.config.ts        # Next.js configuration
+├── tailwind.config.ts    # Tailwind CSS configuration
+└── package.json          # Project dependencies and scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+8. Contact Setup (Resend)
+The contact form uses Server Actions to securely send emails. To make it functional:
 
-## Learn More
+Sign up for an account at Resend.
 
-To learn more about Next.js, take a look at the following resources:
+Verify your domain (or use their testing features).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Generate an API Key.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Update the to and from email addresses in `src/lib/send-email.ts` to match your configuration.
 
-## Deploy on Vercel
+8. Deployment
+The easiest way to deploy this Next.js app is to use the Vercel Platform.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to your GitHub repository.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Import the project into Vercel.
+
+3. Add your `RESEND_API_KEY` to the Vercel Environment Variables settings.
+
+4. Deploy!
+
+Designed and developed by Aung Myo Aye.
