@@ -60,7 +60,7 @@ yarn dev
 
 5. Open `http://localhost:3000` with your browser to see the result.
 6. Project Structure
-
+```
 ├── public/               # Static assets (images, icons, resume PDF)
 ├── src/
 │   ├── app/              # Next.js App Router pages and global layouts
@@ -72,19 +72,20 @@ yarn dev
 ├── next.config.ts        # Next.js configuration
 ├── tailwind.config.ts    # Tailwind CSS configuration
 └── package.json          # Project dependencies and scripts
+```
+## Contact Setup (Resend)
 
-8. Contact Setup (Resend)
-The contact form uses Server Actions to securely send emails. To make it functional:
+1. The contact form uses Server Actions to securely send emails. To make it functional:
 
-Sign up for an account at Resend.
+2. Sign up for an account at Resend.
 
-Verify your domain (or use their testing features).
+3. Verify your domain (or use their testing features).
 
-Generate an API Key.
+4. Generate an API Key.
 
-Update the to and from email addresses in `src/lib/send-email.ts` to match your configuration.
+5. Update the to and from email addresses in `src/lib/send-email.ts` to match your configuration.
 
-8. Deployment
+## Deployment
 The easiest way to deploy this Next.js app is to use the Vercel Platform.
 
 1. Push your code to your GitHub repository.
