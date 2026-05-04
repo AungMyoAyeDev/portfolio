@@ -27,24 +27,18 @@ A modern, responsive, and animated personal portfolio website built with Next.js
 
 ### Prerequisites
 
-Make sure you have Node.js installed. It is recommended to use `npm`, `yarn`, `pnpm`, or `bun`.
+Make sure you have Node.js installed. It is recommended to use `npm`, or , `pnpm`
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/AungMyoAye101/portfolio.git](https://github.com/AungMyoAye101/portfolio.git)
+   git clone [https://github.com/AungMyoAye101/portfolio.git](https://github.com/AungMyoAyeDev/portfolio.git)
    cd portfolio
    ```
 2. Install dependencies:
 ```bash
-npm install
-# or
-yarn install
-# or
 pnpm install
-# or
-bun install
 ```
 3. Set up Environment Variables:
 Create a `.env.local` file in the root of your project and add your Resend API Key for the contact form to work.
@@ -53,9 +47,7 @@ RESEND_API_KEY=your_resend_api_key_here
 ```
 4. Start the depeloved server;
  ```bash
-npm run dev
-# or
-yarn dev
+pnpm run dev
 ```
 
 5. Open `http://localhost:3000` with your browser to see the result.
