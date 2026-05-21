@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
+// @ts-expect-error  no types found for css side-effect import
 import "./globals.css";
 import NavBar from "../components/nav-bar";
 import Footer from "../components/footer";
 import { ThemeProvider } from "./provider";
-
-
-
 
 export const metadata: Metadata = {
   title: "Aung Myo Aye's Portfolio",
@@ -19,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={` antialiased max-w-7xl mx-auto px-4 md:px-6`}
-      >
+      <body className={` antialiased max-w-7xl mx-auto px-4 md:px-6 relative`}>
         <ThemeProvider
           attribute={"class"}
           defaultTheme="system"
