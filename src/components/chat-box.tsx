@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {
@@ -13,6 +13,7 @@ import {
   DrawerTrigger,
 } from "@/src/components/ui/drawer";
 import { Avatar, AvatarImage } from "./ui/avatar";
+import { useChat } from "@ai-sdk/react";
 
 type Message = {
   role: "user" | "bot";
@@ -20,42 +21,48 @@ type Message = {
 };
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const { messages, sendMessage, status } = useChat();
+  // const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendMessage = async (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
-
-    const userMessage: Message = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
+    sendMessage({ text: input });
     setInput("");
-    setIsLoading(true);
-
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-
-      if (!res.ok) throw new Error("Network response failure");
-
-      const data = await res.json();
-      setMessages((prev) => [...prev, { role: "bot", content: data.reply }]);
-    } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "bot",
-          content: "Something went wrong. Please try again later.",
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-    }
   };
+  // const sendMessage = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!input.trim() || isLoading) return;
+
+  //   const userMessage: Message = { role: "user", content: input };
+  //   setMessages((prev) => [...prev, userMessage]);
+  //   setInput("");
+  //   setIsLoading(true);
+
+  //   try {
+  //     const res = await fetch("/api/chat", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ message: input }),
+  //     });
+
+  //     if (!res.ok) throw new Error("Network response failure");
+
+  //     const data = await res.json();
+  //     setMessages((prev) => [...prev, { role: "bot", content: data.reply }]);
+  //   } catch (error) {
+  //     setMessages((prev) => [
+  //       ...prev,
+  //       {
+  //         role: "bot",
+  //         content: "Something went wrong. Please try again later.",
+  //       },
+  //     ]);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <div>
@@ -82,7 +89,7 @@ export default function Chatbot() {
                   </p>
                 )}
 
-                {messages.map((msg, index) => (
+                {/* {messages.map((msg, index) => (
                   <div
                     key={index}
                     className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
@@ -104,6 +111,16 @@ export default function Chatbot() {
                       )}
                     </div>
                   </div>
+                ))} */}
+
+                {messages.map((m) => (
+                  <div key={m.id}>
+                    {m.parts.map((p, i) => {
+                      if (p.type === "text") {
+                        return <span key={i}>{p.text}</span>;
+                      }
+                    })}
+                  </div>
                 ))}
 
                 {isLoading && (
@@ -121,7 +138,7 @@ export default function Chatbot() {
           <DrawerFooter>
             {/* User Prompt Input Section Form */}
             <form
-              onSubmit={sendMessage}
+              onSubmit={handleSubmit}
               className="p-3 border-t border-gray-100 bg-white flex gap-2"
             >
               <input

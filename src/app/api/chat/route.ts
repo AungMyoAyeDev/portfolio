@@ -20,26 +20,20 @@ const openai = new OpenAI({
     "X-Title": "Portfolio Chatbot",
   },
 });
+
+\
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages }: { messages: UIMessage[] } = await req.json();
     console.log(messages, "message");
-    const res = await openai.chat.completions.create({
+    const res = streamText({
       model: "openrouter/free",
-      messages: [
-        {
-          role: "system",
-          content: PORTFOLIO_CONTEXT,
-        },
-        {
-          role: "user",
-          content: messages,
-        },
-      ],
+      system: PORTFOLIO_CONTEXT,
+      messages: await convertToModelMessages(messages),
       temperature: 0.2,
     });
-    const result = res.choices[0].message.content || "No response";
-    return NextResponse.json({ reply: result });
+
+    return res.toUIMessageStreamResponse();
   } catch (error) {
     console.error("Chat API Error:", error);
     return new Response(
