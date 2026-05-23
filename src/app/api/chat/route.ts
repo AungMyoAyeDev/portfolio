@@ -1,33 +1,24 @@
 import { PORTFOLIO_CONTEXT } from "@/src/lib/common";
-import { google } from "@ai-sdk/google";
-import {
-  convertToModelMessages,
-  ModelMessage,
-  streamText,
-  UIMessage,
-} from "ai";
-import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createOpenAI } from "@ai-sdk/openai";
+import { convertToModelMessages, streamText, UIMessage } from "ai";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+const openrouter = createOpenAI({
+  apiKey: process.env.OPENROUTER_API_KEY,
   baseURL: "https://openrouter.ai/api/v1",
-  defaultHeaders: {
+  headers: {
     "HTTP-Referer": "http://localhost:3000", // Optional but recommended by OpenRouter
     "X-Title": "Portfolio Chatbot",
   },
 });
 
-\
 export async function POST(req: Request) {
   try {
     const { messages }: { messages: UIMessage[] } = await req.json();
-    console.log(messages, "message");
     const res = streamText({
-      model: "openrouter/free",
+      model: openrouter("openrouter/free"),
       system: PORTFOLIO_CONTEXT,
       messages: await convertToModelMessages(messages),
       temperature: 0.2,

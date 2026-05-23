@@ -11,10 +11,27 @@
     "@ai-sdk/provider-utils" "4.0.27"
     "@vercel/oidc" "3.2.0"
 
+"@ai-sdk/gateway@3.0.120":
+  version "3.0.120"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-3.0.120.tgz#37457125d3cbd20fb153a8984ffc0285598a122d"
+  integrity sha512-MYKAeD2q7/sa1ZdqtL2tw0Me0B8Tok6Q/fhkJDhJl39dG8u+VBlWO9yk9lcdm784bM418o1EKObo4aOxs6+18Q==
+  dependencies:
+    "@ai-sdk/provider" "3.0.10"
+    "@ai-sdk/provider-utils" "4.0.27"
+    "@vercel/oidc" "3.2.0"
+
 "@ai-sdk/google@^3.0.64":
   version "3.0.75"
   resolved "https://registry.yarnpkg.com/@ai-sdk/google/-/google-3.0.75.tgz#7b5e52df11a60897152f02dd48c895c8015b9916"
   integrity sha512-XAm31ftiOrzlb8NjDzT7kw0xw+4lmgFdGFn1QKM73nXFFKyN1kWLESBV75UGNfjXP8X1YJ0YydnMVqO0jaPghw==
+  dependencies:
+    "@ai-sdk/provider" "3.0.10"
+    "@ai-sdk/provider-utils" "4.0.27"
+
+"@ai-sdk/openai@^3.0.65":
+  version "3.0.65"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/openai/-/openai-3.0.65.tgz#16740cde57ea3d6a66926a75a3f2d54057694b95"
+  integrity sha512-ZlVoWH+zrdiYDiUt6n/xvfCsk33mzsB81TUQkBRVx79rxU1FKZqVH9J/QCtEpSLqx0cUzjvtIw9l9p7EbUv+dw==
   dependencies:
     "@ai-sdk/provider" "3.0.10"
     "@ai-sdk/provider-utils" "4.0.27"
@@ -2022,12 +2039,22 @@ agent-base@^7.1.2:
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-7.1.4.tgz#e3cd76d4c548ee895d3c3fd8dc1f6c5b9032e7a8"
   integrity sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==
 
-ai@6.0.185, ai@^6.0.168:
+ai@6.0.185:
   version "6.0.185"
   resolved "https://registry.yarnpkg.com/ai/-/ai-6.0.185.tgz#283f3b4dc26de2760611a84c937c0e981386f251"
   integrity sha512-oGsqscREaTlo75KHZLtwZxRyI+ZBwHV2wRX9B8smHjgOs13WwoCvUyr5aPUWpIBRz406wmIKy1RzoUEq0/WKJw==
   dependencies:
     "@ai-sdk/gateway" "3.0.116"
+    "@ai-sdk/provider" "3.0.10"
+    "@ai-sdk/provider-utils" "4.0.27"
+    "@opentelemetry/api" "^1.9.0"
+
+ai@^6.0.191:
+  version "6.0.191"
+  resolved "https://registry.yarnpkg.com/ai/-/ai-6.0.191.tgz#afba823c7734484b211b9edec72c9d007ecd15f2"
+  integrity sha512-zAxvjKebQE7YkSyyNIl0OM7i6/zygnKeF+yNUjD4nWOelYrG+LpDd6RnH6mjySI4zUpZ7o4wbnmAy8jc6u98vQ==
+  dependencies:
+    "@ai-sdk/gateway" "3.0.120"
     "@ai-sdk/provider" "3.0.10"
     "@ai-sdk/provider-utils" "4.0.27"
     "@opentelemetry/api" "^1.9.0"

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// @ts-expect-error  no types found for css side-effect import
 import "./globals.css";
 import NavBar from "../components/nav-bar";
 import Footer from "../components/footer";
