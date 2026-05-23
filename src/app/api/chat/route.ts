@@ -9,7 +9,7 @@ const openrouter = createOpenAI({
   apiKey: process.env.OPENROUTER_API_KEY,
   baseURL: "https://openrouter.ai/api/v1",
   headers: {
-    "HTTP-Referer": "http://localhost:3000", // Optional but recommended by OpenRouter
+    "HTTP-Referer": process.env.PROD_URL || "http://localhost:3000", // Optional but recommended by OpenRouter
     "X-Title": "Portfolio Chatbot",
   },
 });
