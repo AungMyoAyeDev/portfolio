@@ -1,5 +1,5 @@
 import About from "../components/about";
-import ChatBot from "../components/chat-box";
+import ChatBot from "../components/chat-bot/chat-box";
 import Contact from "../components/contact";
 import FeaturedProject from "../components/featured";
 import Hero from "../components/hero";
